@@ -1,0 +1,18 @@
+# Table of contents
+
+* [Background](README.md)
+* [Sahamati Net](sahamati-net/README.md)
+  * [Proxy](sahamati-net/proxy.md)
+  * [Fair Use Compliance](sahamati-net/fair-use-compliance.md)
+  * [Network Observability](sahamati-net/network-observability/README.md)
+    * [Telemetry](sahamati-net/network-observability/telemetry.md)
+    * [Observability Services](sahamati-net/network-observability/observability-services.md)
+    * [Data Governance](sahamati-net/network-observability/data-governance.md)
+* [Technical Specifications](technical-specifications/README.md)
+  * [Proxy API Specs](technical-specifications/proxy-api-specs/README.md)
+    * [Modifications to Request](technical-specifications/proxy-api-specs/modifications-to-request.md)
+    * [Benefits of the new structure](technical-specifications/proxy-api-specs/benefits-of-the-new-structure.md)
+    * [APIs Integration](technical-specifications/proxy-api-specs/apis-integration.md)
+    * [Open API Specification](technical-specifications/proxy-api-specs/open-api-specification.md)
+  * [Fair Use Specs](technical-specifications/fair-use-specs.md)
+  * [Network Telemetry Specs](technical-specifications/network-telemetry-specs.md)
