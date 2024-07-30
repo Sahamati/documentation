@@ -13,13 +13,19 @@ The members to register with Sahamati proxy for accessing the APIs and send requ
 
 ## Onboarding Process
 
-Members can be onboarded to the sandbox environment by providing the following details over an email to [sandbox@sahamati.org.in](mailto:sandbox@sahamati.org.in).The entity information such as
+Members can be onboarded to the sandbox environment by providing the following details over an email to [sandbox@sahamati.org.in](mailto:sandbox@sahamati.org.in).
 
-* ID
-* name
-* type
-* base URL
-* RSA public key
+**The Entity (member) information such as**
+
+<table><thead><tr><th width="262">Property Name</th><th>Description</th></tr></thead><tbody><tr><td>ID (Entity ID or Client ID)</td><td>Identifier of the entity to use with CR and other Sahamati Network Services.</td></tr><tr><td>Name</td><td>Name of the entity</td></tr><tr><td>Type</td><td>Entity Type - one of FIU, FIP, AA</td></tr><tr><td>Base URL</td><td>Base URL of the entity to access the APIs and send requests.</td></tr><tr><td>Certificate</td><td>The RSA public key of the entity. It will be used by the members to validate the signature (<code>x-jws-signature</code>) of the API request.</td></tr><tr><td>ips</td><td>The IP address(es) of the entity to whitelist to access of Sahamati Network services (Ex: Proxy).</td></tr><tr><td>inboundports</td><td>The port of the member that the Sahamati services can connect to.</td></tr><tr><td>outboundports</td><td>The port of the member that the Sahamati services can expect to receive requests from.</td></tr></tbody></table>
+
+**The User of the entity information such as**
+
+<table><thead><tr><th width="266">Property Name</th><th>Description</th></tr></thead><tbody><tr><td>Name</td><td>Name of the user from entity</td></tr><tr><td>Email</td><td>Email address of the user</td></tr><tr><td>Mobile [Optional]</td><td>Mobile number of the user</td></tr></tbody></table>
+
+{% hint style="success" %}
+The member (entity) will be onboarded along with **a user with admin role** for managing the profile, secret rotation of entity etc,.
+{% endhint %}
 
 {% hint style="info" %}
 Once the member entry is added to CR, they can whitelist Sahamati Proxy IP.
