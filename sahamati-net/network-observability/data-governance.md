@@ -11,8 +11,8 @@ In line with the above principles, the network observability framework will ensu
 
 Further, below data governance components have to be detailed out in the network data policy. This policy will be established during the implementation of Network Observability and may undergo several update cycles following its initial implementation.
 
-* Receiving the data from network participants
-* Storing of the data by Sahamati and network participants
+* Receiving the data from members
+* Storing of the data by Sahamati and members
 * Backup schedules and duration
 * Archiving old data
 * Purging of expired data

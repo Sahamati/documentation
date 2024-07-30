@@ -13,7 +13,7 @@ The members to register with Sahamati proxy for accessing the APIs and send requ
 
 ## Onboarding Process
 
-Network participants can be onboarded to the sandbox environment by providing the following details over an email to [sandbox@sahamati.org.in](mailto:sandbox@sahamati.org.in).The entity information such as
+Members can be onboarded to the sandbox environment by providing the following details over an email to [sandbox@sahamati.org.in](mailto:sandbox@sahamati.org.in).The entity information such as
 
 * ID
 * name
@@ -22,7 +22,7 @@ Network participants can be onboarded to the sandbox environment by providing th
 * RSA public key
 
 {% hint style="info" %}
-Once the network participant entry is added to CR, they can whitelist Sahamati Proxy IP.
+Once the member entry is added to CR, they can whitelist Sahamati Proxy IP.
 {% endhint %}
 
 ### Credentials by Proxy <a href="#credentials-by-proxy" id="credentials-by-proxy"></a>

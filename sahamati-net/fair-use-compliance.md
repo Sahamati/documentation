@@ -27,7 +27,7 @@ Each use case is mapped to one Purpose Code and the AA ecosystem is collaboratin
 
 ### FIUs & AAs are expected to align their usage of consents within the bounds of these parameters, ensuring consistency and adherence to established parameters.
 
-### Role of AA Ecosystem Participants
+### Role of AA Ecosystem Members
 
 * **ReBIT**
   * Publish expanded list of purpose codes

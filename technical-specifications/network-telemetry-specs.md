@@ -1,6 +1,6 @@
 # Network Telemetry Specs
 
-This page details the telemetry specification to be implemented by the network participants as part of Sahamati Network Observability.
+This page details the telemetry specification to be implemented by the members as part of Sahamati Network Observability.
 
 ## Open Network Telemetry Specification
 
@@ -76,11 +76,11 @@ Following is the required entity level contextual attributes to be sent for all 
       "value": {"stringValue": String}
     },
     {
-      "key": "producer", // Required. Which network participant has produced the event
+      "key": "producer", // Required. Which member has produced the event
       "value": {"stringValue": String}
     },
     {
-      "key": "producerType", // Required. Type of the network participant - One of FIU/FIP/AA/Facilitator (Sahamati)
+      "key": "producerType", // Required. Type of the member - One of FIU/FIP/AA/Facilitator (Sahamati)
       "value": {"stringValue": String}
     },
     {
@@ -139,7 +139,7 @@ As explained in the [Open Network Telemetry Specification](https://github.com/Su
 
 #### API
 
-API telemetry event is used by network participants to share API data with the network observability infrastructure. API telemetry event contains API transport data, including the API URL, correlation identifiers for mapping multiple interconnected API calls, and response metadata like status codes and error details.
+API telemetry event is used by members to share API data with the network observability infrastructure. API telemetry event contains API transport data, including the API URL, correlation identifiers for mapping multiple interconnected API calls, and response metadata like status codes and error details.
 
 Following is the event data spec which is the same as defined in the Open Network Telemetry Spec:
 
@@ -254,7 +254,7 @@ Following event (A discover API call for example) contains an example complete e
 
 #### METRIC
 
-Metric event is used by Network Participants to share business metrics data with the network observability infrastructure.\
+Metric event is used by Members to share business metrics data with the network observability infrastructure.\
 Following is the metric data spec as per the Open Network Telemetry Spec:
 
 ```javascript
@@ -361,7 +361,7 @@ Following metric event (An AA vs non AA usage metric) contains an example comple
 
 #### AUDIT
 
-Audit events are used by participants to communicate about updates and state changes of entities within the network. The entities include domain objects like consent, as well as the participants themselves. In addition audit events can also be used to store all transaction logs.
+Audit events are used by members to communicate about updates and state changes of entities within the network. The entities include domain objects like consent, as well as the members themselves. In addition audit events can also be used to store all transaction logs.
 
 Following is the overall structure for Log events as per the open telemetry spec:
 

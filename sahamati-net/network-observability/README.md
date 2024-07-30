@@ -4,12 +4,12 @@ Observability is a widely recognized practice within the realm of digital paymen
 
 In open & decentralized networks, critical factors that contribute to the success of networks include:
 
-* Adherence to Protocols: for seamless integration among all network participants
-* High Success Rate: for continuous growth of network, its participants and consumers
-* Operational Efficiency: for becoming scale efficient and drive population scale adoption
-* Policy Compliance: for improving trust, and fostering fair & competent ecosystem
+* **Adherence to Protocols:** for seamless integration among all members
+* **High Success Rate:** for continuous growth of network, its members and consumers
+* **Operational Efficiency:** for becoming scale efficient and drive population scale adoption
+* **Policy Compliance:** for improving trust, and fostering fair & competent ecosystem
 
-Network Observability is a structured approach to observe business, operational, & technical aspects of a network, and to discover actionable insights. Network observability provides a shared understanding among all participants regarding the network's growth and health by identifying key metrics and establishing standard definitions. This fosters compliance with API protocols, facilitates the observation and improvement of operational efficiency, and encourages adherence to network policies.
+Network Observability is a structured approach to observe business, operational, & technical aspects of a network, and to discover actionable insights. Network observability provides a shared understanding among all members regarding the network's growth and health by identifying key metrics and establishing standard definitions. This fosters compliance with API protocols, facilitates the observation and improvement of operational efficiency, and encourages adherence to network policies.
 
 **Network Observability plays a pivotal role in monitoring and achieving the key objectives of the network, thereby ensuring optimal Network Performance, Health & Growth**
 
@@ -34,7 +34,7 @@ These limitations underscore the importance of network observability, and Sahama
 
 1. **A unified view of truth that all parties involved can agree with:** With the limitations in SAANS V2.0, where the system only captures 10-minute summaries of the FIP technical health, a significant dimension of the information gets dropped and hence starts to cause blind corners in the ecosystem.&#x20;
 2. **A source of truth for automated support and dispute resolution:** Currently, the support system and dispute resolution rely heavily on bilateral sharing of transaction data for identification and resolution of transactions and failures, Sahamati Network Observability will allow for pinpointing of failure points and, in most scenarios, automated identification.&#x20;
-3. **A mechanism for automated recon and billing:** With the pricing framework coming into the picture now, Sahamati Network Observability will enable automated reconciliation and billing for all network participants based on the data reported to telemetry
+3. **A mechanism for automated recon and billing:** With the pricing framework coming into the picture now, Sahamati Network Observability will enable automated reconciliation and billing for all members based on the data reported to telemetry
 4. **Input into fraud engine:** As Sahamati is currently working on a fraud detection engine to protect customers, Sahamati Network Observability will play an integral role in its design and implementation.&#x20;
 5. **Regulatory reporting:** Sahamati Network Observability will provide end-to-end visibility and allow entities to create regulatory reports and insights through the system itself for their reporting plus it will allow regulators to observe the performance and growth of the AA ecosystem.&#x20;
 6. **Fair Use of AA:** Sahamati Network Observability will enable the detection and reporting of Fair Use violations and will allow for Sahamati as network facilitators to enable a smooth ecosystem.
@@ -45,7 +45,7 @@ These limitations underscore the importance of network observability, and Sahama
 
 Over the past year, the AA ecosystem has grown significantly, processing over 60 million consents. However, this growth has revealed several gaps and challenges:
 
-1. **Multiple Versions of the Truth**: Different network participants have conflicting data, leading to inconsistencies.
+1. **Multiple Versions of the Truth**: Different members have conflicting data, leading to inconsistencies.
 2. **Poor Network Visibility**: Difficulties in reconciling data across the network due to limited visibility.
 3. **Transparency Issues**: Lack of transparency for both internal and external stakeholders.
 4. **Fragmented Datasets**: Data is scattered and hard to access.
@@ -59,12 +59,12 @@ Over the past year, the AA ecosystem has grown significantly, processing over 60
 
 ## Key design principles
 
-It’s important that there is a strong foundation setup with the help of principles that allow only relevant information to flow transparently across participants while protecting the rights of each participant to maintain their unique business propositions and interests protected. Therefore, Sahamati Network Observability has been designed keeping in mind following design principles:
+It’s important that there is a strong foundation setup with the help of principles that allow only relevant information to flow transparently across members while protecting the rights of each member to maintain their unique business propositions and interests protected. Therefore, Sahamati Network Observability has been designed keeping in mind following design principles:
 
 * Minimalism, simplicity and efficiency in design, emphasizing the importance of minimizing unnecessary complexity and features to achieve optimal performance and usability.
-* Rather than imposing strict regulations or mandates, encourage voluntary participation and collaboration among network participants, fostering a sense of ownership and cooperation within the ecosystem.
-* View the network as a collaborative effort involving all participants, where each member contributes to the overall success and functionality of the network, promoting a sense of shared responsibility and mutual benefit.
-* Sahamati, in this context, serves as a facilitator for establishing standardized protocols and frameworks within the network, providing guidelines and support to ensure interoperability and consistency across different components and participants.
+* Rather than imposing strict regulations or mandates, encourage voluntary participation and collaboration among members, fostering a sense of ownership and cooperation within the ecosystem.
+* View the network as a collaborative effort involving all members, where each member contributes to the overall success and functionality of the network, promoting a sense of shared responsibility and mutual benefit.
+* Sahamati, in this context, serves as a facilitator for establishing standardized protocols and frameworks within the network, providing guidelines and support to ensure interoperability and consistency across different components and members.
 * Prioritize anonymity and the exclusion of sensitive information in the collection and analysis of business metrics, safeguarding privacy and confidentiality while still enabling effective monitoring and evaluation of network performance.
-* Extend anonymity to technical metrics and logs at the individual participant level, ensuring that network monitoring and troubleshooting activities do not compromise the privacy or security of participants' data.
+* Extend anonymity to technical metrics and logs at the individual member level, ensuring that network monitoring and troubleshooting activities do not compromise the privacy or security of members' data.
 * Adopt open standards for data specification, promoting interoperability, accessibility, and collaboration among different stakeholders and systems.
