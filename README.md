@@ -30,7 +30,7 @@ Sahamati Net aims to create an interoperable, customer-centric ecosystem through
 
 Currently, Sahamati Net is dedicated to addressing key ecosystem challenges, including interoperability, data usage compliance, and operational efficiency, to provide a seamless experience for AA ecosystem participants. The following are the primary focus areas of Sahamati Net:
 
-* **Interoperability:** Enable ecosystem participants to connect seamlessly with all other Sahamati Network entities. This eliminates the need for multiple integration points, significantly reducing the integration and operational efforts for NPs.
+* **Interoperability:** Enable ecosystem participants to connect seamlessly with all other Sahamati Network entities. This eliminates the need for multiple integration points, significantly reducing the integration and operational efforts for members.
 * **Fair Use Compliance:** FIUs and AAs are expected to align their consent usage within ecosystem-defined boundaries to ensure the fair use of AA. Sahamati Net aims to develop a programmatic, policy-based automated framework that ensures compliance with fair use policies regarding customer consent and data.
 * **Network Observability:** Sahamati Net aims to scale the current network health monitoring system to a comprehensive infrastructure that provides real-time data access and monitors fraud to aid efficient dispute resolution, billing & reconciliation, and tracking network usage.
 * **Policy Development and Advocacy**: The organization is engaged in developing policies and advocating for regulatory frameworks that support the growth and sustainability of the AA ecosystem.

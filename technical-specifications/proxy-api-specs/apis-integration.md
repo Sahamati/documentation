@@ -2,13 +2,13 @@
 
 ## Current API reference <a href="#current-api-reference" id="current-api-reference"></a>
 
-With the current structure, the API requests are sent to the respective recipient NP directly. This requires each NP to understand the metadata of the recipient NP and use their base path while sending.
+With the current structure, the API requests are sent to the respective recipient member directly. This requires each member to understand the metadata of the recipient member and use their base path while sending.
 
 <figure><img src="../../.gitbook/assets/Proxy-Existing-workflow.png" alt=""><figcaption><p>Existing approach to use the APIs by AA Ecosystem</p></figcaption></figure>
 
 ## Using Sahamati Proxy APIs <a href="#using-sahamati-proxy-apis" id="using-sahamati-proxy-apis"></a>
 
-Sahamati Proxy makes it easy for the NPs to send the request to any recipient just by adding the **recipient identifier** in the request body under **meta.headers** section.
+Sahamati Proxy makes it easy for the members to send the request to any recipient just by adding the **recipient identifier** in the request body under **meta.headers** section.
 
 <figure><img src="../../.gitbook/assets/proxy-new-workflow.png" alt=""><figcaption><p>Using Sahamati Proxy APIs for AA Ecosystem</p></figcaption></figure>
 

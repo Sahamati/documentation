@@ -2,7 +2,7 @@
 
 ## Integration Steps
 
-Outlined below are the changes that NPs need to make to their implementation to use the Sahamati Proxy.
+Outlined below are the changes that members need to make to their implementation to use the Sahamati Proxy.
 
 * Using Sahamati proxy API endpoint [https://proxy.sandbox.sahamati.org.in/api/v2](https://proxy.sandbox.sahamati.org.in/api/v2) as base path for all the requests.
 * Wrapping the existing request body in the below template, under **data** section and including the **recipientid** under **meta.headers** section.
