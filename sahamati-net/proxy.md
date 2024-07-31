@@ -31,6 +31,12 @@ The member (entity) will be onboarded along with **a user with admin role** for 
 Once the member entry is added to CR, they can whitelist Sahamati Proxy IP.
 {% endhint %}
 
-### Credentials by Proxy <a href="#credentials-by-proxy" id="credentials-by-proxy"></a>
+### Member Credentials <a href="#credentials-by-proxy" id="credentials-by-proxy"></a>
 
-Upon the successful onboarding of the new member, a **client ID and secret** are issued. These credentials are used to generate an access token in the form of a JSON Web Token (JWT). This access token is then included in the Authorization header of all API requests made by the member to ensure authenticity and secure access to the Sahamati Network Proxy.
+Upon the successful onboarding of the new member, a **Client ID and Secret** are issued. These credentials are used to generate an **access token** in the form of a JSON Web Token (JWT). This access token is then included in the Authorization header of all API requests made by the member to ensure authenticity and secure access to the Sahamati Network Proxy.
+
+### User Credentials
+
+Each member of the Sahamati Network will be onboarding **a user with admin role** to manage member's profile and mananging the secret lifecycle.
+
+The user will receive an email with the credentials to generate user access token for accessing the APIs from Sahamati Network services.
