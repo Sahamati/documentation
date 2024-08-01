@@ -8,8 +8,8 @@ Sahamati Proxy serves as an additional layer on top of the AA network, offering 
 
 The members to register with Sahamati proxy for accessing the APIs and send requests through the Sahamati proxy below are the prerequisites.
 
-* **Base Path** of the API endpoint by member. This will be used by the Sahamati Proxy to forward requests received from other members to the intended target.
-* **RSA Public Key** should be in JSON Web Token (JWT) format. This will be used by other members to validate the request's signature and ensure it has not been tampered with. This adheres to the current process and is not an additional requirement.
+* **Base URL** of the API endpoint by member. This will be used by the Sahamati Proxy to forward requests received from other members to the intended target.
+* **Certificate (RSA Public Key)** should be in JSON Web Token (JWT) format. This will be used by other members to validate the request's signature and ensure it has not been tampered with. This adheres to the current process and is not an additional requirement.
 
 ## Onboarding Process
 
