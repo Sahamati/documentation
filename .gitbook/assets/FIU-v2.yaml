@@ -30,8 +30,8 @@ consumes:
   - application/json
 produces:
   - application/json
-host: proxy.sandbox.sahamati.org.in
-basePath: /api/v2
+host: api.sandbox.sahamati.org.in
+basePath: /proxy/v2
 paths:
   /Consent/Notification:
     post:

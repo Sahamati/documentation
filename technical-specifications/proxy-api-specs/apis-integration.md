@@ -12,7 +12,7 @@ Sahamati Proxy makes it easy for the members to send the request to any recipien
 
 <figure><img src="../../.gitbook/assets/proxy-new-workflow.png" alt=""><figcaption><p>Using Sahamati Proxy APIs for AA Ecosystem</p></figcaption></figure>
 
-<table><thead><tr><th width="157">Particulars</th><th width="192">Comments</th><th></th></tr></thead><tbody><tr><td>Host</td><td>The base path to use by the members of Sahamati Proxy.</td><td>​<a href="https://proxy.sandbox.sahamati.org.in/">https://proxy.sandbox.sahamati.org.in</a>​</td></tr><tr><td>Headers</td><td>This will remain same as previous.</td><td><p>​</p><ul><li>x-jws-signature - Authorization</li><li>Token (from sender)</li></ul></td></tr><tr><td>recipientid</td><td>The recipientid is a required property. It is the identifier of the receiver to whom the API call needs to be forwarded.</td><td><pre class="language-json"><code class="lang-json">{
+<table><thead><tr><th width="157">Particulars</th><th width="176">Comments</th><th></th></tr></thead><tbody><tr><td>Host</td><td>The base path to use by the members of Sahamati Proxy.</td><td><a href="https://api.sandbox.sahamati.org.in/proxy">​https://api.sandbox.sahamati.org.in/proxy</a></td></tr><tr><td>Headers</td><td>This will remain same as previous.</td><td><p>​</p><ul><li>x-jws-signature - Authorization</li><li>Token (from sender)</li></ul></td></tr><tr><td>recipientid</td><td>The recipientid is a required property. It is the identifier of the receiver to whom the API call needs to be forwarded.</td><td><pre class="language-json"><code class="lang-json">{
  "meta": 
   {
     "headers": {

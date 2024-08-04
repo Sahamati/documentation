@@ -38,6 +38,14 @@ Considering the modifications to the API specification, here is the Open API Spe
 
 ## FIP - API Specification <a href="#fiu-api-specification" id="fiu-api-specification"></a>
 
+{% swagger src="../../.gitbook/assets/FIP-v2.yaml" path="/Consent" method="post" %}
+[FIP-v2.yaml](../../.gitbook/assets/FIP-v2.yaml)
+{% endswagger %}
+
+{% swagger src="../../.gitbook/assets/FIP-v2.yaml" path="/Consent/Notification" method="post" %}
+[FIP-v2.yaml](../../.gitbook/assets/FIP-v2.yaml)
+{% endswagger %}
+
 {% swagger src="../../.gitbook/assets/FIP-v2.yaml" path="/Accounts/discover" method="post" %}
 [FIP-v2.yaml](../../.gitbook/assets/FIP-v2.yaml)
 {% endswagger %}
@@ -59,14 +67,6 @@ Considering the modifications to the API specification, here is the Open API Spe
 {% endswagger %}
 
 {% swagger src="../../.gitbook/assets/FIP-v2.yaml" path="/FI/fetch" method="post" %}
-[FIP-v2.yaml](../../.gitbook/assets/FIP-v2.yaml)
-{% endswagger %}
-
-{% swagger src="../../.gitbook/assets/FIP-v2.yaml" path="/Consent/Notification" method="post" %}
-[FIP-v2.yaml](../../.gitbook/assets/FIP-v2.yaml)
-{% endswagger %}
-
-{% swagger src="../../.gitbook/assets/FIP-v2.yaml" path="/Consent" method="post" %}
 [FIP-v2.yaml](../../.gitbook/assets/FIP-v2.yaml)
 {% endswagger %}
 
