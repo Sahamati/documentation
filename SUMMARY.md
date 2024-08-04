@@ -14,7 +14,7 @@
     * [Benefits of the new structure](technical-specifications/proxy-api-specs/benefits-of-the-new-structure.md)
     * [APIs Integration](technical-specifications/proxy-api-specs/apis-integration.md)
     * [Open API Specification](technical-specifications/proxy-api-specs/open-api-specification.md)
+    * [Integration using Simulator](technical-specifications/proxy-api-specs/integration-using-simulator.md)
   * [Fair Use Specs](technical-specifications/fair-use-specs.md)
   * [Network Telemetry Specs](technical-specifications/network-telemetry-specs.md)
-  * [Integration using Simulator](technical-specifications/integration-using-simulator.md)
 * [Glossary](glossary.md)
