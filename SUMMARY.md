@@ -18,3 +18,4 @@
   * [Fair Use Specs](technical-specifications/fair-use-specs.md)
   * [Network Telemetry Specs](technical-specifications/network-telemetry-specs.md)
 * [Glossary](glossary.md)
+* [Guidelines](guidelines.md)
