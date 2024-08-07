@@ -10,8 +10,6 @@
     * [Data Governance](sahamati-net/network-observability/data-governance.md)
 * [Technical Specifications](technical-specifications/README.md)
   * [Proxy API Specs](technical-specifications/proxy-api-specs/README.md)
-    * [Modifications to Request](technical-specifications/proxy-api-specs/modifications-to-request.md)
-    * [Benefits of the new structure](technical-specifications/proxy-api-specs/benefits-of-the-new-structure.md)
     * [APIs Integration](technical-specifications/proxy-api-specs/apis-integration.md)
     * [Open API Specification](technical-specifications/proxy-api-specs/open-api-specification.md)
     * [Integration using Simulator](technical-specifications/proxy-api-specs/integration-using-simulator.md)
