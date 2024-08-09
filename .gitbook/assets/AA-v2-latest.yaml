@@ -70,7 +70,7 @@ paths:
           type: string
           in: header
           required: true
-          description: Detached JWS of the body
+          description: It is the identifier of the receiver to whom the API call needs to be forwarded.
         - name: body
           in: body
           required: true
@@ -179,7 +179,7 @@ paths:
           type: string
           in: header
           required: true
-          description: Detached JWS of the body
+          description: It is the identifier of the receiver to whom the API call needs to be forwarded.
         - name: body
           in: body
           schema:
@@ -290,7 +290,7 @@ paths:
           type: string
           in: header
           required: true
-          description: Detached JWS of the body
+          description: It is the identifier of the receiver to whom the API call needs to be forwarded.
         - name: body
           in: body
           schema:
@@ -399,7 +399,7 @@ paths:
           type: string
           in: header
           required: true
-          description: Detached JWS of the body
+          description: It is the identifier of the receiver to whom the API call needs to be forwarded.
         - name: body
           in: body
           required: true
@@ -508,7 +508,7 @@ paths:
           type: string
           in: header
           required: true
-          description: Detached JWS of the body
+          description: It is the identifier of the receiver to whom the API call needs to be forwarded.
         - name: body
           in: body
           schema:
@@ -637,7 +637,7 @@ paths:
           type: string
           in: header
           required: true
-          description: Detached JWS of the body
+          description: It is the identifier of the receiver to whom the API call needs to be forwarded.
         - name: body
           required: true
           in: body
@@ -749,7 +749,7 @@ paths:
           type: string
           in: header
           required: true
-          description: Detached JWS of the body
+          description: It is the identifier of the receiver to whom the API call needs to be forwarded.
         - name: body
           required: true
           in: body
@@ -860,7 +860,7 @@ paths:
           type: string
           in: header
           required: true
-          description: Detached JWS of the body
+          description: It is the identifier of the receiver to whom the API call needs to be forwarded.
         - name: body
           required: true
           in: body

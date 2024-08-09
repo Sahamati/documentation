@@ -56,7 +56,7 @@ paths:
           
           in: header
           required: true
-          description: Detached JWS of the body
+          description: It is the identifier of the receiver to whom the API call needs to be forwarded.
         - name: body
           required: true
           in: body
@@ -166,7 +166,7 @@ paths:
           
           in: header
           required: true
-          description: Detached JWS of the body
+          description: It is the identifier of the receiver to whom the API call needs to be forwarded.
         - name: body
           required: true
           in: body

@@ -71,7 +71,7 @@ paths:
           
           in: header
           required: true
-          description: Detached JWS of the body
+          description: It is the identifier of the receiver to whom the API call needs to be forwarded.
         - name: body
           in: body
           description: Information of the user for discovering the account/s at the FIP
@@ -171,7 +171,7 @@ paths:
           
           in: header
           required: true
-          description: Detached JWS of the body
+          description: It is the identifier of the receiver to whom the API call needs to be forwarded.
         - name: body
           in: body
           schema:
@@ -269,7 +269,7 @@ paths:
           
           in: header
           required: true
-          description: Detached JWS of the body
+          description: It is the identifier of the receiver to whom the API call needs to be forwarded.
         - name: body
           in: body
           schema:
@@ -368,7 +368,7 @@ paths:
           
           in: header
           required: true
-          description: Detached JWS of the body
+          description: It is the identifier of the receiver to whom the API call needs to be forwarded.
         - name: body
           in: body
           schema:
@@ -467,7 +467,7 @@ paths:
           
           in: header
           required: true
-          description: Detached JWS of the body
+          description: It is the identifier of the receiver to whom the API call needs to be forwarded.
         - name: body
           in: body
           required: true
@@ -574,7 +574,7 @@ paths:
           
           in: header
           required: true
-          description: Detached JWS of the body
+          description: It is the identifier of the receiver to whom the API call needs to be forwarded.
         - name: body
           in: body
           schema:
@@ -681,7 +681,7 @@ paths:
           
           in: header
           required: true
-          description: Detached JWS of the body
+          description: It is the identifier of the receiver to whom the API call needs to be forwarded.
         - name: body
           in: body
           description: Notification about the status of consent
@@ -780,7 +780,7 @@ paths:
           
           in: header
           required: true
-          description: Detached JWS of the body
+          description: It is the identifier of the receiver to whom the API call needs to be forwarded.
         - name: body
           in: body
           description: The Signed Consent sent by AA to FIP.
