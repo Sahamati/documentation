@@ -8,7 +8,9 @@ The Response Simulator is designed to simulate the behaviour of real Entity’s 
 
 The sample workflow diagram below illustrates the usage of the Response Simulator by including a simulated response with the expected response.
 
-<figure><img src="../../.gitbook/assets/Simulator-sample-flow-1.png" alt=""><figcaption><p>Entity Integration with Proxy using "Response Simulator"</p></figcaption></figure>
+
+
+<figure><img src="../../.gitbook/assets/Simulator-latest-wf-1.png" alt=""><figcaption><p>Entity Integration with Proxy using "Response Simulator"</p></figcaption></figure>
 
 The following two details are required in the request to use the APIs with Response Simulator:
 
@@ -34,7 +36,9 @@ This AA response simulator will support all the APIs listed under this ReBIT Spe
 
 Sample FI/fetch workflow using AA-SIMULATOR:
 
-<figure><img src="../../.gitbook/assets/Simulator-sample-flow-2.png" alt=""><figcaption></figcaption></figure>
+
+
+<figure><img src="../../.gitbook/assets/Simulator-latest-wf-2.png" alt=""><figcaption></figcaption></figure>
 
 ### FIU Response Simulator
 
