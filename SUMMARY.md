@@ -18,5 +18,6 @@
     * [Integration using Simulator](technical-specifications/proxy-api-specs/integration-using-simulator.md)
   * [Fair Use Specs](technical-specifications/fair-use-specs.md)
   * [Network Telemetry Specs](technical-specifications/network-telemetry-specs.md)
+  * [Identity & Access Management](technical-specifications/identity-and-access-management.md)
 * [Glossary](glossary.md)
 * [Guidelines](guidelines.md)
