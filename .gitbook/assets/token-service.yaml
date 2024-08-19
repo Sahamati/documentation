@@ -15,6 +15,8 @@ info:
 tags:
   - name: Entity APIs
   - name: User APIs
+schemes:
+  - https
 host: api.sandbox.sahamati.org.in
 basePath: /iam/v1
 paths:
@@ -365,27 +367,19 @@ paths:
         - Entity APIs
       summary: Entity Token Generate
       description: 'This API allows you to generate a token for a specific entity within the Sahamati Identity and Access Management (IAM) system. The generated token is used to authenticate and authorize API requests on behalf of the entity.'
+      consumes:
+        - application/x-www-form-urlencoded
       parameters:
-      - name: Content-Type
-        type: string
-        in: header
-        required: true
-        description: 'application/x-www-form-urlencoded'
-      - name: body
-        in: body
-        description: Credentials of the entity
-        schema:
-          type: object
-          required:
-            - id
-            - secret
-          properties:
-            id:
-              type: string
-              example: "<entity_id>"
-            secret:
-              type: string
-              example: "<entity_secret>"
+        - name: id
+          in: formData
+          description: The entity ID.
+          required: true
+          type: string
+        - name: secret
+          in: formData
+          description: The secret associated with the entity.
+          required: true
+          type: string
       responses:
         '200':
           description: Successful response
@@ -609,27 +603,19 @@ paths:
         - User APIs
       summary: User Token Generate
       description: 'This API allows a registered user to generate an authentication token within the Sahamati Identity and Access Management (IAM) system. The generated token is used to authenticate and authorize API requests on behalf of the user.'
+      consumes:
+        - application/x-www-form-urlencoded
       parameters:
-      - name: Content-Type
-        type: string
-        in: header
-        required: true
-        description: 'application/x-www-form-urlencoded'
-      - name: body
-        in: body
-        description: Credentials of the User
-        schema:
-          type: object
-          required:
-            - username
-            - password
-          properties:
-            username:
-              type: string
-              example: "<username>"
-            password:
-              type: string
-              example: "<password>"
+        - name: username
+          in: formData
+          description: User email.
+          required: true
+          type: string
+        - name: password
+          in: formData
+          description: The password associated with the user.
+          required: true
+          type: string
       responses:
         '200':
           description: Successful response
@@ -1002,6 +988,11 @@ definitions:
   
   EntitySecretRequest:
     type: "object"
+    required:
+      - ver
+      - timestamp
+      - txnid
+      - entityid
     properties:
       ver:
         type: "string"

@@ -1,0 +1,50 @@
+openapi: 3.0.0
+info:
+  title: User Token API
+  description: API to generate a user token.
+  version: 1.0.0
+servers:
+  - url: https://tokens.sandbox.sahamati.org.in/iam/v1
+    description: Sandbox Environment
+paths:
+  /user/token/generate:
+    post:
+      summary: Generate a user token
+      description: Generates a token for the user using the provided `username` and `password`.
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                  description: The username of the user.
+                  example: sowmya.dixit
+                password:
+                  type: string
+                  format: password
+                  description: The password of the user.
+                  example: '********'
+              required:
+                - username
+                - password
+      responses:
+        '200':
+          description: Token generated successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+                    description: The generated token.
+                    example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+        '400':
+          description: Bad Request - Invalid parameters
+        '401':
+          description: Unauthorized - Invalid username or password
+        '500':
+          description: Internal Server Error - Unable to generate token
