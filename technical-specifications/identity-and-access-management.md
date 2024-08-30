@@ -4,17 +4,24 @@ Members are onboarded to Sahamati Net by creating a entity profile, with at leas
 
 Here are the steps for a member to onboard.
 
-* [Request for the registration of the member or entity.](../sahamati-net/proxy.md#onboarding-process)
-* [Request for the registration of the user.](../sahamati-net/proxy.md#onboarding-process)
-* Follow the bleow steps for the Member and User activation.
+* [Member & User Registration](../sahamati-net/proxy.md#onboarding-process)
+* Account Activation
+  * [User](identity-and-access-management.md#user-account-activation)
+  * [Member](identity-and-access-management.md#member-entity-activation)
 
-### User account activation:
+### User Account Activation:
 
-Upon onboarding, the designated user will receive an email containing a link to confirm their email address. After confirming, the user will be prompted to configure a password, completing the account activation process.
+During onboarding, the designated user will receive an email with a link to verify their email address. Once verified, the user will be prompted to set up a password, finalizing the account activation process. Here are the main steps for activating a user account:
 
-### Member (Entity) activation:
+* [x] Verify email address
+* [x] Set a password for the user account
 
-To fully activate a member on Sahamati Net, at least one user associated with the member must be activated. This user will then initiate the process to generate a secret, which is essential for further API interactions.
+### Member (Entity) Activation:
+
+To fully activate a member on Sahamati Net, at least one associated user must be activated. This user will then begin the process of generating a secret, which is crucial for future API interactions. The key steps for member activation are as follows:
+
+* [x] Activate the user account associated with the member.
+* [x] Generate a secret for the member (entity).
 
 ## Token Generation APIs:
 

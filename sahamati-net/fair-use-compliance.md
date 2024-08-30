@@ -10,18 +10,36 @@ Each use case is mapped to one Purpose Code and the AA ecosystem is collaboratin
 
 ```javascript
 {
-  "Purpose Code": "103: Aggregated statement",
+  "Purpose Code": "103",
   "Use Case": "Underwriting Risk: Underwriting a loan application",
   "License Types": "Bank, NBFC, HFC",
   "Fair Use Parameters": {
-    "FITypes": ["All RBI", "SEBI and GSTN",  "FI Types"]
-    "Consent Types": ["Profile", "Summary", "Transactions"]
-    "FetchType": "Once"
-    "Maximum Frequency": "One-time"
-    "MaximumFIDataRange": "Consent expiry minus 14 months"
-    "Maximum Consent Expiry": "1 month"
-    "Maximum Data Expiry": "1 month"
+    "FITypes": [
+      "DEPOSIT", "TERM_DEPOSIT", "RECURRING_DEPOSIT", "SIP", "CP",
+      "GOVT_SECURITIES", "EQUITIES", "BONDS", "DEBENTURES", "MUTUAL_FUNDS",
+      "ETF", "IDR", "CIS", "AIF", "INSURANCE_POLICIES", "NPS", "INVIT",
+      "REIT", "GSTR1_3B", "LIFE_INSURANCE", "GENERAL_INSURANCE", "OTHER"
+    ],
+    "Consent Types": ["Profile", "Summary", "Transactions"],
+    "FetchType": "ONETIME",
+    "MaximumFrequency": {
+      "unit": "MONTH",
+      "value": 1
+    },
+    "MaximumFIDataRange": {
+      "unit": "MONTH",
+      "value": 14
+    },
+    "Maximum Consent Expiry": {
+      "unit": "MONTH",
+      "value": 1
+    },
+    "Maximum Data Expiry": {
+      "unit": "MONTH",
+      "value": 1
+    },
     "Consent Mode": ["Store", "View"]
+  }
 }
 ```
 
