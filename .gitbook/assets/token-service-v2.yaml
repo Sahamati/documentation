@@ -1,0 +1,742 @@
+swagger: '2.0'
+info:
+  title: Token Service APIs
+  x-custom-tags:
+    x-api-name: Token Service APIs
+  description: >-
+    # Summary
+    
+    This collection of APIs provides comprehensive functionality for managing users and entities within the Sahamati IAM system, from user registration and password management to entity-specific operations like secret management and token generation.
+    
+    ---
+  version: 2.1.0
+  contact:
+    email: help@sahamati.org.in
+tags:
+  - name: Entity APIs
+  - name: User APIs
+schemes:
+  - https
+host: api.sandbox.sahamati.org.in
+basePath: /iam/v1
+paths:
+  /entity/secret/read:
+    post:
+      tags:
+        - Entity APIs
+      summary: Secret Read API
+      description: |
+        The Secret Read API enables admin to retrieve the current secret for a specific member. To access this information, an user access token with administrative rights must be provided. Below is the API specification.
+      parameters:
+      - name: Authorization
+        type: string
+        in: header
+        required: true
+        description: User Bearer token for authorization
+      - name: body
+        in: body
+        description: Information of the entity to read its secret
+        schema:
+          $ref: '#/definitions/EntitySecretRequest'
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            $ref: '#/definitions/EntitySecretResponse'
+        '401':
+          description: Unauthorized
+          schema:
+            type: "object"
+            properties:
+              ver:
+                type: "string"
+                example: "1.0.0"
+              timestamp:
+                type: "string"
+                format: "date-time"
+                example: "2024-07-16T11:33:34.509Z"
+              txnId:
+                type: "string"
+                example: "f35761ac-4a18-11e8-96ff-0277a9fbfedc"
+              errorCode:
+                type: "string"
+                example: "Unauthorized"
+              errorMsg:
+                type: "string"
+                example: "Invalid entity id"
+        '400':
+          description: Bad Request
+          schema:
+            type: "object"
+            properties:
+              ver:
+                type: "string"
+                example: "1.0.0"
+              timestamp:
+                type: "string"
+                format: "date-time"
+                example: "2024-07-16T11:33:34.509Z"
+              txnId:
+                type: "string"
+                example: "f35761ac-4a18-11e8-96ff-0277a9fbfedc"
+              errorCode:
+                type: "string"
+                example: "Bad Request"
+              errorMsg:
+                type: "string"
+                example: "Entity Id is missing in the request"
+  /entity/secret/reset:
+    post:
+      tags:
+        - Entity APIs
+      summary: Secret Reset API
+      description: |
+        The Secret Reset API is designed to allow an admin to reset a member's secret. To perform this action, an access token with administrative privileges for the specified member is required. Once reset, the newly generated secret will have a validity period of 20 days, after which it will need to be renewed or reset again. Below is the API specification.
+      parameters:
+      - name: Authorization
+        type: string
+        in: header
+        required: true
+        description: User Bearer token for authorization
+      - name: body
+        in: body
+        description: Information of the entity to reset its secret
+        schema:
+          $ref: '#/definitions/EntitySecretRequest'
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            $ref: '#/definitions/EntitySecretResponse'
+        '401':
+          description: Unauthorized
+          schema:
+            type: "object"
+            properties:
+              ver:
+                type: "string"
+                example: "1.0.0"
+              timestamp:
+                type: "string"
+                format: "date-time"
+                example: "2024-07-16T11:33:34.509Z"
+              txnId:
+                type: "string"
+                example: "f35761ac-4a18-11e8-96ff-0277a9fbfedc"
+              errorCode:
+                type: "string"
+                example: "Unauthorized"
+              errorMsg:
+                type: "string"
+                example: "Invalid entity id"
+        '400':
+          description: Bad Request
+          schema:
+            type: "object"
+            properties:
+              ver:
+                type: "string"
+                example: "1.0.0"
+              timestamp:
+                type: "string"
+                format: "date-time"
+                example: "2024-07-16T11:33:34.509Z"
+              txnId:
+                type: "string"
+                example: "f35761ac-4a18-11e8-96ff-0277a9fbfedc"
+              errorCode:
+                type: "string"
+                example: "Bad Request"
+              errorMsg:
+                type: "string"
+                example: "Entity Id is missing in the request"
+  /entity/token/generate:
+    post:
+      tags:
+        - Entity APIs
+      summary: Entity Token Generate API
+      description: |
+        The generation of a Member (Entity) Access Token requires the ID (client ID) and the Secret. This token is used for the interaction with other members. The access token has an expiry of 24 hrs. Below is the API specification.
+      consumes:
+        - application/x-www-form-urlencoded
+      parameters:
+        - name: id
+          in: formData
+          description: The entity ID.
+          required: true
+          type: string
+        - name: secret
+          in: formData
+          description: The secret associated with the entity.
+          required: true
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            $ref: '#/definitions/TokenResponse'
+        '401':
+          description: Unauthorized
+          schema:
+            type: "object"
+            properties:
+              ver:
+                type: "string"
+                example: "1.0.0"
+              timestamp:
+                type: "string"
+                format: "date-time"
+                example: "2024-07-16T11:33:34.509Z"
+              txnId:
+                type: "string"
+                example: "f35761ac-4a18-11e8-96ff-0277a9fbfedc"
+              errorCode:
+                type: "string"
+                example: "Unauthorized"
+              errorMsg:
+                type: "string"
+                example: "Invalid entity id/secret or secret is expired"
+        '400':
+          description: Bad Request
+          schema:
+            type: "object"
+            properties:
+              ver:
+                type: "string"
+                example: "1.0.0"
+              timestamp:
+                type: "string"
+                format: "date-time"
+                example: "2024-07-16T11:33:34.509Z"
+              txnId:
+                type: "string"
+                example: "f35761ac-4a18-11e8-96ff-0277a9fbfedc"
+              errorCode:
+                type: "string"
+                example: "Bad Request"
+              errorMsg:
+                type: "string"
+                example: "Entity Id/Secret is missing in the request"
+  /user/token/generate:
+    post:
+      tags:
+        - User APIs
+      summary: User Token Generate API
+      description: |
+        To generate a User Access Token, the user must provide their username (email) and the password configured during the account activation process. This access token is necessary for interacting with the member's secret management APIs. The access token has an expiry of 24 hrs. Below is the API specification.
+      consumes:
+        - application/x-www-form-urlencoded
+      parameters:
+        - name: username
+          in: formData
+          description: User email.
+          required: true
+          type: string
+        - name: password
+          in: formData
+          description: The password associated with the user.
+          required: true
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            $ref: '#/definitions/TokenResponse'
+        '401':
+          description: Unauthorized
+          schema:
+            type: "object"
+            properties:
+              ver:
+                type: "string"
+                example: "1.0.0"
+              timestamp:
+                type: "string"
+                format: "date-time"
+                example: "2024-07-16T11:33:34.509Z"
+              txnId:
+                type: "string"
+                example: "f35761ac-4a18-11e8-96ff-0277a9fbfedc"
+              errorCode:
+                type: "string"
+                example: "Unauthorized"
+              errorMsg:
+                type: "string"
+                example: "Invalid username/password or password is expired"
+        '400':
+          description: Bad Request
+          schema:
+            type: "object"
+            properties:
+              ver:
+                type: "string"
+                example: "1.0.0"
+              timestamp:
+                type: "string"
+                format: "date-time"
+                example: "2024-07-16T11:33:34.509Z"
+              txnId:
+                type: "string"
+                example: "f35761ac-4a18-11e8-96ff-0277a9fbfedc"
+              errorCode:
+                type: "string"
+                example: "Bad Request"
+              errorMsg:
+                type: "string"
+                example: "User Id/Password is missing in the reques"
+
+definitions:
+  CreateEntityRequest:
+    type: object
+    required:
+      - ver
+      - timestamp
+      - txnId
+      - type
+      - status
+      - createdBy
+      - entity
+    properties:
+      ver:
+        type: string
+        example: '2.0.0'
+        description: API version.
+        xml:
+          attribute: true
+      timestamp:
+        type: string
+        description: Request creation timestamp.
+        format: date-time
+        example: '2023-06-26T06:41:54.904+0000'
+        xml:
+          attribute: true
+      txnId:
+        type: string
+        description: >-
+          Unique transaction identifier used for providing an end to end
+          traceability.
+        example: f35761ac-4a18-11e8-96ff-0277a9fbfedc
+        xml:
+          attribute: true
+      type:
+        type: string
+        example: 'AA'
+        description: Entity Type. AA/FIU/FIP
+        xml:
+          attribute: true
+      status:
+        type: string
+        example: 'ACTIVE'
+        description: Entity status.
+        xml:
+          attribute: true
+      createdBy:
+        type: string
+        example: 'Sahamati Admin'
+        description: Entity created by.
+        xml:
+          attribute: true
+      entity:
+        type: object
+        required:
+          - id
+          - name
+          - code
+          - entityhandle
+          - Identifiers
+          - baseurl
+          - fitypes
+          - certificate
+          - inboundports
+          - outboundports
+          - ips
+        description: >-
+          This block would contain the information about the entity used for onboarding.
+        properties:
+          id:
+            type: string
+            example: 'SANDBOX_AA_1'
+            description: Entity Id.
+            xml:
+              attribute: true
+          name:
+            type: string
+            example: SANDBOX_AA_1
+            description: Name of the Entity.
+            xml:
+              attribute: true
+          code:
+            type: string
+            example: SANDBOX_AA_1
+            description: Entity code.
+            xml:
+              attribute: true
+          entityhandle:
+            type: string
+            example: "@sandbox-aa"
+            description: Entity Handle.
+            xml:
+              attribute: true
+          Identifiers:
+            type: array
+            items:
+              type: object
+              description: >-
+                A set of Identifiers required for discovering the accounts of a customer at the FIP. 
+                It is mandatory to send atleast one STRONG category Identifier. 
+                All identifiers which are used primarily for discovery must be authenticated 
+                to ensure that they belong to the user to prevent malicious activity.
+              required:
+                - category
+                - type
+              properties:
+                category:
+                  type: string
+                  description: >-
+                    Category of identifiers based on the ability to find
+                    authenticity online.
+                  enum:
+                    - STRONG
+                    - WEAK
+                    - ANCILLARY
+                  xml:
+                    attribute: true
+                type:
+                  type: string
+                  description: Specifies the type of identifier.
+                  example: MOBILE
+                  xml:
+                    attribute: true
+                  enum:
+                    - MOBILE
+                    - AADHAR
+                    - EMAIL
+                    - PAN
+                    - DOB
+                    - ACCNO
+                    - CRN
+                    - PPAN
+                    - Others
+          baseurl:
+            type: string
+            example: v2:https://sandbox-aa.in
+            description: Base Url of the Entity.
+            xml:
+              attribute: true
+          webviewurl:
+            type: string
+            example: null
+            xml:
+              attribute: true
+          fitypes:
+            type: array
+            items:
+              type: string
+            example: [""]
+            description: Entity fi types.
+            xml:
+              attribute: true
+          certificates:
+            type: object
+            required:
+              - alg
+              - e
+              - kid
+              - kty
+              - n
+              - use
+            properties:
+                alg:
+                  type: string
+                  example: RS256
+                  xml:
+                    attribute: true
+                e:
+                  type: string
+                  example: AQAB
+                  xml:
+                    attribute: true
+                kid:
+                  type: string
+                  example: 4nEXdWUL6lG6CrWONiH6pFzh7kqvqX_BKOs8PFIYlya
+                  xml:
+                    attribute: true
+                kty:
+                  type: string
+                  example: RSA
+                  xml:
+                    attribute: true
+                n:
+                  type: string
+                  example: uh0fNzOYK2L2wGzixMLN-pOIHDH1tuA3rk6MmW39Q0VbAHWXmn0fZpS88hcIARmsPbbNXAW59VDCGEgPd49VVfiOeENI8PqliNml8gB1C1oGkpnAcda8O4v5kd_ZN4YZcLYqHyv9L8RnBidOzXzi-CxdgoFtM3pAnUYBERbbYi8LK5em8mBCixKuX_NszbrZiT14SY1AglNEWNPgibt3EMzGSxGyWyOgSEfsaQ4HGlppPU5lkWNx1GqktYelDxE7VQDNOGsoS1l03_JVr1oyYIA-1-M9ndq4Cjx3x9QFfaPts8MGw5yWSZCugbIeoBPzHmvlgm3CiGgqFQVrL1mJ2w
+                  xml:
+                    attribute: true
+                use:
+                  type: string
+                  example: sig
+                  xml:
+                    attribute: true
+          inboundports:
+            type: array
+            items:
+              type: string
+            example: ["433"]
+            xml:
+              attribute: true
+          outboundports:
+            type: array
+            items:
+              type: string
+            example: ["443"]
+            xml:
+              attribute: true
+          ips:
+            type: array
+            items:
+              type: string
+            example: ["3.109.145.80"]
+            xml:
+              attribute: true
+              
+  CreateEntityResponse:
+    type: "object"
+    properties:
+      ver:
+        type: "string"
+        example: "1.0.0"
+      timestamp:
+        type: "string"
+        format: "date-time"
+        example: "2024-07-16T11:33:34.509Z"
+      txnid:
+        type: "string"
+        example: "f35761ac-4a18-11e8-96ff-0277a9fbfedc"
+      message:
+        type: "string"
+        example: "Entity successfully onboarded."
+      entity:
+        type: "object"
+        properties:
+          id:
+            type: "string"
+            example: "aa-1"
+          name:
+            type: "string"
+            example: "aa"
+          status:
+            type: "string"
+            example: "ACTIVE"
+  
+  AddEntityUserRequest:
+    type: "object"
+    properties:
+      ver:
+        type: "string"
+        example: "1.0.0"
+      timestamp:
+        type: "string"
+        format: "date-time"
+        example: "2024-07-16T11:33:34.509Z"
+      txnid:
+        type: "string"
+        example: "f35761ac-4a18-11e8-96ff-0277a9fbfedc"
+      username:
+        type: "string"
+        example: "newuser@example.com"
+      entityid:
+        type: "string"
+        example: "aa-1"
+      roles:
+        type: "array"
+        items:
+          type: "string"
+        example:
+            - "entity-admin"
+  
+  EntityUserAddResponse:
+    type: "object"
+    properties:
+      ver:
+        type: "string"
+        example: "1.0.0"
+      timestamp:
+        type: "string"
+        format: "date-time"
+        example: "2024-07-16T11:33:34.509Z"
+      txnid:
+        type: "string"
+        example: "f35761ac-4a18-11e8-96ff-0277a9fbfedc"
+      message:
+        type: "string"
+        example: "User successfully linked to the entity."
+  
+  RemoveEntityUserRequest:
+    type: "object"
+    properties:
+      ver:
+        type: "string"
+        example: "1.0.0"
+      timestamp:
+        type: "string"
+        format: "date-time"
+        example: "2024-07-16T11:33:34.509Z"
+      txnid:
+        type: "string"
+        example: "f35761ac-4a18-11e8-96ff-0277a9fbfedc"
+      username:
+        type: "string"
+        example: "newuser@example.com"
+      entityid:
+        type: "string"
+        example: "aa-1"
+  
+  EntityUserRemoveResponse:
+    type: "object"
+    properties:
+      ver:
+        type: "string"
+        example: "1.0.0"
+      timestamp:
+        type: "string"
+        format: "date-time"
+        example: "2024-07-16T11:33:34.509Z"
+      txnid:
+        type: "string"
+        example: "f35761ac-4a18-11e8-96ff-0277a9fbfedc"
+      message:
+        type: "string"
+        example: "User successfully removed from the entity."
+  
+  EntitySecretRequest:
+    type: "object"
+    required:
+      - ver
+      - timestamp
+      - txnId
+      - entityId
+    properties:
+      ver:
+        type: "string"
+        example: "1.0.0"
+      timestamp:
+        type: "string"
+        format: "date-time"
+        example: "2024-07-16T11:33:34.509Z"
+      txnId:
+        type: "string"
+        example: "f35761ac-4a18-11e8-96ff-0277a9fbfedc"
+      entityId:
+        type: "string"
+        example: "aa-1"
+  
+  EntitySecretResponse:
+    type: "object"
+    properties:
+      ver:
+        type: "string"
+        example: "1.0.0"
+      timestamp:
+        type: "string"
+        format: "date-time"
+        example: "2024-07-16T11:33:34.509Z"
+      txnId:
+        type: "string"
+        example: "f35761ac-4a18-11e8-96ff-0277a9fbfedc"
+      entityId:
+        type: "string"
+        example: "aa-1"
+      secret:
+        type: "string"
+        example: "xxxxxxxxxxxxxxxxxxxxx"
+      expiresOn:
+        type: number
+        example: 1725010763
+  
+  TokenResponse:
+    type: "object"
+    properties:
+      ver:
+        type: "string"
+        example: "1.0.0"
+      timestamp:
+        type: "string"
+        format: "date-time"
+        example: "2024-07-16T11:33:34.509Z"
+      txnId:
+        type: "string"
+        example: "f35761ac-4a18-11e8-96ff-0277a9fbfedc"
+      accessToken:
+        type: "string"
+        example: ""
+      expiresIn:
+        type: "integer"
+        example: 86400
+      tokenType:
+        type: "string"
+        example: "Bearer"
+  
+  CreateUserRequest:
+    type: "object"
+    properties:
+      txnid:
+        type: "string"
+        example: "f35761ac-4a18-11e8-96ff-0277a9fbfedc"
+      username:
+        type: "string"
+        example: "test.user@example.in"
+      email:
+        type: "string"
+        example: "stest.user@example.in"
+      firstname:
+        type: "string"
+        example: "Test"
+      lastname:
+        type: "string"
+        example: "User"
+  
+  CreateUserResponse:
+    type: "object"
+    properties:
+      ver:
+        type: "string"
+        example: "1.0.0"
+      timestamp:
+        type: "string"
+        format: "date-time"
+        example: "2024-07-16T11:33:34.509Z"
+      txnid:
+        type: "string"
+        example: "f35761ac-4a18-11e8-96ff-0277a9fbfedc"
+      username:
+        type: "string"
+        example: "test.user@example.in"
+      message:
+        type: "string"
+        example: "User has been successfully onboarded. Please check your email for further instructions."
+  
+  UserResetRequest:
+    type: "object"
+    properties:
+      txnid:
+        type: "string"
+        example: "f35761ac-4a18-11e8-96ff-0277a9fbfedc"
+      email:
+        type: "string"
+        example: "test.user@example.in"
+  
+  UserResetResponse:
+    type: "object"
+    properties:
+      ver:
+        type: "string"
+        example: "1.0.0"
+      timestamp:
+        type: "string"
+        format: "date-time"
+        example: "2024-07-16T11:33:34.509Z"
+      txnid:
+        type: "string"
+        example: "f35761ac-4a18-11e8-96ff-0277a9fbfedc"
+      message:
+        type: "string"
+        example: "The password reset link has been successfully sent to the user's email."
