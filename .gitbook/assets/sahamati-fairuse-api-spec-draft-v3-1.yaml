@@ -5,15 +5,15 @@ info:
   version: 1.0.0
 
 servers:
-  - url: https://api.uat.sahamati.org.in/data
+  - url: https://api.uat.sahamati.org.in/v1/data
     description: UAT
-  - url: https://api.sandbox.sahamati.org.in/data
+  - url: https://api.sandbox.sahamati.org.in/v1/data
     description: Sandbox
-  - url: https://api.dev.sahamati.org.in/data
+  - url: https://api.dev.sahamati.org.in/v1/data
     description: Development
 
 paths:
-  /v1/fairuse-params/list:
+  /fairuse-params/list:
     post:
       tags:
         - Fairuse Master Data APIs
@@ -43,6 +43,9 @@ paths:
                       type: string
                       description: Status of the consent purpose.
                       example: "Active"
+                    publisher:
+                      type: string
+                      example: "Sahamati"
                     
       responses:
         '200':
@@ -92,7 +95,7 @@ paths:
       security:
         - bearerAuth: []
         
-  /v1/purpose-code/list:
+  /purpose-code/list:
     post:
       tags:
         - Fairuse Master Data APIs
@@ -122,6 +125,9 @@ paths:
                       type: string
                       description: Category of the purpose.
                       example: "Financial Reporting"
+                    publisher:
+                      type: string
+                      example: "Sahamati"
                     
       responses:
         '200':
@@ -171,7 +177,7 @@ paths:
       security:
         - bearerAuth: []
         
-  /v1/network-rules/list:
+  /network-rules/list:
     post:
       tags:
         - Network Rules APIs
@@ -201,6 +207,9 @@ paths:
                       type: string
                       description: Status of the consent purpose.
                       example: "Active"
+                    publisher:
+                      type: string
+                      example: "Sahamati"
                     
       responses:
         '200':
@@ -303,8 +312,10 @@ components:
           example: ""
         usecase:
           $ref: '#/components/schemas/Usecase'
-        purpose:
-          $ref: '#/components/schemas/Purpose'
+        purposeCode:
+          type: string
+          description: Purpose code
+          example: "103"
         status:
           type: string
           description: Status of the consent params
@@ -427,7 +438,7 @@ components:
         policyCode:
           type: string
           description: The public endpoint of the Rego having implementation of the network rule.
-          example: "https://play.openpolicyagent.org/p/MFylYjybJf"
+          example: "https://play.openpolicyagent.org/p/gmgcxyvEZ5"
         publisher:
           type: string
           description: The unique code of the publisher implemented the network rule.
