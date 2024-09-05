@@ -1,0 +1,441 @@
+openapi: 3.0.0
+info:
+  title: Consent Purpose List API
+  description: API for retrieving the list of consent purposes.
+  version: 1.0.0
+
+servers:
+  - url: https://api.uat.sahamati.org.in/data
+    description: UAT
+  - url: https://api.sandbox.sahamati.org.in/data
+    description: Sandbox
+  - url: https://api.dev.sahamati.org.in/data
+    description: Development
+
+paths:
+  /v1/fairuse-params/list:
+    post:
+      tags:
+        - Fairuse Master Data APIs
+      summary: Fair Use Parameters API
+      description: |
+        API for retrieving the Fairuse Consent parameters master data list. Each Consent purpose (template) defines the usecase, purpose along with consent parameters explaining the upper bound or the limits.
+        
+        This API authorized using the member or user access token.
+      operationId: getConsentParamsList
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: ["filters"]
+              properties:
+                filters:
+                  type: object
+                  description: Filter criteria for retrieving consent purposes
+                  properties:
+                    id:
+                      type: string
+                      description: Unique Identifier of the Consent purpose.
+                      example: "dfc571ed-863f-4f90-a249-07d3b2497f57"
+                    status:
+                      type: string
+                      description: Status of the consent purpose.
+                      example: "Active"
+                    
+      responses:
+        '200':
+          description: List of consent parameters
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ver:
+                    type: "string"
+                    example: "1.0.0"
+                  timestamp:
+                    type: "string"
+                    format: "date-time"
+                    example: "2024-07-16T11:33:34.509Z"
+                  txnId:
+                    type: "string"
+                    example: "f35761ac-4a18-11e8-96ff-0277a9fbfedc"
+                  result:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/ConsentParams'
+        '401':
+          description: Unauthorized, invalid or missing token.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ver:
+                    type: "string"
+                    example: "1.0.0"
+                  timestamp:
+                    type: "string"
+                    format: "date-time"
+                    example: "2024-07-16T11:33:34.509Z"
+                  txnId:
+                    type: "string"
+                    example: "f35761ac-4a18-11e8-96ff-0277a9fbfedc"
+                  errorCode:
+                    type: "string"
+                    example: "Unauthorized"
+                  errorMsg:
+                    type: "string"
+                    example: "Invalid Authorization token"
+      security:
+        - bearerAuth: []
+        
+  /v1/purpose-code/list:
+    post:
+      tags:
+        - Fairuse Master Data APIs
+      summary: Purpose Code List API
+      description: |
+        API for retrieving the Fairuse Purpose code master data list.
+        
+        This API authorized using the member or user access token.
+      operationId: getPurposeCodeList
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: ["filters"]
+              properties:
+                filters:
+                  type: object
+                  description: Filter criteria for retrieving consent purposes
+                  properties:
+                    code:
+                      type: string
+                      description: Purpose code.
+                      example: "103"
+                    category:
+                      type: string
+                      description: Category of the purpose.
+                      example: "Financial Reporting"
+                    
+      responses:
+        '200':
+          description: List of consent purposes codes
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ver:
+                    type: "string"
+                    example: "1.0.0"
+                  timestamp:
+                    type: "string"
+                    format: "date-time"
+                    example: "2024-07-16T11:33:34.509Z"
+                  txnId:
+                    type: "string"
+                    example: "f35761ac-4a18-11e8-96ff-0277a9fbfedc"
+                  result:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Purpose'
+        '401':
+          description: Unauthorized, invalid or missing token.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ver:
+                    type: "string"
+                    example: "1.0.0"
+                  timestamp:
+                    type: "string"
+                    format: "date-time"
+                    example: "2024-07-16T11:33:34.509Z"
+                  txnId:
+                    type: "string"
+                    example: "f35761ac-4a18-11e8-96ff-0277a9fbfedc"
+                  errorCode:
+                    type: "string"
+                    example: "Unauthorized"
+                  errorMsg:
+                    type: "string"
+                    example: "Invalid Authorization token"
+      security:
+        - bearerAuth: []
+        
+  /v1/network-rules/list:
+    post:
+      tags:
+        - Network Rules APIs
+      summary: Sahamati Network Rules (Policies) API
+      description: |
+        API for retrieving the Sahamati Network Rules List.
+        
+        This API authorized using the member or user access token.
+
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: ["filters"]
+              properties:
+                filters:
+                  type: object
+                  description: Filter criteria for retrieving consent purposes
+                  properties:
+                    category:
+                      type: string
+                      description: Type of the Network Rule.
+                      example: "Fairuse"
+                    status:
+                      type: string
+                      description: Status of the consent purpose.
+                      example: "Active"
+                    
+      responses:
+        '200':
+          description: List of consent parameters
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ver:
+                    type: "string"
+                    example: "1.0.0"
+                  timestamp:
+                    type: "string"
+                    format: "date-time"
+                    example: "2024-07-16T11:33:34.509Z"
+                  txnId:
+                    type: "string"
+                    example: "f35761ac-4a18-11e8-96ff-0277a9fbfedc"
+                  result:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/NetworkRule'
+        '401':
+          description: Unauthorized, invalid or missing token.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ver:
+                    type: "string"
+                    example: "1.0.0"
+                  timestamp:
+                    type: "string"
+                    format: "date-time"
+                    example: "2024-07-16T11:33:34.509Z"
+                  txnId:
+                    type: "string"
+                    example: "f35761ac-4a18-11e8-96ff-0277a9fbfedc"
+                  errorCode:
+                    type: "string"
+                    example: "Unauthorized"
+                  errorMsg:
+                    type: "string"
+                    example: "Invalid Authorization token"
+      security:
+        - bearerAuth: []
+
+components:
+  schemas:
+    Usecase:
+      type: object
+      properties:
+        code:
+          type: string
+          description: Unique code of the use case to easily identify.
+          example: U001
+        category:
+          type: string
+          description: Category of the use case
+          example: Underwriting Risk
+        description:
+          type: string
+          description: Details of the use case
+          example: Underwriting a loan application
+        publisher:
+          type: string
+          description: The unique code of the publisher defined or hosted the use case.
+          example: "Sahamati"
+    Purpose:
+      type: object
+      properties:
+        code:
+          type: string
+          description: Purpose code
+          example: "103"
+        category:
+          type: string
+          description: Category of the purpose
+          example: Financial Reporting
+        description:
+          type: string
+          description: Text for customers
+          example: To process your loan application
+        publisher:
+          type: string
+          description: The unique code of the publisher defined or hosted the purpose.
+          example: "Sahamati"
+    ConsentParams:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique Identifier of the Consent params.
+          example: "dfc571ed-863f-4f90-a249-07d3b2497f57"
+        description:
+          type: string
+          description: Consent params description
+          example: ""
+        usecase:
+          $ref: '#/components/schemas/Usecase'
+        purpose:
+          $ref: '#/components/schemas/Purpose'
+        status:
+          type: string
+          description: Status of the consent params
+          enum: ["Draft","Under Review","Recommended","Rejected","Active","Inactive"]
+          example: Active
+        publisher:
+          type: string
+          description: The unique code of the publisher implemented the network rule.
+          example: "Sahamati"
+        consentParams:
+          type: object
+          properties:
+            fiTypes:
+              type: array
+              items:
+                type: string
+                enum: [ "DEPOSIT", "TERM_DEPOSIT", "RECURRING_DEPOSIT", "SIP", "CP", "GOVT_SECURITIES", "EQUITIES", "BONDS", "DEBENTURES", "MUTUAL_FUNDS", "ETF", "IDR", CIS, AIF, INSURANCE_POLICIES, NPS, INVIT, REIT, GSTR1_3B, LIFE_INSURANCE, GENERAL_INSURANCE, OTHER]
+              description: List of financial information types
+              example: [ "DEPOSIT", "TERM_DEPOSIT"]
+            consentTypes:
+              type: array
+              items:
+                type: string
+                enum: ["PROFILE", "SUMMARY", "TRANSACTIONS"]
+              description: List of consent types
+              example: ["PROFILE", "SUMMARY"]
+            fetchType:
+              type: string
+              enum: ["ONETIME", "PERIODIC"]
+              description: Fetch type
+              example: "ONETIME"
+            frequency:
+              type: object
+              properties:
+                max:
+                  type: object
+                  properties:
+                    unit:
+                      type: string
+                      enum: ["HOUR","DAY", "MONTH", "YEAR", "INF"]
+                      example: MONTH
+                    value:
+                      type: number
+                      example: 1
+            FIDataRange:
+              type: object
+              properties:
+                max:
+                  type: object
+                  properties:
+                    unit:
+                      type: string
+                      enum: ["DAY", "MONTH", "YEAR"]
+                      example: MONTH
+                    value:
+                      type: number
+                      example: 14
+            consentExpiry:
+              type: object
+              properties:
+                max:
+                  type: object
+                  properties:
+                    unit:
+                      type: string
+                      enum: ["DAY", "MONTH", "YEAR", "Coterminous with loan tenure"]
+                      example: MONTH
+                    value:
+                      type: number
+                      example: 1
+            dataLife:
+              type: object
+              properties:
+                max:
+                  type: object
+                  properties:
+                    unit:
+                      type: string
+                      enum: ["DAY", "MONTH", "YEAR", "INF"]
+                      example: MONTH
+                    value:
+                      type: number
+                      example: 1
+            consentMode:
+              type: array
+              items:
+                type: string
+                enum: ["VIEW", "STORE", "QUERY", "STREAM"]
+              description: Consent mode
+              example: ["STORE", "VIEW"]
+            dataFilter:
+              type: array
+              items:
+                type: object
+              description: Data filter criteria
+    NetworkRule:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique Identifier of the Network Rule.
+          example: "dfc571ed-863f-4f90-a249-07d3b2497f57"
+        name:
+          type: string
+          description: Name of the Network Rule.
+          example: "Fairuse Network Rule for Purpose 103"
+        description:
+          type: string
+          description: Details about the Network Rule
+          example: ""
+        status:
+          type: string
+          description: Status of the consent purpose
+          enum: ["Draft","Under Review","Rejected","Active","Inactive"]
+          example: Active
+        category:
+          type: string
+          description: Type of the Network Rule
+          enum: ["Fairuse", "RateLimiting"]
+        policyCode:
+          type: string
+          description: The public endpoint of the Rego having implementation of the network rule.
+          example: "https://play.openpolicyagent.org/p/MFylYjybJf"
+        publisher:
+          type: string
+          description: The unique code of the publisher implemented the network rule.
+          example: "Sahamati"
+                
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
