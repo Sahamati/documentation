@@ -431,6 +431,10 @@ components:
           description: Status of the consent purpose
           enum: ["Draft","Under Review","Rejected","Active","Inactive"]
           example: Active
+        fairuseParams:
+          type: string
+          description: Unique identifier of the fairuse Params object to reference the network rule.
+          example: "dfc571ed-863f-4f90-a249-07d3b2497f57"
         category:
           type: string
           description: Type of the Network Rule
