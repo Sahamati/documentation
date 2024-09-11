@@ -17,7 +17,33 @@ Members can be onboarded to the sandbox environment by providing the following d
 
 **The Entity (member) information such as**
 
-<table><thead><tr><th width="262">Property Name</th><th>Description</th></tr></thead><tbody><tr><td>ID (Entity ID or Client ID)</td><td>Identifier of the entity to use with CR and other Sahamati Network Services.</td></tr><tr><td>Name</td><td>Name of the entity</td></tr><tr><td>Type</td><td>Entity Type - one of FIU, FIP, AA</td></tr><tr><td>Base URL</td><td>Base URL of the entity to access the APIs and send requests.</td></tr><tr><td>Certificate</td><td>The RSA public key of the entity. It will be used by the members to validate the signature (<code>x-jws-signature</code>) of the API request.</td></tr><tr><td>ips</td><td>The IP address(es) of the entity to whitelist to access of Sahamati Network services (Ex: Proxy).</td></tr><tr><td>inboundports</td><td>The port of the member that the Sahamati services can connect to.</td></tr><tr><td>outboundports</td><td>The port of the member that the Sahamati services can expect to receive requests from.</td></tr><tr><td>entityhandle</td><td>Relevant and required only for AAs.</td></tr></tbody></table>
+<table><thead><tr><th width="262">Property Name</th><th>Description</th></tr></thead><tbody><tr><td>ID (Entity ID or Client ID)</td><td>Identifier of the entity to use with CR and other Sahamati Network Services.</td></tr><tr><td>Name</td><td>Name of the entity</td></tr><tr><td>Type</td><td>Entity Type - one of FIU, FIP, AA</td></tr><tr><td>Base URL</td><td>Base URL of the entity to access the APIs and send requests.<br><strong>(Only v2 API endpoint is supported by Sandbox environment)</strong></td></tr><tr><td>Certificate</td><td>The RSA public key of the entity. It will be used by the members to validate the signature (<code>x-jws-signature</code>) of the API request.</td></tr><tr><td>ips</td><td>The IP address(es) of the entity to whitelist to access of Sahamati Network services (Ex: Proxy).</td></tr><tr><td>inboundports</td><td>The port of the member that the Sahamati services can connect to.</td></tr><tr><td>outboundports</td><td>The port of the member that the Sahamati services can expect to receive requests from.</td></tr><tr><td>entityhandle</td><td>Relevant and required only for AAs.</td></tr></tbody></table>
+
+The member details should be supplied in a JSON file following the format below.
+
+```json
+{
+    "type": "<Entity Type - one of FIU, FIP, AA>",
+    "entityinfo": {
+      "name": "<Name of the member>",
+      "id": "<Identifier of the entity to use with CR>",
+      "code": "<Code of the entity to use with CR - Should be same as Identifier.>",
+      "entityhandle": "<Handle of the entity - Required for AA",
+      "Identifiers": [ // Identifers used by the Entity for customers.
+        {
+          "category": "STRONG",
+          "type": "MOBILE"
+        }
+      ],
+      "baseurl": "<Base URL of the entity to access ReBIT APIs. Only v2 is supported.>",
+      "fitypes": [], // FI Type value from the entity.
+      "certificate": {}, // Public Certificate JSON from the entity.
+      "inboundports": ["<port>"], // Inbound ports from the entity infrastructure.
+      "outboundports": ["<port>"],// Outbound ports from the entity infrastructure.
+      "ips": ["<IP address>"] // IP address of to whitelist for accepting the request.
+    }
+  }
+```
 
 **The User of the entity information such as**
 
