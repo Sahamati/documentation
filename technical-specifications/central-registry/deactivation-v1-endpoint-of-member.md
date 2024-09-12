@@ -1,4 +1,4 @@
-# Deactivation of v1 endpoint of member
+# Deactivation - v1 endpoint of member
 
 ## Introduction
 
@@ -20,9 +20,9 @@ When a member is ready to deprecate the v1 APIs from their system, the central r
 
 To address these concerns, we will deactivate the v1 endpoint instead of removing it. To deactivate the v1 endpoint for a member, the v1 API endpoint in the Central Registry will be updated by appending **nonexistent-resource** to the URL. Below is an example for your reference.
 
-| baseurl                                                                                              |
-| ---------------------------------------------------------------------------------------------------- |
-| **v1:https://aa-ecosystem-member.org/v1/nonexistent-resource**,v2:https://aa-ecosystem-member.org/v2 |
+| baseurl                                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------------------- |
+| <p><strong>v1:https://aa-ecosystem-member.org/v1/nonexistent-resource</strong>,<br>v2:https://aa-ecosystem-member.org/v2</p> |
 
 ## How to request for v1 endpoint deactivation
 
