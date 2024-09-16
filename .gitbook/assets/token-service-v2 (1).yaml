@@ -17,7 +17,7 @@ tags:
   - name: User APIs
 schemes:
   - https
-host: api.sahamati.org.in
+host: api.sandbox.sahamati.org.in
 basePath: /iam/v1
 paths:
   /entity/secret/read:
