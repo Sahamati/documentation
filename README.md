@@ -4,9 +4,9 @@ The Account Aggregator (AA) infrastructure is a sophisticated technological fram
 
 The Reserve Bank Information Technology Pvt Ltd (ReBIT), a wholly-owned subsidiary of the RBI, was authorized to establish technology standards for the ecosystem. This regulatory framework established a high-level architecture, and the market was kept independent of operationalizing the data-sharing mechanism. This market-driven approach has led to the formation of Sahamati as an industry alliance to collaboratively build the necessary procedural and technological foundations for the AA ecosystem.
 
-Sahamati Net is the technological infrastructure developed and maintained by Sahamati to support the Account Aggregator (AA) ecosystem. Hosted in a secure, highly available, and scalable environment, this technological infrastructure ensures the robustness and reliability of the AA ecosystem. The infrastructure aims to engender trust, build visibility in ecosystem health, offer implementation support and grievance redressal mechanisms, foster a culture of compliance, and enable efficient integrations across the ecosystem. Sahamati has co-created these crucial technology artefacts with the collective intelligence of the ecosystem to serve its diverse needs.
+SahamatiNet is the technological infrastructure developed and maintained by Sahamati to support the Account Aggregator (AA) ecosystem. Hosted in a secure, highly available, and scalable environment, this technological infrastructure ensures the robustness and reliability of the AA ecosystem. The infrastructure aims to engender trust, build visibility in ecosystem health, offer implementation support and grievance redressal mechanisms, foster a culture of compliance, and enable efficient integrations across the ecosystem. Sahamati has co-created these crucial technology artefacts with the collective intelligence of the ecosystem to serve its diverse needs.
 
-Delve into the functional aspects of the Sahamati Net:
+Delve into the functional aspects of the SahamatiNet:
 
 ### Network Trust <a href="#network-trust" id="network-trust"></a>
 
@@ -26,13 +26,13 @@ Sahamati is committed to fostering a culture of compliance in the Account Aggreg
 
 Sahamati equips the ecosystem with implementation support and grievance redressal mechanisms. During the implementation phase, Sahamati provides comprehensive support, offering technical assistance, guidance, and resources to ensure smooth onboarding and effective utilization of the infrastructure. A dedicated support application is available to address grievances and resolve issues faced by members. This mechanism ensures that any problems are promptly addressed, maintaining member satisfaction and trust in the ecosystem.
 
-Sahamati Net aims to create an interoperable, customer-centric ecosystem through a secure, transparent, and efficient infrastructure. This holistic infrastructure ensures the reliability, security, and growth of the AA ecosystem. The infrastructure enhances the efficiency of data-sharing transactions and promotes trust and collaboration among all stakeholders, driving the overall success of the AA ecosystem.
+SahamatiNet aims to create an interoperable, customer-centric ecosystem through a secure, transparent, and efficient infrastructure. This holistic infrastructure ensures the reliability, security, and growth of the AA ecosystem. The infrastructure enhances the efficiency of data-sharing transactions and promotes trust and collaboration among all stakeholders, driving the overall success of the AA ecosystem.
 
-Currently, Sahamati Net is dedicated to addressing key ecosystem challenges, including interoperability, data usage compliance, and operational efficiency, to provide a seamless experience for AA ecosystem members. The following are the primary focus areas of Sahamati Net:
+Currently, SahamatiNet is dedicated to addressing key ecosystem challenges, including interoperability, data usage compliance, and operational efficiency, to provide a seamless experience for AA ecosystem members. The following are the primary focus areas of SahamatiNet:
 
 * **Interoperability:** Enable ecosystem members to connect seamlessly with all other Sahamati Network entities. This eliminates the need for multiple integration points, significantly reducing the integration and operational efforts for members.
-* **Fair Use Compliance:** FIUs and AAs are expected to align their consent usage within ecosystem-defined boundaries to ensure the fair use of AA. Sahamati Net aims to develop a programmatic, policy-based automated framework that ensures compliance with fair use policies regarding customer consent and data.
-* **Network Observability:** Sahamati Net aims to scale the current network health monitoring system to a comprehensive infrastructure that provides real-time data access and monitors fraud to aid efficient dispute resolution, billing & reconciliation, and tracking network usage.
+* **Fair Use Compliance:** FIUs and AAs are expected to align their consent usage within ecosystem-defined boundaries to ensure the fair use of AA. SahamatiNet aims to develop a programmatic, policy-based automated framework that ensures compliance with fair use policies regarding customer consent and data.
+* **Network Observability:** SahamatiNet aims to scale the current network health monitoring system to a comprehensive infrastructure that provides real-time data access and monitors fraud to aid efficient dispute resolution, billing & reconciliation, and tracking network usage.
 * **Policy Development and Advocacy**: The organization is engaged in developing policies and advocating for regulatory frameworks that support the growth and sustainability of the AA ecosystem.
 * **Additional Initiatives**: Sahamati is continually exploring and implementing other initiatives to support and enhance the AA ecosystem's functionality and resilience.
 

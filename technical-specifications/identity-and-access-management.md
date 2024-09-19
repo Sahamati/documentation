@@ -1,10 +1,10 @@
 # Identity & Access Management
 
-Members are onboarded to Sahamati Net by creating a entity profile, with at least one user designated to manage the member or entity profile and secret.&#x20;
+Members are onboarded to SahamatiNet by creating a entity profile, with at least one user designated to manage the member or entity profile and secret.&#x20;
 
 Here are the steps for a member to onboard.
 
-* [Member & User Registration](../sahamati-net/proxy.md#onboarding-process)
+* [Member & User Registration](../sahamatinet/proxy.md#onboarding-process)
 * Account Activation
   * [User](identity-and-access-management.md#user-account-activation)
   * [Member](identity-and-access-management.md#member-entity-activation)
@@ -18,12 +18,12 @@ During onboarding, the designated user will receive an email with a link to veri
 
 ### Member (Entity) Activation:
 
-To fully activate a member on Sahamati Net, at least one associated user must be activated. This user will then begin the process of generating a secret, which is crucial for future API interactions. The key steps for member activation are as follows:
+To fully activate a member on SahamatiNet, at least one associated user must be activated. This user will then begin the process of generating a secret, which is crucial for future API interactions. The key steps for member activation are as follows:
 
 * [x] Activate the user account associated with the member.
 * [x] Generate a secret for the member (entity).
 
-Once the member onboarded on Sahamati Net, the below APIs can be used by the associated user to manage the secret.
+Once the member onboarded on SahamatiNet, the below APIs can be used by the associated user to manage the secret.
 
 ### Scenario: Member Secret Management
 
