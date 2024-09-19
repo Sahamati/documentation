@@ -91,7 +91,7 @@ paths:
         - Entity APIs
       summary: Secret Reset API
       description: |
-        The Secret Reset API is designed to allow an admin to reset a member's secret. To perform this action, an access token with administrative privileges for the specified member is required. Once reset, the newly generated secret will have a validity period of 20 days, after which it will need to be renewed or reset again. Below is the API specification.
+        The Secret Reset API is designed to allow an admin to reset a member's secret. To perform this action, an access token with administrative privileges for the specified member is required. Once reset, the newly generated secret will have a validity period of 60 days, after which it will need to be renewed or reset again. Below is the API specification.
       parameters:
       - name: Authorization
         type: string

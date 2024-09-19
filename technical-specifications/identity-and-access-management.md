@@ -37,12 +37,12 @@ Below are the Base URL of each environment to use IAM APIs.
 
 ## Token Generation APIs:
 
-{% swagger src="../.gitbook/assets/token-service-v2.yaml" path="/user/token/generate" method="post" %}
-[token-service-v2.yaml](../.gitbook/assets/token-service-v2.yaml)
+{% swagger src="../.gitbook/assets/token-service-v2 (1).yaml" path="/user/token/generate" method="post" %}
+[token-service-v2 (1).yaml](<../.gitbook/assets/token-service-v2 (1).yaml>)
 {% endswagger %}
 
-{% swagger src="../.gitbook/assets/token-service-v2.yaml" path="/entity/token/generate" method="post" %}
-[token-service-v2.yaml](../.gitbook/assets/token-service-v2.yaml)
+{% swagger src="../.gitbook/assets/token-service-v2 (1).yaml" path="/entity/token/generate" method="post" %}
+[token-service-v2 (1).yaml](<../.gitbook/assets/token-service-v2 (1).yaml>)
 {% endswagger %}
 
 ## Member Secret Management APIs
@@ -51,6 +51,6 @@ Below are the Base URL of each environment to use IAM APIs.
 [token-service-v2.yaml](../.gitbook/assets/token-service-v2.yaml)
 {% endswagger %}
 
-{% swagger src="../.gitbook/assets/token-service-v2.yaml" path="/entity/secret/read" method="post" %}
-[token-service-v2.yaml](../.gitbook/assets/token-service-v2.yaml)
+{% swagger src="../.gitbook/assets/token-service-v2 (1).yaml" path="/entity/secret/read" method="post" %}
+[token-service-v2 (1).yaml](<../.gitbook/assets/token-service-v2 (1).yaml>)
 {% endswagger %}
