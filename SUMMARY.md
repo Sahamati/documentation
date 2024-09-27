@@ -26,7 +26,7 @@
   * [Environment - Configurations](technical-specifications/environment-configurations.md)
 * [Release Calendar](release-calendar/README.md)
   * [Deprecation of V1 API Endpoint URLs](release-calendar/deprecation-of-v1-api-endpoint-urls.md)
-  * [Deactivation of Deprecated V1 APIs](release-calendar/deactivation-of-deprecated-v1-apis.md)
   * [Client Secret Rotation](release-calendar/client-secret-rotation.md)
+  * [Deactivation of Deprecated V1 APIs](release-calendar/deactivation-of-deprecated-v1-apis.md)
 * [Glossary](glossary.md)
 * [Guidelines](guidelines.md)
