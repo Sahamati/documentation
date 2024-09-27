@@ -33,7 +33,7 @@ Once the member onboarded on SahamatiNet, the below APIs can be used by the asso
 
 Below are the Base URL of each environment to use IAM APIs.
 
-<table><thead><tr><th width="172">Environment</th><th>Base URL</th></tr></thead><tbody><tr><td>Production</td><td>https://api.sahamati.org.in/iam</td></tr><tr><td>UAT</td><td>https://uattokens.sahamati.org.in/iam</td></tr><tr><td>Sandbox</td><td>https://api.sandbox.sahamati.org.in/iam</td></tr></tbody></table>
+<table><thead><tr><th width="172">Environment</th><th>Base URL</th></tr></thead><tbody><tr><td>Production</td><td>https://api.sahamati.org.in/iam</td></tr><tr><td>UAT</td><td>https://api.uat.sahamati.org.in/iam</td></tr><tr><td>Sandbox</td><td>https://api.sandbox.sahamati.org.in/iam</td></tr></tbody></table>
 
 ## Token Generation APIs:
 
