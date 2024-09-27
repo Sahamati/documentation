@@ -1,4 +1,4 @@
-# Deprecation of V1 API Endpoint URLs in Central Registry
+# Deprecation of V1 API Endpoint URLs
 
 This notice is to inform all participants of the Account Aggregator (AA) ecosystem about the deprecation of the ReBIT API V1 in the Central Registry and the necessary steps for transitioning to the V2 API.
 

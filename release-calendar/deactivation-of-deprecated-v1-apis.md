@@ -1,4 +1,4 @@
-# Deactivation of Deprecated V1 APIs of Central Registry
+# Deactivation of Deprecated V1 APIs
 
 As part of Sahamati’s ongoing enhancements, the Central Registry APIs have transitioned to Version 2 (V2), following the ReBIT V2 standard. The V2 APIs upgrades done in Jan 2024 are aimed to improve the discovery of entities and streamline the retrieval of endpoints and certificates.
 
