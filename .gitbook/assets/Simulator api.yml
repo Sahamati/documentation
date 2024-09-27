@@ -1,0 +1,458 @@
+openapi: 3.0.0
+info:
+  version: "1.0.0"
+  title: AA Simulator API
+  description: API to simulate responses for AA-Simulator
+servers:
+  - url: https://api.dev.sahamati.org.in/simulate/v2
+paths:
+  /response/add:
+    post:
+      summary: Configure a custom response for a mock entity
+      description: Add a custom response simulation for a given entity, endpoint, response code, and scenario.
+      operationId: addSimulatedResponse
+      parameters:
+        - in: header
+          name: Authorization
+          required: true
+          schema:
+            type: string
+            example: Bearer <token>
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - entityId
+                - endpoint
+                - responseCode
+                - response
+                - scenario
+              properties:
+                entityId:
+                  type: string
+                  example: "AA-SIMULATOR"
+                endpoint:
+                  type: string
+                  example: "/Consent/Notification"
+                responseCode:
+                  type: integer
+                  example: 500
+                response:
+                  type: object
+                  required:
+                    - ver
+                    - txnid
+                    - timestamp
+                    - errorCode
+                    - errorMsg
+                  properties:
+                    ver:
+                      type: string
+                      example: "2.0.0"
+                    txnid:
+                      type: string
+                      example: "0b811819-9044-4856-b0ee-8c88035f8858"
+                    timestamp:
+                      type: string
+                      example: "2024-09-23T07:40:34.978Z"
+                    errorCode:
+                      type: string
+                      example: "InvalidRequest"
+                    errorMsg:
+                      type: string
+                      example: "InternalError"
+                scenario:
+                  type: string
+                  example: "AA-SIMULATOR-500-Error"
+      responses:
+        '200':
+          description: Successfully added the response simulation.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  version:
+                    type: string
+                    example: "1.0.0"
+                  timestamp:
+                    type: string
+                    example: "2024-09-25T06:52:19.750Z"
+                  entityId:
+                    type: string
+                    example: "AA-SIMULATOR"
+                  message:
+                    type: string
+                    example: "AA-SIMULATOR added successfully."
+        '400':
+          description: Bad request due to missing required fields.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  version:
+                    type: string
+                    example: "1.0.0"
+                  timestamp:
+                    type: string
+                    example: "2024-09-25T06:53:27.425Z"
+                  txnid:
+                    type: string
+                    example: "b812e853-f9a1-4a88-99d5-232de000d2d2"
+                  errMsg:
+                    type: string
+                    example: "Missing required fields: scenario"
+                  errCode:
+                    type: string
+                    example: "RES_2012"
+        '409':
+          description: Conflict due to an existing entity with the same endpoint and response code.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  version:
+                    type: string
+                    example: "1.0.0"
+                  timestamp:
+                    type: string
+                    example: "2024-09-25T06:53:49.835Z"
+                  txnid:
+                    type: string
+                    example: "105102fc-36d8-46b0-a54d-39d87ed6fe3c"
+                  errMsg:
+                    type: string
+                    example: "The entity id with endpoint and response code already exists"
+                  errCode:
+                    type: string
+                    example: "RES_2014"
+        '401':
+          description: Unauthorized due to missing or invalid authorization header.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  version:
+                    type: string
+                    example: "1.0.0"
+                  timestamp:
+                    type: string
+                    example: "2024-09-25T06:54:07.171Z"
+                  txnid:
+                    type: string
+                    example: "ed5329c3-44c4-469f-aa8f-08b1b4e5a13e"
+                  errMsg:
+                    type: string
+                    example: "Authorization header is missing"
+                  errCode:
+                    type: string
+                    example: "RES_2001"
+  
+  /response/update:
+    put:
+      summary: Update the custom response configured for a mock entity
+      description: Update an existing response simulation for a given entity, endpoint, and response code.
+      operationId: updateSimulatedResponse
+      parameters:
+        - name: x-scenario-id
+          in: header
+          required: true
+          schema:
+            type: string
+            example: "AA-SIMULATOR-500-Error"
+        - in: header
+          name: Authorization
+          required: true
+          schema:
+            type: string
+            example: Bearer <token>
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - entityId
+                - endpoint
+                - responseCode
+                - response
+              properties:
+                entityId:
+                  type: string
+                  example: "AA-SIMULATOR"
+                endpoint:
+                  type: string
+                  example: "/Consent/Notification"
+                responseCode:
+                  type: integer
+                  example: 500
+                response:
+                  type: object
+                  required:
+                    - ver
+                    - txnid
+                    - timestamp
+                    - errorCode
+                    - errorMsg
+                  properties:
+                    ver:
+                      type: string
+                      example: "2.0.0"
+                    txnid:
+                      type: string
+                      example: "0b811819-9044-4856-b0ee-8c88035f8858"
+                    timestamp:
+                      type: string
+                      example: "2024-09-23T07:40:34.978Z"
+                    errorCode:
+                      type: string
+                      example: "InvalidRequest"
+                    errorMsg:
+                      type: string
+                      example: "InternalError"
+      responses:
+        '200':
+          description: Successfully updated the response simulation.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  version:
+                    type: string
+                    example: "1.0.0"
+                  timestamp:
+                    type: string
+                    example: "2024-09-25T06:57:37.039Z"
+                  entityId:
+                    type: string
+                    example: "AA-SIMULATOR"
+                  message:
+                    type: string
+                    example: "AA-SIMULATOR updated successfully"
+        '400':
+          description: Bad request due to missing required fields.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  version:
+                    type: string
+                    example: "1.0.0"
+                  timestamp:
+                    type: string
+                    example: "2024-09-25T06:58:14.240Z"
+                  txnid:
+                    type: string
+                    example: "653fa3ba-6e09-47e4-9c25-e0c31350e24f"
+                  errMsg:
+                    type: string
+                    example: "Missing required fields: endpoint"
+                  errCode:
+                    type: string
+                    example: "RES_2012"
+        '401':
+          description: Unauthorized due to missing or invalid authorization header.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  version:
+                    type: string
+                    example: "1.0.0"
+                  timestamp:
+                    type: string
+                    example: "2024-09-25T06:58:34.158Z"
+                  txnid:
+                    type: string
+                    example: "8f023494-cc2f-4844-9511-70ca26c0ba2d"
+                  errMsg:
+                    type: string
+                    example: "Authorization header is missing"
+                  errCode:
+                    type: string
+                    example: "RES_2001"
+        '404':
+          description: Not found when the specified entity, endpoint, or response code does not exist.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  version:
+                    type: string
+                    example: "1.0.0"
+                  timestamp:
+                    type: string
+                    example: "2024-09-25T06:58:52.641Z"
+                  txnid:
+                    type: string
+                    example: "40b12b7e-7a25-4135-b72d-910f3ed69ebd"
+                  errMsg:
+                    type: string
+                    example: "Entity with ID 'AA-SIMULATOR-111' not found with endpoint '/Consent/Notification' and Response code: 500."
+                  errCode:
+                    type: string
+                    example: "RES_2011"
+  /response/list:
+    post:
+      summary: List all configured responses
+      description: To list all the custom responses configured for the given entity
+      parameters:
+        - in: header
+          name: x-scenario-id
+          required: true
+          schema:
+            type: string
+          example: AA-SIMULATOR-500-Error
+        - in: header
+          name: Authorization
+          required: true
+          schema:
+            type: string
+            example: Bearer <token>
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - entityId
+              properties:
+                entityId:
+                  type: string
+                  example: AA-SIMULATOR
+      responses:
+        '200':
+          description: Successfully retrieved response list
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ver:
+                    type: string
+                    example: 1.0.0
+                  timestamp:
+                    type: string
+                    example: 2024-09-25T07:05:54.036Z
+                  result:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        entityId:
+                          type: string
+                          example: AA-SIMULATOR
+                        endpoint:
+                          type: string
+                          example: /Consent/Notification
+                        scenario:
+                          type: string
+                          example: AA-SIMULATOR-500-Error
+                        response:
+                          type: object
+                          properties:
+                            ver:
+                              type: string
+                              example: 2.0.0
+                            txnid:
+                              type: string
+                              example: 0b811819-9044-4856-b0ee-8c88035f8858
+                            timestamp:
+                              type: string
+                              example: 2024-09-23T07:40:34.978Z
+                            errorCode:
+                              type: string
+                              example: InvalidRequest
+                            errorMsg:
+                              type: string
+                              example: InternalError
+                        responseCode:
+                          type: integer
+                          example: 500
+        '400':
+          description: Bad Request - Missing required fields
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ver:
+                    type: string
+                    example: 1.0.0
+                  timestamp:
+                    type: string
+                    example: 2024-09-25T07:06:32.092Z
+                  txnid:
+                    type: string
+                    example: d4d3cb2a-e76c-446d-bb55-1ac2206b57ff
+                  errMsg:
+                    type: string
+                    example: Entity ID is required
+                  errCode:
+                    type: string
+                    example: RES_2015
+        '404':
+          description: Not Found - No data for given entity ID
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ver:
+                    type: string
+                    example: 1.0.0
+                  timestamp:
+                    type: string
+                    example: 2024-09-25T07:06:52.377Z
+                  txnid:
+                    type: string
+                    example: 00b11a89-4365-4909-af49-cfd9c3499dba
+                  errMsg:
+                    type: string
+                    example: No data found for Entity ID 'AA-SIMULATOR-111'
+                  errCode:
+                    type: string
+                    example: RES_2016
+        '401':
+          description: Unauthorized - Missing authorization header
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ver:
+                    type: string
+                    example: 1.0.0
+                  timestamp:
+                    type: string
+                    example: 2024-09-25T07:07:16.398Z
+                  txnid:
+                    type: string
+                    example: 8abf3b2d-9a8b-47ec-9888-748c0992d78c
+                  errMsg:
+                    type: string
+                    example: Authorization header is missing
+                  errCode:
+                    type: string
+                    example: RES_2001
+
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+security:
+  - BearerAuth: []

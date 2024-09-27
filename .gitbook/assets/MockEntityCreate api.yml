@@ -1,0 +1,235 @@
+openapi: 3.0.0
+info:
+  title: Mock Entity Registration API
+  version: 1.0.0
+servers:
+  - url: https://api.dev.sahamati.org.in/iam/v1
+paths:
+  /entity/mock/register:
+    post:
+      summary: Create Mock Entity
+      description: Register a new custom mock entity using user token.
+      operationId: registerEntity
+      parameters:
+        - in: header
+          name: Authorization
+          required: true
+          schema:
+            type: string
+            example: Bearer <UserToken>
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - ver
+                - timestamp
+                - txnid
+                - type
+                - entityinfo
+              properties:
+                ver:
+                  type: string
+                  example: "1.0"
+                timestamp:
+                  type: string
+                  format: date-time
+                  example: "2024-08-28T01:58:50.505Z"
+                txnid:
+                  type: string
+                  example: "1fbb-11ed-861d-0242"
+                type:
+                  type: string
+                  example: "FIU"
+                entityinfo:
+                  type: object
+                  required:
+                    - name
+                    - id
+                    - entityhandle
+                    - Identifiers
+                    - baseurl
+                    - fitypes
+                    - certificate
+                    - inboundports
+                    - outboundports
+                    - ips
+                  properties:
+                    name:
+                      type: string
+                      example: "test1"
+                    id:
+                      type: string
+                      example: "test1"
+                    entityhandle:
+                      type: string
+                      example: ""
+                    Identifiers:
+                      type: array
+                      items:
+                        type: object
+                        required:
+                          - category
+                          - type
+                        properties:
+                          category:
+                            type: string
+                            example: "STRONG"
+                          type:
+                            type: string
+                            example: "MOBILE"
+                    baseurl:
+                      type: string
+                      example: ""
+                    fitypes:
+                      type: array
+                      items:
+                        type: string
+                        example: ""
+                    certificate:
+                      type: object
+                      required:
+                        - alg
+                        - e
+                        - kid
+                        - kty
+                        - n
+                        - use
+                      properties:
+                        alg:
+                          type: string
+                          example: "RS256"
+                        e:
+                          type: string
+                          example: "AQAB"
+                        kid:
+                          type: string
+                          example: "4nEXdaiPFssssssIsssYsaslyf"
+                        kty:
+                          type: string
+                          example: "RSA"
+                        n:
+                          type: string
+                          example: "uh0fNzOYK2L2wGzixMLN-pOIHDH1tuA3rk6MmW39Q0VbAHWXmn0fZpS88hcIARmsPbbNXAW59VDCGEgPd49VVfiOeENI8PqliNml8gB1C1oGkpnAcda8O4v5kd_ZN4YZcLYqHyv9L8RnBidOzXzi-CxdgoFtM3pAnUYBERbbYi8LK5em8mBCixKuX_NszbrZiT14SY1AglNEWNPgibt3EMzGSxGyWyOgSEfsaQ4HGlppPU5lkWNx1GqktYelDxE7VQDNOGsoS1l03_JVr1oyYIA-1-M9ndq4Cjx3x9QFfaPts8MGw5yWSZCugbIeoBPzHmvlgm3CiGgqFQVrL1mJ2w"
+                        use:
+                          type: string
+                          example: "sig"
+                    inboundports:
+                      type: array
+                      items:
+                        type: string
+                        example: "443"
+                    outboundports:
+                      type: array
+                      items:
+                        type: string
+                        example: "443"
+                    ips:
+                      type: array
+                      items:
+                        type: string
+                        example: "3.109.145.80"
+      responses:
+        '200':
+          description: Successful onboarding of the entity
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ver:
+                    type: string
+                    example: "1.0.0"
+                  timestamp:
+                    type: string
+                    format: date-time
+                    example: "2024-09-25T10:01:19.942498808Z"
+                  txnId:
+                    type: string
+                    example: "1fbb-11ed-861d-0242"
+                  message:
+                    type: string
+                    example: "Entity successfully onboarded."
+                  entity:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        example: "test1"
+                      name:
+                        type: string
+                        example: "test1"
+                      status:
+                        type: string
+                        example: "ACTIVE"
+        '400':
+          description: Bad Request due to certificate existence
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ver:
+                    type: string
+                    example: "1.0.0"
+                  timestamp:
+                    type: string
+                    format: date-time
+                    example: "2024-09-25T10:02:14.238960759Z"
+                  txnId:
+                    type: string
+                    example: "1fbb-11ed-861d-0242"
+                  errorCode:
+                    type: string
+                    example: "TKN_2022"
+                  errorMsg:
+                    type: string
+                    example: "Certificate with KID already exists"
+        '401':
+          description: Unauthorized access due to invalid token
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ver:
+                    type: string
+                    example: "1.0.0"
+                  timestamp:
+                    type: string
+                    format: date-time
+                    example: "2024-09-25T10:02:29.865956249Z"
+                  txnId:
+                    type: string
+                    example: "1fbb-11ed-861d-0242"
+                  errorCode:
+                    type: string
+                    example: "TKN_2001"
+                  errorMsg:
+                    type: string
+                    example: "Authorization token is missing or invalid"
+        '409':
+          description: Conflict due to entity already existing
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ver:
+                    type: string
+                    example: "1.0.0"
+                  timestamp:
+                    type: string
+                    format: date-time
+                    example: "2024-09-25T10:01:52.837955345Z"
+                  txnId:
+                    type: string
+                    example: "1fbb-11ed-861d-0242"
+                  errorCode:
+                    type: string
+                    example: "TKN_2021"
+                  errorMsg:
+                    type: string
+                    example: "Entity test0 Already Exist."
