@@ -4,6 +4,8 @@ The Account Discovery & Linking process involves identifying the financial accou
 
 ### **Steps Involved in Account Discovery & Linking:**
 
+<figure><img src="../../.gitbook/assets/account-linking-scenario.png" alt=""><figcaption><p>Account Discovery &#x26; Linking</p></figcaption></figure>
+
 #### **1. User Login and Identity Verification:**
 
 The user logs into the AA application and provides their mobile number or other identity verification details. The AA then queries the FIPs to discover accounts associated with the user.
