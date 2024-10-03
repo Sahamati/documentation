@@ -20,7 +20,7 @@ The Central Registry is a foundational service that serves as a directory for al
 
 #### API Collection:
 
-{% file src="../.gitbook/assets/CR - Member API's.postman_collection.json" %}
+{% file src="../.gitbook/assets/Central Registry.postman_collection.json" %}
 Central Registry - API Collection
 {% endfile %}
 
@@ -81,6 +81,10 @@ The Observability service provides insights into the **AA network usage metrics*
 * Monitors AA network usage metrics (e.g., transactions, errors).
 * Provides actionable insights for performance improvement.
 * Enhances transparency and operational visibility within the ecosystem.
+
+To Access the Dashboard for the usage metrics, please use the below URL with your primiary contact email and password.
+
+Observability Dashboard: [http://data.sandbox.sahamati.org.in/](http://data.sandbox.sahamati.org.in/)
 
 ***
 
