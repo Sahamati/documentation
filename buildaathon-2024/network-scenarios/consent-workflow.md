@@ -4,6 +4,12 @@ The consent workflow is a fundamental part of the Account Aggregator (AA) ecosys
 
 ### **Steps Involved in Consent Workflow:**
 
+#### Pre-requisites:
+
+The [Account Discovery & Linking](account-discovery-and-linking.md) is handled by the user to execute the Consent workflow.
+
+<figure><img src="../../.gitbook/assets/consent-workflow.png" alt=""><figcaption><p>Consent Workflow</p></figcaption></figure>
+
 #### **1. FIU Initiates Consent Request:**
 
 The FIU initiates the process by sending a consent request to the Account Aggregator (AA). The request specifies the type of financial data, the duration, and the purpose for which it is being requested. This consent request is made by the FIU to the AA.
