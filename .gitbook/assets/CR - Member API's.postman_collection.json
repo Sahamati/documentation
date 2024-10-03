@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "f4634e4d-d9aa-4137-aaf8-d8ed8ea1c9d2",
+		"name": "CR - Member API's",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "22548295",
+		"_collection_link": "https://sanketikatraining.postman.co/workspace/Personal-Workspace~0e6947ca-ea3a-4f72-9d9f-256da8b1ec59/collection/22548295-f4634e4d-d9aa-4137-aaf8-d8ed8ea1c9d2?action=share&source=collection_link&creator=22548295"
+	},
+	"item": [
+		{
+			"name": "Member Token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Generate member token\", function() {",
+							"    pm.response.to.have.status(200);",
+							"})",
+							"",
+							"if(pm.response.code == 200){",
+							"    pm.environment.set(\"member_token\",pm.response.json().accessToken);",
+							"}"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "{{member_id}}",
+							"type": "text"
+						},
+						{
+							"key": "secret",
+							"value": "{{member_secret}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{host}}/iam/v1/entity/token/generate"
+			},
+			"response": []
+		},
+		{
+			"name": "FIP",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{member_token}}"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "{{host}}/cr/v2/entityInfo/FIP"
+			},
+			"response": []
+		},
+		{
+			"name": "AA",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{member_token}}"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "{{host}}/cr/v2/entityInfo/AA"
+			},
+			"response": []
+		},
+		{
+			"name": "FIU",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{member_token}}"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "{{host}}/cr/v2/entityInfo/FIU"
+			},
+			"response": []
+		},
+		{
+			"name": "Client / Get by type & ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{member_token}}"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "{{host}}/cr/v2/entityInfo/AA/AA-SIMULATOR",
+				"description": "Description\n\nURL : {CR-Host}/entityInfo/{entityType}/{entityId}\n\nThis API will retrieve entity details based on the specified 'entityType' , 'entityId' and role of the caller."
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": {
+			"accessTokenUrl": "{{auth.token-url}}",
+			"clientSecret": "{{auth.clientSecret}}",
+			"clientId": "{{auth.clientId}}",
+			"tokenName": "{{auth.tokenName}}",
+			"grant_type": "client_credentials",
+			"challengeAlgorithm": "S256",
+			"username": "dheeraj@finarkein.com",
+			"useBrowser": true,
+			"password": "dheeraj",
+			"authUrl": "http://localhost:8080/auth/realms/sahamati/account/",
+			"addTokenTo": "header",
+			"client_authentication": "header"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

@@ -12,11 +12,17 @@ Below are the key SahamatiNet services, each of which addresses a unique need wi
 
 The Central Registry is a foundational service that serves as a directory for all registered ecosystem members. It exposes APIs that allow users to access detailed information about each member, including their roles (whether they are AAs, FIPs, FIUs, or TSPs) and other essential details like API endpoints and certificate for signature validation. This registry streamlines the process of discovering and connecting with other members in the ecosystem.
 
-**Key Features:**
+#### **Key Features:**
 
 * Simplifies discovery of ecosystem members.
 * Provides up-to-date information about registration, compliance, and API availability of members.
 * Facilitates quick connections between AAs, FIPs, and FIUs for secure data exchange.
+
+#### API Collection:
+
+{% file src="../.gitbook/assets/CR - Member API's.postman_collection.json" %}
+Central Registry - API Collection
+{% endfile %}
 
 ### **2. Token-Service (IAM)**
 
@@ -27,6 +33,12 @@ In the AA ecosystem, secure and authorized communication between members is crit
 * Generates secure access tokens for authentication.
 * Enables authorized requests between AAs, FIPs, FIUs, and other entities using ReBIT APIs.
 * Ensures robust security for every transaction or data exchange.
+
+#### API Collection:
+
+{% file src="../.gitbook/assets/Token-Service[IAM].postman_collection.json" %}
+Token-Service\[IAM] - API Collection
+{% endfile %}
 
 ### **3. Proxy**
 
@@ -54,6 +66,12 @@ The Simulator service is designed to mimic the behavior of different ecosystem m
 To learn more about how to use the Simulator for API integration, visit the following link:\
 [Simulator for API Integration](https://developer.sahamati.org.in/technical-specifications/proxy-api-specs/integration-using-simulator)
 
+#### API Collection:
+
+{% file src="../.gitbook/assets/Simulator.postman_collection.json" %}
+Simulator - API Collection
+{% endfile %}
+
 ### **5. Observability**
 
 The Observability service provides insights into the **AA network usage metrics**, helping ecosystem members understand their own performance and the overall health of the network. By monitoring key metrics such as transaction volumes, latency, and error rates, members can gain valuable data to improve their systems and ensure that they are adhering to the high standards of performance and reliability expected within the AA framework. Observability is essential for tracking system health, identifying potential issues, and optimizing performance over time.
@@ -65,5 +83,9 @@ The Observability service provides insights into the **AA network usage metrics*
 * Enhances transparency and operational visibility within the ecosystem.
 
 ***
+
+{% file src="../.gitbook/assets/Sandbox - SahamatiNet.postman_environment.json" %}
+SahamatiNet - Sandbox Environment
+{% endfile %}
 
 These SahamatiNet services together form a robust infrastructure that ensures secure, seamless, and efficient communication between different members of the AA ecosystem. By leveraging these services, participants in the Sahamati Buildaathon and other ecosystem members can focus on innovation, while SahamatiNet handles the complexities of interoperability, security, and monitoring.
