@@ -8,11 +8,11 @@ Using mock entities, developers can simulate the behavior of real entities withi
 
 The sample workflow diagrams below illustrates the usage of the Mock Entities and Responses by including entity id and scenario id under headers.
 
-<figure><img src="../../../.gitbook/assets/custom-response-success.png" alt=""><figcaption><p>Sample workflow of mocking success scenario</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Router-Custom-response-1.png" alt=""><figcaption><p>Sample workflow of mocking success scenario</p></figcaption></figure>
 
 
 
-<figure><img src="../../../.gitbook/assets/custom-response-500.png" alt=""><figcaption><p>Sample workflow of mocking error scenario</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Router-custom-response-2.png" alt=""><figcaption><p>Sample workflow of mocking error scenario</p></figcaption></figure>
 
 The following two details are required in the request to use the APIs with custom entity and respective configured response:
 

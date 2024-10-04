@@ -10,7 +10,7 @@ The sample workflow diagram below illustrates the usage of the Response Simulato
 
 
 
-<figure><img src="../../../.gitbook/assets/Simulator-latest-wf-1.png" alt=""><figcaption><p>Entity Integration with Proxy using "Response Simulator"</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Router-consent-flow.png" alt=""><figcaption><p>Entity Integration with Proxy using "Response Simulator"</p></figcaption></figure>
 
 The following two details are required in the request to use the APIs with Response Simulator:
 
@@ -36,11 +36,11 @@ The **FIP's Accounts/link/verify** API is the only one that utilizes the OTP rec
 
 The sample workflow diagram below illustrates the usage of the valid OTP &#x20;
 
-<figure><img src="../../../.gitbook/assets/OTP-success.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Router-OTP-flow-success.png" alt=""><figcaption></figcaption></figure>
 
 The sample workflow diagram below illustrates the usage of the invalid OTP&#x20;
 
-<figure><img src="../../../.gitbook/assets/OTP-failure.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Router-OTP-flow-failure.png" alt=""><figcaption></figcaption></figure>
 
 ## API Specifications:
 
@@ -54,7 +54,7 @@ Sample FI/fetch workflow using AA-SIMULATOR:
 
 
 
-<figure><img src="../../../.gitbook/assets/Simulator-latest-wf-2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Router-FI-Fetch-Flow.png" alt=""><figcaption></figcaption></figure>
 
 ### FIU Response Simulator
 
