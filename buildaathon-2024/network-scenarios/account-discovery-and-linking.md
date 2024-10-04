@@ -33,3 +33,14 @@ _**ReBIT API Involved (AA 2.1.0 Spec):**_** /Accounts/link/verify (POST)**: The 
 After successful OTP verification, the user’s selected accounts are linked to the AA. The FIP will send a notfication to the AA on successful OTP verification for the account linking. These accounts can now be used for data sharing in future consent workflows.
 
 _**ReBIT API Involved (AA 2.1.0 Spec):**_** /Account/link/Notification (POST)**: The AA confirms that the accounts have been successfully linked and communicates this to the user.
+
+### Reference Implementation Guide & Using Simulator
+
+For the above use case implementation, AA need to implement a few internal APIs for hanlding the user registration, login and accounts data along with the ReBIT API Specification.
+
+In this scenario, the AA need to have a mock FIP to support the integration testing with mock response for the API requests to FIP. Below are the APIs from Simulator helpful for the implementation and integration.
+
+* [Create a Mock FIP for Integration](../../technical-specifications/proxy-api-specs/integration-using-simulator/customisation-of-mock-entity-and-responses.md#entity-mock-register)
+* [Composing Mock Response for](../../technical-specifications/proxy-api-specs/integration-using-simulator/customisation-of-mock-entity-and-responses.md#response-add)
+  * Accounts Discovery
+  * Accounts Linking
