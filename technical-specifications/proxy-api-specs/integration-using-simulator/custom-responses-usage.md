@@ -16,11 +16,11 @@ The sample workflow diagrams below illustrates the usage of the Mock Entities an
 
 The following two details are required in the request to use the APIs with custom entity and respective configured response:
 
-* **x-recipient-id:** This header specifies the proxy that will route the request to the respective custom entity created using [Create API](customisation-of-mock-entity-and-responses.md#entity-mock-register).
+* **x-request-meta:** This header specifies the proxy that will route the request to the respective custom entity created using [Create API](customisation-of-mock-entity-and-responses.md#entity-mock-register).
 * **x-scenario-id:** This header should contain the scenario id for the specific response configured for respective entity using [Add response API](customisation-of-mock-entity-and-responses.md#response-add)
 
 #### Sample Request Headers:
 
-<pre class="language-javascript"><code class="lang-javascript"><strong>x-recipient-id: custom-aa-id
-</strong><strong>x-scenario-id: custom-aa-id-500-error
+<pre class="language-javascript"><code class="lang-javascript">x-request-meta: [Base64 of {"recipient-id": "&#x3C;custom-aa-id>"}]
+<strong>x-scenario-id: custom-aa-id-500-error
 </strong></code></pre>

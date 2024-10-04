@@ -31,3 +31,4 @@
 {% swagger src="../../../.gitbook/assets/AA-v2-latest.yaml" path="/Account/link/Notification" method="post" %}
 [AA-v2-latest.yaml](../../../.gitbook/assets/AA-v2-latest.yaml)
 {% endswagger %}
+

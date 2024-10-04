@@ -31,3 +31,4 @@
 {% swagger src="../../../.gitbook/assets/FIP-v2-latest.yaml" path="/Consent" method="post" %}
 [FIP-v2-latest.yaml](../../../.gitbook/assets/FIP-v2-latest.yaml)
 {% endswagger %}
+

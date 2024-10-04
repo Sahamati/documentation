@@ -14,7 +14,7 @@ The sample workflow diagram below illustrates the usage of the Response Simulato
 
 The following two details are required in the request to use the APIs with Response Simulator:
 
-* **x-recipient-id:** This header specifies the proxy that will route the request to the respective response simulator. The available options are,
+* **recipient-id:** This is specified in the **x-request-meta** header through which the proxy that will route the request to the respective response simulator. The available options are,
   * **AA-SIMULATOR**
   * **FIU-SIMULATOR** and
   * **FIP-SIMULATOR**.
@@ -22,8 +22,8 @@ The following two details are required in the request to use the APIs with Respo
 
 #### Sample Request Headers:
 
-<pre class="language-javascript"><code class="lang-javascript"><strong>x-recipient-id: AA-SIMULATOR
-</strong><strong>x-simulate-res: DataGone
+<pre class="language-javascript"><code class="lang-javascript">x-request-meta: [Base64 of {"recipient-id": "AA-SIMULATOR"}]
+<strong>x-simulate-res: DataGone
 </strong></code></pre>
 
 ## OTP Scenario:
