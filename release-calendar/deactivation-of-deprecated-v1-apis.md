@@ -16,7 +16,7 @@ As part of Sahamati’s ongoing enhancements, the Central Registry APIs have tra
 * **UAT Environment:**\
   These changes have already been deployed in the UAT environment.
 * **Production Environment:**\
-  The decommissioning will take effect in the Production environment starting from 3rd October 2024.
+  The decommissioning will take effect in the Production environment post deployment in October 2024.
 
 ### Action Required:
 

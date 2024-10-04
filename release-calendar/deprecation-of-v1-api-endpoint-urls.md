@@ -1,6 +1,6 @@
 # Deprecation of V1 API Endpoint URLs
 
-This notice is to inform all participants of the Account Aggregator (AA) ecosystem about the deprecation of the ReBIT API V1 in the Central Registry and the necessary steps for transitioning to the V2 API.
+This is to inform all participants of the Account Aggregator (AA) ecosystem about the deprecation of the ReBIT API V1 in the Central Registry and the necessary steps for transitioning to the V2 API.
 
 ### Key Updates:
 
@@ -9,7 +9,7 @@ This notice is to inform all participants of the Account Aggregator (AA) ecosyst
 * **For Participants Using V1:**\
   You are required to update your API Endpoint URLs to V2 in the Central Registry. Please share your V2 endpoint details with the Sahamati Services team.
 * **For Participants Supporting Both V1 and V2:**\
-  To ensure a smooth transition, it is recommended to deprecate the V1 endpoint URL by updating it to /v1/nonexistent-resource in the Central Registry. This will signal to users that the V1 endpoint is no longer valid, ensuring they switch to V2 seamlessly.
+  To ensure a smooth transition, it is recommended to deprecate the V1 endpoint URL by updating it to **/v1/nonexistent-resource** in the Central Registry. This will signal to users that the V1 endpoint is no longer valid, ensuring they switch to V2 seamlessly.
 * **Best Practices:**\
   As a best practice, participants should refresh the Entities Endpoint URL from the Central Registry daily. This ensures that any updates made by other participants transitioning to V2 are reflected in your system, helping avoid miscommunication or errors.
 
@@ -20,5 +20,5 @@ This notice is to inform all participants of the Account Aggregator (AA) ecosyst
 ### Action Required:
 
 * **Update your Base URLs**\
-  Please reach out to services@sahamati.org.in to update your application Endpoint Base URLs from V1 to V2 in the Central Registry.
+  Please reach out to **services@sahamati.org.in** to update your application Endpoint Base URLs from V1 to V2 in the Central Registry.
 
