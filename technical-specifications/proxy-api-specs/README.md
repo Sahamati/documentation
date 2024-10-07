@@ -12,6 +12,6 @@ Outlined below are the changes that members need to make to their implementation
 {% hint style="success" %}
 ```
 x-request-meta: <Base64 of JSON object 
-{"recipient-id":<unique identifier of the receiver>"}>
+{"recipient-id":"<unique identifier of the receiver>"}>
 ```
 {% endhint %}
