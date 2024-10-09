@@ -37,6 +37,16 @@ Below are the Base URL of each environment to use IAM APIs.
 
 ## Token Generation APIs:
 
+#### API Postman Collection:&#x20;
+
+> **We recommend you to use below postman collection to try out our IAM/Token-Service APIs**
+
+{% file src="../.gitbook/assets/Token-Service[IAM].postman_collection.json" %}
+
+Below is the Sandbox Environment file for SahamatiNet Services
+
+{% file src="../.gitbook/assets/Sandbox - SahamatiNet.postman_environment.json" %}
+
 {% swagger src="../.gitbook/assets/token-service-v2 (1).yaml" path="/user/token/generate" method="post" %}
 [token-service-v2 (1).yaml](<../.gitbook/assets/token-service-v2 (1).yaml>)
 {% endswagger %}
