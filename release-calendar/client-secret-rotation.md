@@ -33,5 +33,9 @@ This is to inform all participants in the Account Aggregator (AA) ecosystem abou
 
 Please ensure these changes are incorporated into your applications and processes by the given deadlines to maintain uninterrupted access to the AA ecosystem.
 
-\
+**Update on Client Secret Rotation:**
+
+Based on the UAT feedback regarding client secret rotation, we will be updating the validity period for newly generated tokens to 180 days. As a result, the planned deployment, **originally scheduled for 3rd October 2024, will be moved to Week 2 of October 2024**, following the next round of UAT.
+
+The next release will also include changes that allow entities to parameterise and configure the expiry period themselves, based on their respective regulatory guidelines.\
 \
