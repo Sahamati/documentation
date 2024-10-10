@@ -34,13 +34,13 @@ tags:
 schemes:
   - https
 securityDefinitions:
-  AA_api_key:
+  aa_api_key:
     type: apiKey
     name: aa_api_key
     in: header
-    description: AA_api_key is provided to FIP by the AA
+    description: aa_api_key is provided to FIP by the AA
 security:
-  - AA_api_key: []
+  - aa_api_key: []
 consumes:
   - application/json
 produces:
@@ -52,6 +52,8 @@ paths:
     post:
       tags:
         - Account Discovery and Linking
+      security:
+        - aa_api_key: []
       description: >-
         This API enables an AA to discover accounts belonging to a customer
         based on the customer identifiers. A list of masked account information
@@ -157,6 +159,8 @@ paths:
     post:
       tags:
         - Account Discovery and Linking
+      security:
+        - aa_api_key: []
       description: >-
         This API will be used for initiating an account link request to link
         selected account/s with the AA customer address.
@@ -259,6 +263,8 @@ paths:
     post:
       tags:
         - Account Discovery and Linking
+      security:
+        - aa_api_key: []
       description: >-
         This API will be used to delete a previously established account link to
         the user's profile. Once deleted, the financial information can not be retrieved for that account through Account Aggregator.
@@ -360,6 +366,8 @@ paths:
     post:
       tags:
         - Account Discovery and Linking
+      security:
+        - aa_api_key: []
       description: >-
         This API is used to submit the token/OTP(received from the customer)
         back to FIP so that account linkage can be completed. It is used only in
@@ -462,6 +470,8 @@ paths:
     post:
       tags:
         - Data Flow
+      security:
+        - aa_api_key: []
       description: >-
         This API is used by the AA to request for financial information from the FIP. 
         The FIP will validate the request against the signed consent and return a 
@@ -574,6 +584,8 @@ paths:
     post:
       tags:
         - Data Flow
+      security:
+        - aa_api_key: []
       description: >-
         This API is used to fetch financial information from FIP once AA recieves the data ready notification.
 
@@ -682,6 +694,8 @@ paths:
     post:
       tags:
         - Consent & Consent Notifications
+      security:
+        - aa_api_key: []
       description: >-
          This API is intended to be used by AA to notify the change in consent status due to the consent management 
          operations performed by the customer. 
@@ -785,6 +799,8 @@ paths:
     post:
       tags:
         - Consent & Consent Notifications
+      security:
+        - aa_api_key: []
       description: >-
         This API will be used by the AA to send the consent artefact to the FIP
         on creation.
@@ -887,6 +903,8 @@ paths:
     get:
       tags:
         - Monitoring
+      security:
+        - aa_api_key: []
       description: |-
         This API can be used by the AAs to check availability of the FIP application.
 

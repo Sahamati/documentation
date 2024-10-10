@@ -19,13 +19,13 @@ tags:
     description: >-
       These APIs are used by AAs to send consent status update and financial information request related notifications to FIU/AA Client.
 securityDefinitions:
-  AA_api_key:
+  aa_api_key:
     type: apiKey
     name: aa_api_key
     in: header
-    description: AA_api_key is provided to FIP by the AA
+    description: aa_api_key is provided to FIP by the AA
 security:
-  - AA_api_key: []
+  - aa_api_key: []
 consumes:
   - application/json
 produces:
@@ -37,6 +37,8 @@ paths:
     post:
       tags:
         - Notifications
+      security:
+        - aa_api_key: []
       description: >-
         This API is intended to be used by AA to notify FIU about the change in consent status due to the 
         consent management operations performed by the Customer. For more details about consent notification flow, 
@@ -152,6 +154,8 @@ paths:
     post:
       tags:
         - Notifications
+      security:
+        - aa_api_key: []
       description: >-
         This API can be used by AAs to send notifications related to Financial Information (FI) fetch to FIU/AA Client.
 

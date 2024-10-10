@@ -25,16 +25,16 @@ tags:
 schemes:
   - https
 securityDefinitions:
-  Client_api_key:
+  client_api_key:
     type: apiKey
     name: client_api_key
     in: header
-    description: Client_api_key is provided to AA by the AA Client or the FIU
-  FIP_api_key:
+    description: client_api_key is provided to AA by the AA Client or the FIU
+  fip_api_key:
     type: apiKey
     name: fip_api_key
     in: header
-    description: FIP_api_key is provided to AA by the FIP
+    description: fip_api_key is provided to AA by the FIP
 security:
   - Client_api_key: []
 consumes:
@@ -48,6 +48,8 @@ paths:
     post:
       tags:
         - Consent Flow
+      security:
+        - client_api_key: []
       description: >-
         This API is intended for AA Client to request generation of digitally
         signed consent artefacts. The customer has to use the AA application to
@@ -167,6 +169,8 @@ paths:
     post:
       tags:
         - Consent Flow
+      security:
+        - client_api_key: []
       description: >-
         This API is intended to be used by FIU/AA Client to check the 
         consent status and retrieve the consent ID from AA once the consent is approved by customer.
@@ -279,8 +283,8 @@ paths:
       tags:
         - Consent Flow
       security:
-        - FIP_api_key: []
-        - Client_api_key: []
+        - fip_api_key: []
+        - client_api_key: []
       description: >-
         This API is intended for fetching the information associated with the
         specific consent.
@@ -393,6 +397,8 @@ paths:
     post:
       tags:
         - Data Flow
+      security:
+        - client_api_key: []
       description: >-
         This API is used by the FIU to request for financial information from the AA. 
         The AA will validate the request against the signed consent and return a 
@@ -508,6 +514,8 @@ paths:
     post:
       tags:
         - Data Flow
+      security:
+        - client_api_key: []
       description: >-
         This API is used to fetch financial information from AA once FIU recieves the data ready notification.
 
@@ -644,8 +652,8 @@ paths:
         <br> Note: "Request Body Example Value" and "Responses Example Value"
         given below is for illustrative purposes only.
       security:
-        - Client_api_key: []
-        - FIP_api_key: []
+        - client_api_key: []
+        - fip_api_key: []
       parameters:
         - name: x-jws-signature
           type: string
@@ -760,8 +768,8 @@ paths:
         <br> Note: "Request Body Example Value" and "Responses Example Value"
         given below is for illustrative purposes only.
       security:
-        - Client_api_key: []
-        - FIP_api_key: []
+        - client_api_key: []
+        - fip_api_key: []
       parameters:
         - name: x-jws-signature
           type: string
@@ -876,7 +884,7 @@ paths:
         <br> Note: "Request Body Example Value" and "Responses Example Value"
         given below is for illustrative purposes only.
       security:
-        - FIP_api_key: []
+        - fip_api_key: []
       parameters:
         - name: x-jws-signature
           type: string
@@ -990,8 +998,8 @@ paths:
 
          <br> Note: "Request Body Example Value" and "Responses Example Value" given below is for illustrative purposes only.
       security:
-        - FIP_api_key: []
-        - Client_api_key: []
+        - fip_api_key: []
+        - client_api_key: []
       responses:
         '200':
           description: OK
