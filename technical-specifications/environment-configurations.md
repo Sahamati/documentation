@@ -6,11 +6,12 @@ Below are the configuration details of each environment to access the APIs.
 
 ### Sandbox Environment
 
-| Service/Feature       | Base URL                                          |
-| --------------------- | ------------------------------------------------- |
-| Token Service (IAM)   | https://api.**sandbox**.sahamati.org.in/**iam**   |
-| Central Registry (CR) | https://api.**sandbox**.sahamati.org.in/**cr**    |
-| Proxy                 | https://api.**sandbox**.sahamati.org.in/**proxy** |
+| Service/Feature       | Base URL                                                                               |
+| --------------------- | -------------------------------------------------------------------------------------- |
+| Public Key            | https://api.sandbox.sahamati.org.in/auth/realms/sahamati/protocol/openid-connect/certs |
+| Token Service (IAM)   | https://api.**sandbox**.sahamati.org.in/**iam**                                        |
+| Central Registry (CR) | https://api.**sandbox**.sahamati.org.in/**cr**                                         |
+| Proxy                 | https://api.**sandbox**.sahamati.org.in/**proxy**                                      |
 
 ### UAT Environment
 

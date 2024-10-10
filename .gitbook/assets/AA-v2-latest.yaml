@@ -48,8 +48,6 @@ paths:
     post:
       tags:
         - Consent Flow
-      security:
-        - client_api_key: []
       description: >-
         This API is intended for AA Client to request generation of digitally
         signed consent artefacts. The customer has to use the AA application to
@@ -63,6 +61,11 @@ paths:
         <br>Note: "Request Body Example Value" and "Responses Example Value"
         given below is for illustrative purposes only.
       parameters:
+        - name: client_api_key
+          type: apiKey
+          in: header
+          required: true
+          description: client_api_key is provided to AA by the AA Client or the FIU
         - name: x-jws-signature
           type: string
           in: header
@@ -169,8 +172,6 @@ paths:
     post:
       tags:
         - Consent Flow
-      security:
-        - client_api_key: []
       description: >-
         This API is intended to be used by FIU/AA Client to check the 
         consent status and retrieve the consent ID from AA once the consent is approved by customer.
@@ -178,6 +179,11 @@ paths:
         <br> Note: "Request Body Example Value" and "Responses Example Value"
         given below is for illustrative purposes only.
       parameters:
+        - name: client_api_key
+          type: apiKey
+          in: header
+          required: true
+          description: client_api_key is provided to AA by the AA Client or the FIU
         - name: x-jws-signature
           type: string
           in: header
@@ -282,9 +288,6 @@ paths:
     post:
       tags:
         - Consent Flow
-      security:
-        - fip_api_key: []
-        - client_api_key: []
       description: >-
         This API is intended for fetching the information associated with the
         specific consent.
@@ -292,9 +295,18 @@ paths:
         <br> Note: "Request Body Example Value" and "Responses Example Value"
         given below is for illustrative purposes only.
       parameters:
+        - name: client_api_key
+          type: apiKey
+          in: header
+          required: true
+          description: client_api_key is provided to AA by the AA Client or the FIU
+        - name: fip_api_key
+          type: apiKey
+          in: header
+          required: true
+          description: fip_api_key is provided to AA by the FIP
         - name: x-jws-signature
           type: string
-          
           in: header
           required: true
           description: Detached JWS of the body
@@ -397,8 +409,6 @@ paths:
     post:
       tags:
         - Data Flow
-      security:
-        - client_api_key: []
       description: >-
         This API is used by the FIU to request for financial information from the AA. 
         The AA will validate the request against the signed consent and return a 
@@ -407,9 +417,13 @@ paths:
         <br> Note: "Request Body Example Value" and "Responses Example Value"
         given below is for illustrative purposes only.
       parameters:
+        - name: client_api_key
+          type: apiKey
+          in: header
+          required: true
+          description: client_api_key is provided to AA by the AA Client or the FIU
         - name: x-jws-signature
-          type: string
-          
+          type: string  
           in: header
           required: true
           description: Detached JWS of the body
@@ -514,17 +528,19 @@ paths:
     post:
       tags:
         - Data Flow
-      security:
-        - client_api_key: []
       description: >-
         This API is used to fetch financial information from AA once FIU recieves the data ready notification.
 
         <br> Note: "Request Body Example Value" and "Responses Example Value"
         given below is for illustrative purposes only.
       parameters:
+        - name: client_api_key
+          type: apiKey
+          in: header
+          required: true
+          description: client_api_key is provided to AA by the AA Client or the FIU
         - name: x-jws-signature
           type: string
-          
           in: header
           required: true
           description: Detached JWS of the body
@@ -651,13 +667,19 @@ paths:
 
         <br> Note: "Request Body Example Value" and "Responses Example Value"
         given below is for illustrative purposes only.
-      security:
-        - client_api_key: []
-        - fip_api_key: []
       parameters:
+        - name: client_api_key
+          type: apiKey
+          in: header
+          required: true
+          description: client_api_key is provided to AA by the AA Client or the FIU
+        - name: fip_api_key
+          type: apiKey
+          in: header
+          required: true
+          description: fip_api_key is provided to AA by the FIP
         - name: x-jws-signature
           type: string
-          
           in: header
           required: true
           description: Detached JWS of the body
@@ -767,13 +789,19 @@ paths:
 
         <br> Note: "Request Body Example Value" and "Responses Example Value"
         given below is for illustrative purposes only.
-      security:
-        - client_api_key: []
-        - fip_api_key: []
       parameters:
+        - name: client_api_key
+          type: apiKey
+          in: header
+          required: true
+          description: client_api_key is provided to AA by the AA Client or the FIU
+        - name: fip_api_key
+          type: apiKey
+          in: header
+          required: true
+          description: fip_api_key is provided to AA by the FIP
         - name: x-jws-signature
           type: string
-          
           in: header
           required: true
           description: Detached JWS of the body
@@ -883,12 +911,14 @@ paths:
 
         <br> Note: "Request Body Example Value" and "Responses Example Value"
         given below is for illustrative purposes only.
-      security:
-        - fip_api_key: []
       parameters:
+        - name: fip_api_key
+          type: apiKey
+          in: header
+          required: true
+          description: fip_api_key is provided to AA by the FIP
         - name: x-jws-signature
           type: string
-          
           in: header
           required: true
           description: Detached JWS of the body
@@ -997,9 +1027,17 @@ paths:
         This API can be used by FIPs and FIUs to check availability of AA Application.
 
          <br> Note: "Request Body Example Value" and "Responses Example Value" given below is for illustrative purposes only.
-      security:
-        - fip_api_key: []
-        - client_api_key: []
+      parameters:
+        - name: client_api_key
+          type: apiKey
+          in: header
+          required: true
+          description: client_api_key is provided to AA by the AA Client or the FIU
+        - name: fip_api_key
+          type: apiKey
+          in: header
+          required: true
+          description: fip_api_key is provided to AA by the FIP
       responses:
         '200':
           description: OK

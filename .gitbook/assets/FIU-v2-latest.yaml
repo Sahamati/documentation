@@ -23,7 +23,7 @@ securityDefinitions:
     type: apiKey
     name: aa_api_key
     in: header
-    description: aa_api_key is provided to FIP by the AA
+    description: aa_api_key is provided to FIU by the AA
 security:
   - aa_api_key: []
 consumes:
@@ -37,8 +37,6 @@ paths:
     post:
       tags:
         - Notifications
-      security:
-        - aa_api_key: []
       description: >-
         This API is intended to be used by AA to notify FIU about the change in consent status due to the 
         consent management operations performed by the Customer. For more details about consent notification flow, 
@@ -47,9 +45,13 @@ paths:
         <br>Note: "Request Body Example Value" and "Responses Example Value"
         given below is for illustrative purposes only.
       parameters:
+        - name: aa_api_key
+          type: apiKey
+          in: header
+          required: true
+          description: aa_api_key is provided to FIU by the AA
         - name: x-jws-signature
           type: string
-          
           in: header
           required: true
           description: Detached JWS of the body
@@ -154,17 +156,19 @@ paths:
     post:
       tags:
         - Notifications
-      security:
-        - aa_api_key: []
       description: >-
         This API can be used by AAs to send notifications related to Financial Information (FI) fetch to FIU/AA Client.
 
         <br>Note: "Request Body Example Value" and "Responses Example Value"
         given below is for illustrative purposes only.
       parameters:
+        - name: aa_api_key
+          type: apiKey
+          in: header
+          required: true
+          description: aa_api_key is provided to FIU by the AA
         - name: x-jws-signature
           type: string
-          
           in: header
           required: true
           description: Detached JWS of the body
