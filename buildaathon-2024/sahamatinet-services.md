@@ -53,6 +53,10 @@ Interoperability is a core challenge in any data-sharing ecosystem. The Proxy ac
 For more detailed insights into how the Proxy functions, you can refer to the below link:\
 [Proxy Service Details](https://developer.sahamati.org.in/sahamatinet/proxy)
 
+#### API Collection:
+
+{% file src="../.gitbook/assets/Proxy Service.postman_collection.json" %}
+
 ### **4. Simulator**
 
 The Simulator service is designed to mimic the behavior of different ecosystem members during API integrations. This allows developers and teams to simulate various scenarios (such as being an AA, FIP, or FIU) and observe how the system responds, without needing to use live data or access actual financial institutions. The Simulator helps teams test their innovations, troubleshoot potential issues, and validate integrations in a controlled environment before moving to production.
