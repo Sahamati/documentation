@@ -1,11 +1,11 @@
 # Client Secret Rotation
 
-This is to inform all participants in the Account Aggregator (AA) ecosystem about the new Client Secret Rotation policy, following the recommendations from a recent RBI audit.
+This is to inform all participants in the Account Aggregator (AA) ecosystem about the new Client Secret Rotation policy, following the recommendations from market participants.
 
 ### Key Updates
 
-* **RBI Audit Recommendation:**\
-  Following a recent audit of several AAs by the RBI, it was recommended that the Client Secret Token used for authentication of Token Service should be rotated periodically to enhance security and mitigate risks related to token misuse or compromise.
+* **Best Practice Recommendation:**\
+  Following feedback from market participants, it was recommended that the Client Secret Token used for authentication of Token Service should be rotated periodically to enhance security and mitigate risks related to token misuse or compromise.
 * **Current Observations:**\
   A substantial number of participants have not rotated the Client Secret provided during their initial onboarding with the Central Registry (CR). To address this, Sahamati is introducing a Client Secret Rotation feature that enables participants to rotate their secrets efficiently and securely.
 * **Designated Authorised Users:**\
