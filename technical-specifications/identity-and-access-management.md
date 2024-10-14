@@ -47,20 +47,20 @@ Below is the Sandbox Environment file for SahamatiNet Services
 
 {% file src="../.gitbook/assets/Sandbox - SahamatiNet.postman_environment.json" %}
 
-{% swagger src="../.gitbook/assets/token-service-v2 (1).yaml" path="/user/token/generate" method="post" %}
-[token-service-v2 (1).yaml](<../.gitbook/assets/token-service-v2 (1).yaml>)
+{% swagger src="../.gitbook/assets/Token-Service-Latest (1).yaml" path="/user/token/generate" method="post" %}
+[Token-Service-Latest (1).yaml](<../.gitbook/assets/Token-Service-Latest (1).yaml>)
 {% endswagger %}
 
-{% swagger src="../.gitbook/assets/token-service-v2 (1).yaml" path="/entity/token/generate" method="post" %}
-[token-service-v2 (1).yaml](<../.gitbook/assets/token-service-v2 (1).yaml>)
+{% swagger src="../.gitbook/assets/Token-Service-Latest (1).yaml" path="/entity/token/generate" method="post" %}
+[Token-Service-Latest (1).yaml](<../.gitbook/assets/Token-Service-Latest (1).yaml>)
 {% endswagger %}
 
 ## Member Secret Management APIs
 
-{% swagger src="../.gitbook/assets/token-service-v2.yaml" path="/entity/secret/reset" method="post" %}
-[token-service-v2.yaml](../.gitbook/assets/token-service-v2.yaml)
+{% swagger src="../.gitbook/assets/Token-Service-Latest.yaml" path="/entity/secret/reset" method="post" %}
+[Token-Service-Latest.yaml](../.gitbook/assets/Token-Service-Latest.yaml)
 {% endswagger %}
 
-{% swagger src="../.gitbook/assets/token-service-v2 (1).yaml" path="/entity/secret/read" method="post" %}
-[token-service-v2 (1).yaml](<../.gitbook/assets/token-service-v2 (1).yaml>)
+{% swagger src="../.gitbook/assets/Token-Service-Latest (1).yaml" path="/entity/secret/read" method="post" %}
+[Token-Service-Latest (1).yaml](<../.gitbook/assets/Token-Service-Latest (1).yaml>)
 {% endswagger %}
