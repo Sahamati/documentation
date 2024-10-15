@@ -32,3 +32,8 @@
 [FIP-v2-latest (1).yaml](<../../../.gitbook/assets/FIP-v2-latest (1).yaml>)
 {% endswagger %}
 
+
+
+{% swagger src="../../../.gitbook/assets/FIP-v2-latest (1).yaml" path="/Heartbeat" method="get" %}
+[FIP-v2-latest (1).yaml](<../../../.gitbook/assets/FIP-v2-latest (1).yaml>)
+{% endswagger %}

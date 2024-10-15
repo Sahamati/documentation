@@ -32,3 +32,8 @@
 [AA-v2-latest.yaml](../../../.gitbook/assets/AA-v2-latest.yaml)
 {% endswagger %}
 
+
+
+{% swagger src="../../../.gitbook/assets/AA-v2-latest.yaml" path="/Heartbeat" method="get" %}
+[AA-v2-latest.yaml](../../../.gitbook/assets/AA-v2-latest.yaml)
+{% endswagger %}
