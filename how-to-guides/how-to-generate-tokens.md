@@ -4,8 +4,8 @@
 
 To generate and validate access tokens from Sahamati, here are sample curl commands for User Token and Entity Token APIs. It is recommended to use Postman for quicker and more efficient testing. However, the following curl commands are helpful for direct implementation within code.
 
-**User Token API:**\
-This API generates a token for a user (email/password-based authentication).
+**User Access Token API:**\
+This API generates a token for a user (email/password-based authentication). To generate a User Access Token, the user must provide their username (email) and the password configured during the account activation process. **This access token is necessary for interacting with the member's secret management APIs**. The access token has an expiry of 24 hrs.
 
 Example curl &#x20;
 
@@ -17,8 +17,8 @@ curl -X 'POST' \
   -d 'username=<your-email>&password=<your-password>
 ```
 
-**Entity Token API**:\
-This API generates a token for an entity based on its ID and secret.
+**Entity Access Token API**:\
+This API generates a token for an entity based on its ID and secret. The generation of a Member (Entity) Access Token requires the ID (client ID) and the Secret. **This access token is used for the interaction with other members**. The access token has an expiry of 24 hrs.
 
 Example curl
 
