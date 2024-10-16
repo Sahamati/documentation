@@ -18,6 +18,7 @@ tags:
 servers:
   - url: https://api.sandbox.sahamati.org.in/iam/v1
   - url: https://api.sahamati.org.in/iam/v1
+x-hideTryItPanel: true
 paths:
   /entity/secret/read:
     post:
@@ -170,9 +171,18 @@ paths:
       tags:
         - Entity APIs
       summary: Entity Token Generate API
+      x-codeSamples:
+        - lang: curl
+          label: Curl
+          source: |
+            curl -L \
+              -X POST \
+              'https://api.sandbox.sahamati.org.in/iam/v1/entity/token/generate' \
+              -H 'accept: application/json' \
+              -H 'Content-Type: application/x-www-form-urlencoded' \
+              -d 'id=<id>&secret=<secret>
       description: |
         The generation of a Member (Entity) Access Token requires the ID (client ID) and the Secret. This token is used for the interaction with other members. The access token has an expiry of 24 hrs. Below is the API specification.
-        
       requestBody:
         required: true
         content:
@@ -248,6 +258,16 @@ paths:
       tags:
         - User APIs
       summary: User Token Generate API
+      x-codeSamples:
+        - lang: curl
+          label: Curl
+          source: |
+            curl -L \
+              -X POST \
+              'https://api.sandbox.sahamati.org.in/iam/v1/user/token/generate' \
+              -H 'accept: application/json' \
+              -H 'Content-Type: application/x-www-form-urlencoded' \
+              -d 'username=<email>&password=<password>
       description: |
         To generate a User Access Token, the user must provide their username (email) and the password configured during the account activation process. This access token is necessary for interacting with the member's secret management APIs. The access token has an expiry of 24 hrs. Below is the API specification.
       requestBody:

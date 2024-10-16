@@ -39,7 +39,9 @@ Below are the Base URL of each environment to use IAM APIs.
 
 #### API Postman Collection:&#x20;
 
-> **We recommend you to use below postman collection to try out our IAM/Token-Service APIs**
+{% hint style="info" %}
+We recommend you to use below postman collection to try out our Token-Service\[IAM] APIs
+{% endhint %}
 
 {% file src="../.gitbook/assets/Token-Service[IAM].postman_collection.json" %}
 
@@ -47,12 +49,12 @@ Below is the Sandbox Environment file for SahamatiNet Services
 
 {% file src="../.gitbook/assets/Sandbox - SahamatiNet.postman_environment.json" %}
 
-{% swagger src="../.gitbook/assets/Token-Service-Latest (1).yaml" path="/user/token/generate" method="post" %}
-[Token-Service-Latest (1).yaml](<../.gitbook/assets/Token-Service-Latest (1).yaml>)
+{% swagger src="../.gitbook/assets/Token-Service-Latest.yaml" path="/user/token/generate" method="post" %}
+[Token-Service-Latest.yaml](../.gitbook/assets/Token-Service-Latest.yaml)
 {% endswagger %}
 
-{% swagger src="../.gitbook/assets/Token-Service-Latest (1).yaml" path="/entity/token/generate" method="post" %}
-[Token-Service-Latest (1).yaml](<../.gitbook/assets/Token-Service-Latest (1).yaml>)
+{% swagger src="../.gitbook/assets/Token-Service-Latest.yaml" path="/entity/token/generate" method="post" %}
+[Token-Service-Latest.yaml](../.gitbook/assets/Token-Service-Latest.yaml)
 {% endswagger %}
 
 ## Member Secret Management APIs
@@ -61,6 +63,6 @@ Below is the Sandbox Environment file for SahamatiNet Services
 [Token-Service-Latest.yaml](../.gitbook/assets/Token-Service-Latest.yaml)
 {% endswagger %}
 
-{% swagger src="../.gitbook/assets/Token-Service-Latest (1).yaml" path="/entity/secret/read" method="post" %}
-[Token-Service-Latest (1).yaml](<../.gitbook/assets/Token-Service-Latest (1).yaml>)
+{% swagger src="../.gitbook/assets/Token-Service-Latest.yaml" path="/entity/secret/read" method="post" %}
+[Token-Service-Latest.yaml](../.gitbook/assets/Token-Service-Latest.yaml)
 {% endswagger %}
