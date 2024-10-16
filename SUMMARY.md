@@ -33,7 +33,7 @@
 * [Frequently Asked Questions](frequently-asked-questions.md)
 * [How To Guides](how-to-guides/README.md)
   * [How To Onboard to Sandbox ?](how-to-guides/how-to-onboard-to-sandbox.md)
-  * [How To Create an Entity ID ?](how-to-guides/how-to-create-an-entity-id.md)
+  * [How To Decide on an Entity ID ?](how-to-guides/how-to-decide-on-an-entity-id.md)
   * [How To Generate a Certificate ?](how-to-guides/how-to-generate-a-certificate.md)
   * [How To Generate Tokens ?](how-to-guides/how-to-generate-tokens.md)
 * [BuildAAthon 2024](buildaathon-2024/README.md)

@@ -29,7 +29,7 @@ Once the member onboarded on SahamatiNet, the below APIs can be used by the asso
 
 1. **Generate User Access Token**: Use the [User Token Generate API](identity-and-access-management.md#user-token-generate) by providing email and password to get the access token. The access token should be used as the Authorization token for the steps below.
 2. **Reset Member Secret**: Use the [Secret Reset API](identity-and-access-management.md#entity-secret-reset) by providing the entityId and Authorization token.
-3. Read Member Secret: Use the [Secreate Read API](identity-and-access-management.md#entity-secret-read) by providing the entityId and Authorization token to fetch the latest secret to use.
+3. Read Member Secret: Use the [Secret Read API](identity-and-access-management.md#entity-secret-read) by providing the entityId and Authorization token to fetch the latest secret to use.
 
 Below are the Base URL of each environment to use IAM APIs.
 
