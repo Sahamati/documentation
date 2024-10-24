@@ -11,14 +11,14 @@ This is to inform all participants in the Account Aggregator (AA) ecosystem abou
 * **Designated Authorised Users:**\
   Each participant organisation must designate an authorised user who will be responsible for managing the Client Secret rotation. This user will be onboarded into the **Token Service (Identity & Access Management)** and tasked with rotating the secret using new APIs. The SPOC (Single Point of Contact) must also ensure that the newly generated secret token is securely integrated into their organisation's systems. It is recommended to use a **service account email** associated with the **participant organisation.** This ensures the account remains under the organisation's control for long-term management, providing consistency and seamless operation over time.
 * **Secret Token Expiration:**\
-  Moving forward, Client Secret Tokens will expire every 180 days. All participants are required to rotate their Client Secrets before the expiration date to ensure uninterrupted access to the network. This regular rotation is essential to maintaining the security of the AA ecosystem.
+  Moving forward, Client Secret Tokens set by Entities will expire every 180 days. All participants are required to rotate their Client Secrets before the expiration date to ensure uninterrupted access to the network. This regular rotation is essential to maintaining the security of the AA ecosystem.
 
 ### Implementation Timelines
 
 * **UAT Environment:**\
   The Client Secret Rotation feature is now live in the UAT environment, allowing participants to begin testing the process immediately.
 * **Production Environment:**\
-  The feature will be available in the Production environment post deployment in October 2024.
+  The feature is now available in the Production environment post deployment on 16th October 2024.
 
 ### Action Required
 
@@ -35,7 +35,8 @@ Please ensure these changes are incorporated into your applications and processe
 
 **Update on Client Secret Rotation:**
 
-Based on the UAT feedback regarding client secret rotation, we will be updating the validity period for newly generated tokens to 180 days. As a result, the planned deployment, **originally scheduled for 3rd October 2024, will be moved to Week 2 of October 2024**, following the next round of UAT.
+Based on feedback from UAT on client secret rotation, we have extended the validity period for newly generated tokens to **180 days**. Consequently, the deployment, initially scheduled for 3rd October 2024, was completed on **16th October 2024**.
 
-The next release will also include changes that allow entities to parameterise and configure the expiry period themselves, based on their respective regulatory guidelines.\
-\
+Please note that there will be **NO automatic expiration** of existing secret tokens in the Central Registry. Entities must **initiate and set** the expiration themselves, using the process outlined above.
+
+In the upcoming release, entities will also be able to **parameterise and configure** the expiry period of their secrets, in line with their specific regulatory guidelines.
