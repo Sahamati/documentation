@@ -6,7 +6,7 @@ Below are the key SahamatiNet services, each of which addresses a unique need wi
 
 
 
-<figure><img src="../.gitbook/assets/sahamatinet-services-v2.png" alt=""><figcaption><p>SahamatiNet - Services</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/SahamatiNet - Services.png" alt=""><figcaption><p>SahamatiNet - Services</p></figcaption></figure>
 
 ### **1. Central Registry**
 
@@ -40,9 +40,9 @@ In the AA ecosystem, secure and authorized communication between members is crit
 Token-Service\[IAM] - API Collection
 {% endfile %}
 
-### **3. Proxy**
+### **3.** Router
 
-Interoperability is a core challenge in any data-sharing ecosystem. The Proxy acts as a bridge to ensure smooth and standardized communication between various ecosystem members using ReBIT APIs. When a request is made by one member to another (such as an FIU requesting data from an FIP), the Proxy  ensures that the API requests and responses are correctly routed and formatted. This service is crucial for ensuring that no matter what system or infrastructure a member uses, the interaction remains standardized and interoperable across the network.
+Interoperability is a core challenge in any data-sharing ecosystem. The Router acts as a bridge to ensure smooth and standardized communication between various ecosystem members using ReBIT APIs. When a request is made by one member to another (such as an FIU requesting data from an FIP), the Router  ensures that the API requests and responses are correctly routed and formatted. This service is crucial for ensuring that no matter what system or infrastructure a member uses, the interaction remains standardized and interoperable across the network.
 
 **Key Features:**
 
@@ -50,7 +50,7 @@ Interoperability is a core challenge in any data-sharing ecosystem. The Proxy ac
 * Routes and standardizes API requests and responses.
 * Simplifies cross-ecosystem communication by eliminating compatibility issues.
 
-For more detailed insights into how the Proxy functions, you can refer to the below link:\
+For more detailed insights into how the Router functions, you can refer to the below link:\
 [Proxy Service Details](https://developer.sahamati.org.in/sahamatinet/proxy)
 
 #### API Collection:

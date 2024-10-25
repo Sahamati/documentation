@@ -1,20 +1,20 @@
 # Integration using Simulator
 
-This page outlines the usage of **Response Simulator** by AA, FIU or FIP with entity APIs for the integration of Proxy. This **Response Simulator** will simulate the behaviour of the actual entity APIs to facilitate Sahamati proxy usage and testing.
+This page outlines the usage of **Response Simulator** by AA, FIU or FIP with entity APIs for the integration of Router. This **Response Simulator** will simulate the behaviour of the actual entity APIs to facilitate Sahamati router usage and testing.
 
 ## Overview:
 
-The Response Simulator is designed to simulate the behaviour of real Entity’s Protocol APIs. It provides a controlled environment for developers to test and verify proxy service without relying on an actual entity.
+The Response Simulator is designed to simulate the behaviour of real Entity’s Protocol APIs. It provides a controlled environment for developers to test and verify router service without relying on an actual entity.
 
 The sample workflow diagram below illustrates the usage of the Response Simulator by including a simulated response with the expected response.
 
 
 
-<figure><img src="../../../.gitbook/assets/Router-consent-flow.png" alt=""><figcaption><p>Entity Integration with Proxy using "Response Simulator"</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Entity Integration with Router using Response Simulator.png" alt=""><figcaption><p>Entity Integration with Router using "Response Simulator"</p></figcaption></figure>
 
 The following two details are required in the request to use the APIs with Response Simulator:
 
-* **recipient-id:** This is specified in the **x-request-meta** header through which the proxy that will route the request to the respective response simulator. The available options are,
+* **recipient-id:** This is specified in the **x-request-meta** header through which the router that will route the request to the respective response simulator. The available options are,
   * **AA-SIMULATOR**
   * **FIU-SIMULATOR** and
   * **FIP-SIMULATOR**.
@@ -36,11 +36,11 @@ The **FIP's Accounts/link/verify** API is the only one that utilizes the OTP rec
 
 The sample workflow diagram below illustrates the usage of the valid OTP &#x20;
 
-<figure><img src="../../../.gitbook/assets/Router-OTP-flow-success.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/link verify success.png" alt=""><figcaption></figcaption></figure>
 
 The sample workflow diagram below illustrates the usage of the invalid OTP&#x20;
 
-<figure><img src="../../../.gitbook/assets/Router-OTP-flow-failure.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/invalid otp.png" alt=""><figcaption></figcaption></figure>
 
 ## API Specifications:
 
@@ -54,7 +54,7 @@ Sample FI/fetch workflow using AA-SIMULATOR:
 
 
 
-<figure><img src="../../../.gitbook/assets/Router-FI-Fetch-Flow.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/fi fetch.png" alt=""><figcaption></figcaption></figure>
 
 #### Preloaded Scenarios
 

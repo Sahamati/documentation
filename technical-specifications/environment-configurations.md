@@ -11,7 +11,7 @@ Below are the configuration details of each environment to access the APIs.
 | Public Key            | https://api.sandbox.sahamati.org.in/auth/realms/sahamati/protocol/openid-connect/certs |
 | Token Service (IAM)   | https://api.**sandbox**.sahamati.org.in/**iam**                                        |
 | Central Registry (CR) | https://api.**sandbox**.sahamati.org.in/**cr**                                         |
-| Proxy                 | https://api.**sandbox**.sahamati.org.in/**proxy**                                      |
+| Router                | https://api.**sandbox**.sahamati.org.in/**proxy**                                      |
 
 ### UAT Environment
 

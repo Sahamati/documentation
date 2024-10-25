@@ -4,7 +4,7 @@ Members are onboarded to SahamatiNet by creating a entity profile, with at least
 
 Here are the steps for a member to onboard.
 
-* [Member & User Registration](../sahamatinet/proxy.md#onboarding-process)
+* [Member & User Registration](../sahamatinet/router.md#onboarding-process)
 * Account Activation
   * [User](identity-and-access-management.md#user-account-activation)
   * [Member](identity-and-access-management.md#member-entity-activation)
