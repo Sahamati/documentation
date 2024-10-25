@@ -18,7 +18,7 @@
     * [Integration using Simulator](technical-specifications/proxy-api-specs/integration-using-simulator/README.md)
       * [Customisation of Mock Entity and Responses](technical-specifications/proxy-api-specs/integration-using-simulator/customisation-of-mock-entity-and-responses.md)
       * [Custom Responses Usage](technical-specifications/proxy-api-specs/integration-using-simulator/custom-responses-usage.md)
-  * [Fair Use Specs - Draft](technical-specifications/fair-use-specs-draft.md)
+  * [Fair Use Specs](technical-specifications/fair-use-specs.md)
   * [Network Telemetry Specs](technical-specifications/network-telemetry-specs.md)
   * [Identity & Access Management](technical-specifications/identity-and-access-management.md)
   * [Central Registry](technical-specifications/central-registry/README.md)

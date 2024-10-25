@@ -1,0 +1,334 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Consent Template List API
+  description: API to retrieve a list of consent templates in the Account Aggregator (AA) ecosystem with filtering options.
+
+servers:
+  - url: https://api.sahamati.org.in/v1
+
+paths:
+  /consent-template/list:
+    post:
+      summary: Consent Template List
+      description: Returns a list of consent templates with optional filtering parameters.
+      operationId: listConsentTemplates
+      requestBody:
+        description: Filters to refine the search for consent templates.
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filters:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                      description: Unique identifier of the consent template.
+                    status:
+                      type: string
+                      description: Status of the consent template.
+                      enum: ["Active", "Inactive"]
+                    publisher:
+                      type: string
+                      description: Name of the template's publisher.
+                    category:
+                      type: string
+                      description: Category of the rule.
+                    purpose:
+                      type: object
+                      properties:
+                        code:
+                          type: string
+                          description: Purpose code of the consent template.
+              example:
+                filters:
+                  id: "5d5e2bfb-e6c1-4b9b-90a5-c9dba65036c0"
+                  status: "Active"
+                  publisher: "Sahamati"
+                  purpose:
+                    code: "103"
+
+      responses:
+        '200':
+          description: A list of consent templates matching the filters.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ver:
+                    type: string
+                    description: Version of the API response.
+                    example: "1.0.0"
+                  timestamp:
+                    type: string
+                    format: date-time
+                    description: The timestamp of when the response was generated.
+                    example: "2024-09-20T06:48:08.006984182Z"
+                  txnId:
+                    type: string
+                    description: Transaction ID for tracking purposes.
+                    example: "64da25d2-e02d-4575-a8e3-0e3972c4601f"
+                  result:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        version:
+                          type: string
+                          description: Version of the consent template.
+                          example: "1.0"
+                        id:
+                          type: string
+                          description: Unique identifier of the consent template.
+                          example: "ZmFpcnVzZXBhcmFtcy0xMDE="
+                        description:
+                          type: string
+                          description: Description of the template.
+                          example: ""
+                        usecase:
+                          type: object
+                          properties:
+                            code:
+                              type: string
+                              description: Code for the use case tied to the template.
+                              example: "U001"
+                            category:
+                              type: string
+                              description: Category of the use case (e.g., PFM).
+                              example: "PFM"
+                            description:
+                              type: string
+                              description: Description of the use case.
+                              example: "Performing financial risk assessment on a periodic basis..."
+                        purpose:
+                          type: object
+                          properties:
+                            code:
+                              type: string
+                              description: Purpose code.
+                              example: "101"
+                            category:
+                              type: string
+                              description: Purpose category.
+                              example: "Personal Finance"
+                            description:
+                              type: string
+                              description: Purpose description.
+                              example: "Wealth management service"
+                        status:
+                          type: string
+                          description: Status of the template.
+                          enum: ["Draft", "Active", "Inactive"]
+                          example: "Active"
+                        publisher:
+                          type: string
+                          description: Publisher of the consent template.
+                          example: "Sahamati"
+                        limits:
+                          type: object
+                          properties:
+                            fiTypes:
+                              type: array
+                              items:
+                                type: string
+                              description: Financial information types.
+                              example: ["DEPOSIT", "TERM_DEPOSIT", "RECURRING_DEPOSIT"]
+                            consentTypes:
+                              type: array
+                              items:
+                                type: string
+                              description: Types of consent.
+                              example: ["PROFILE", "SUMMARY", "TRANSACTIONS"]
+                            fetchType:
+                              type: string
+                              description: Fetch type for consent data.
+                              enum: ["PERIODIC", "OTHER"]
+                              example: "PERIODIC"
+                            frequency:
+                              type: object
+                              properties:
+                                max:
+                                  type: object
+                                  properties:
+                                    unit:
+                                      type: string
+                                      description: Unit of frequency.
+                                      example: "DAY"
+                                    value:
+                                      type: integer
+                                      description: Maximum value for frequency.
+                                      example: 1
+                            FIDataRange:
+                              type: object
+                              properties:
+                                max:
+                                  type: object
+                                  properties:
+                                    unit:
+                                      type: string
+                                      description: Unit for data range.
+                                      example: "MONTH"
+                                    value:
+                                      type: integer
+                                      description: Maximum allowed data range.
+                                      example: 13
+                            consentExpiry:
+                              type: object
+                              properties:
+                                max:
+                                  type: object
+                                  properties:
+                                    unit:
+                                      type: string
+                                      description: Unit for consent expiry.
+                                      example: "YEAR"
+                                    value:
+                                      type: integer
+                                      description: Maximum expiry period.
+                                      example: 1
+                            dataLife:
+                              type: object
+                              properties:
+                                max:
+                                  type: object
+                                  properties:
+                                    unit:
+                                      type: string
+                                      description: Unit for data life.
+                                      example: "MONTH"
+                                    value:
+                                      type: integer
+                                      description: Maximum data life.
+                                      example: 1
+                            consentMode:
+                              type: array
+                              items:
+                                type: string
+                              description: Consent modes.
+                              example: ["STORE", "VIEW"]
+                            dataFilter:
+                              type: array
+                              items:
+                                type: string
+                              description: Data filters applied.
+                              example: []
+                            evaluationRule:
+                              type: string
+                              description: URL for the evaluation rule.
+                              example: "https://api.sahamati.org.in/api/v1/consent-template/evaluation-rule/C001"
+                            actionRule:
+                              type: string
+                              description: URL for the action rule.
+                              example: "https://api.sahamati.org.in/api/v1/consent-template/outcome-rule/C001"
+        '400':
+          description: Bad Request - Invalid input parameters.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ver:
+                    type: string
+                  timestamp:
+                    type: string
+                  txnId:
+                    type: string
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: string
+                      message:
+                        type: string
+                example:
+                  ver: "1.0.0"
+                  timestamp: "2024-09-20T06:48:08.006984182Z"
+                  txnId: "64da25d2-e02d-4575-a8e3-0e3972c4601f"
+                  error:
+                    code: "ERR_400"
+                    message: "Invalid request format"
+        '401':
+          description: Unauthorized - Authentication failed.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ver:
+                    type: string
+                  timestamp:
+                    type: string
+                  txnId:
+                    type: string
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: string
+                      message:
+                        type: string
+                example:
+                  ver: "1.0.0"
+                  timestamp: "2024-09-20T06:48:08.006984182Z"
+                  txnId: "64da25d2-e02d-4575-a8e3-0e3972c4601f"
+                  error:
+                    code: "ERR_401"
+                    message: "Unauthorized - Authentication failed. Please check your credentials."
+        '404':
+          description: Not Found - Consent template or resource does not exist.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ver:
+                    type: string
+                  timestamp:
+                    type: string
+                  txnId:
+                    type: string
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: string
+                      message:
+                        type: string
+                example:
+                  ver: "1.0.0"
+                  timestamp: "2024-09-20T06:48:08.006984182Z"
+                  txnId: "64da25d2-e02d-4575-a8e3-0e3972c4601f"
+                  error:
+                    code: "ERR_404"
+                    message: "Not Found - The requested consent template or resource does not exist."
+        '500':
+          description: Internal Server Error - An issue occurred on the server.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ver:
+                    type: string
+                  timestamp:
+                    type: string
+                  txnId:
+                    type: string
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: string
+                      message:
+                        type: string
+                example:
+                  ver: "1.0.0"
+                  timestamp: "2024-09-20T06:48:08.006984182Z"
+                  txnId: "64da25d2-e02d-4575-a8e3-0e3972c4601f"
+                  error:
+                    code: "ERR_500"
+                    message: "Internal Server Error - An unexpected issue occurred on the server. Please try again later."
