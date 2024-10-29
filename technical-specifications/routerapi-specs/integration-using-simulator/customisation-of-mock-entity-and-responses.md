@@ -24,8 +24,8 @@ We recommend to use below postman collection for quicker access
 
 
 
-{% hint style="info" %}
-## Regenerate the User Token after creating the mock entity to enable access to the newly created entity.
+{% hint style="warning" %}
+#### Regenerate the User Token after creating the mock entity to enable access to the newly created entity.
 {% endhint %}
 
 {% swagger src="../../../.gitbook/assets/Simulator api.yml" path="/response/add" method="post" %}

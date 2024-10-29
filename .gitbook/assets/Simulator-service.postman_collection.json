@@ -55,6 +55,39 @@
 			"response": []
 		},
 		{
+			"name": "Mock Entity Creation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{user_token}}"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer <UserToken>"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ver\": \"1.0\",\n    \"timestamp\": \"2024-08-28T01:58:50.505Z\",\n    \"txnid\": \"1fbb-11ed-861d-0242\",\n    \"type\": \"FIP\",\n    \"entityinfo\": {\n        \"name\": \"entityId_mock_FIP\",\n        \"id\": \"entityId_mock_FIP\",\n        \"entityhandle\": \"\",\n        \"Identifiers\": [\n            {\n                \"category\": \"STRONG\",\n                \"type\": \"MOBILE\"\n            }\n        ],\n        \"baseurl\": \"\",\n        \"fitypes\": [\n            \"\"\n        ],\n        \"certificate\": {\n            \"alg\": \"RS256\",\n            \"e\": \"AQAB\",\n            \"kid\": \"4nEXdaiPFssssssIsssYsaslyf\",\n            \"kty\": \"RSA\",\n            \"n\": \"uh0fNzOYK2L2wGzixMLN-pOIHDH1tuA3rk6MmW39Q0VbAHWXmn0fZpS88hcIARmsPbbNXAW59VDCGEgPd49VVfiOeENI8PqliNml8gB1C1oGkpnAcda8O4v5kd_ZN4YZcLYqHyv9L8RnBidOzXzi-CxdgoFtM3pAnUYBERbbYi8LK5em8mBCixKuX_NszbrZiT14SY1AglNEWNPgibt3EMzGSxGyWyOgSEfsaQ4HGlppPU5lkWNx1GqktYelDxE7VQDNOGsoS1l03_JVr1oyYIA-1-M9ndq4Cjx3x9QFfaPts8MGw5yWSZCugbIeoBPzHmvlgm3CiGgqFQVrL1mJ2w\",\n            \"use\": \"sig\"\n        },\n        \"inboundports\": [\n            \"\"\n        ],\n        \"outboundports\": [\n            \"\"\n        ],\n        \"ips\": [\n            \"\"\n        ]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{host}}/iam/v1/entity/mock/register"
+			},
+			"response": []
+		},
+		{
 			"name": "Add Response",
 			"request": {
 				"auth": {
