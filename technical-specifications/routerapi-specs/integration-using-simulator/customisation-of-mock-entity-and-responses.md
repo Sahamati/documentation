@@ -14,15 +14,23 @@ All the APIs listed below require a user token for authorization. Onboarded user
 [identity-and-access-management.md](../../identity-and-access-management.md)
 {% endcontent-ref %}
 
+We recommend to use below postman collection for quicker access
+
+{% file src="../../../.gitbook/assets/Simulator-service.postman_collection.json" %}
+
 {% swagger src="../../../.gitbook/assets/MockEntityCreate api.yml" path="/entity/mock/register" method="post" %}
 [MockEntityCreate api.yml](<../../../.gitbook/assets/MockEntityCreate api.yml>)
 {% endswagger %}
 
+
+
+{% hint style="info" %}
+## Regenerate the User Token after creating the mock entity to enable access to the newly created entity.
+{% endhint %}
+
 {% swagger src="../../../.gitbook/assets/Simulator api.yml" path="/response/add" method="post" %}
 [Simulator api.yml](<../../../.gitbook/assets/Simulator api.yml>)
 {% endswagger %}
-
-
 
 {% swagger src="../../../.gitbook/assets/Simulator api.yml" path="/response/list" method="post" %}
 [Simulator api.yml](<../../../.gitbook/assets/Simulator api.yml>)

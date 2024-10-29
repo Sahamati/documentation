@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "34e762d8-d147-4e89-8de4-56d57fc1fc60",
+		"name": "Simulator-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "22548295",
+		"_collection_link": "https://sanketikatraining.postman.co/workspace/Personal-Workspace~0e6947ca-ea3a-4f72-9d9f-256da8b1ec59/collection/22548295-34e762d8-d147-4e89-8de4-56d57fc1fc60?action=share&source=collection_link&creator=22548295"
+	},
+	"item": [
+		{
+			"name": "User Token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Token generate - Success\", function() {",
+							"    pm.response.to.have.status(200);",
+							"})",
+							"",
+							"if(pm.response.code == 200){",
+							"    pm.environment.set(\"user_token\",pm.response.json().accessToken);",
+							"}"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "user@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{host}}/iam/v1/user/token/generate"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Response",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{user_token}}"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"entityId\": \"AA-SIMULATOR\",\n    \"endpoint\": \"/Consent\",\n    \"scenario\": \"ConsentDeposit_Success\",\n    \"response\": {\n        \"ver\": \"2.0.0\",\n        \"timestamp\": \"2024-10-26T06:13:30.967+0000\",\n        \"txnid\": \"f35761ac-4a18-11e8-96ff-0277a9fbfedc\",\n        \"response\": \"OK\"\n    },\n    \"responseCode\": 200\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{host}}/simulate/v2/response/add"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Response",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{user_token}}"
+					}
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-scenario-id",
+						"value": "AA-SIMULATOR-BADREQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"entityId\": \"AA-SIMULATOR\",\n    \"endpoint\": \"/Consent\",\n    \"scenario\": \"ConsentDeposit_Success\",\n    \"response\": {\n        \"ver\": \"2.0.0\",\n        \"timestamp\": \"2024-10-26T06:13:30.967+0000\",\n        \"txnid\": \"f35761ac-4a18-11e8-96ff-0277a9fbfedc\",\n        \"response\": \"OK\"\n    },\n    \"responseCode\": 200\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{host}}/simulate/v2/response/update"
+			},
+			"response": []
+		},
+		{
+			"name": "List Responses",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{user_token}}"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJtckl2NGpsMVprMzZ4cEVITmRJUFBsZHo0WFVLaXBRT3VhcEdOQ1NRd1pNIn0.eyJleHAiOjE3Mjc1MDExMDYsImlhdCI6MTcyNzQxNDcwNiwianRpIjoiYWM0ZmJmNDYtODk0Yi00YmZlLTgwMTAtYTM5NWJhMjE3OTU4IiwiaXNzIjoiaHR0cHM6Ly9hcGkuZGV2LnNhaGFtYXRpLm9yZy5pbi9hdXRoL3JlYWxtcy9zYWhhbWF0aSIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI0MWU4NzIwZS05ZDNlLTQ1NmYtOTlkNi0zNmQ4YjA2NDRlMjYiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJERVYtRW50aXR5LUFkbWluIiwic2Vzc2lvbl9zdGF0ZSI6IjY2YzBmNWVlLTM5ZjItNDc0My05ZDJiLTU3ZDdhZjZjMWE1YSIsImFjciI6IjEiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1zYWhhbWF0aSIsIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJzaWQiOiI2NmMwZjVlZS0zOWYyLTQ3NDMtOWQyYi01N2Q3YWY2YzFhNWEiLCJlbnRpdHlfbWV0YSI6eyJ0b3N0IjpbImVudGl0eS1hZG1pbiJdfSwibmFtZSI6IlRlc3QgVXNlciIsInNlY3JldF9leHBpcnlfdHMiOiIyMDI0LTA3LTI3VDExOjMzOjM0LjUwOVoiLCJnaXZlbl9uYW1lIjoiVGVzdCIsImZhbWlseV9uYW1lIjoiVXNlciIsImVtYWlsIjoidGVzdGVtYWlsOTk5QHlvcG1haWwuY29tIn0.eZfzgN6gyL1RsjraNNeg3tOscSzGd5QjIvt2lGRBJDXhXLhsyQXLqOTxIJLpj9sfH606fdKJLsd9pdM96sDK1XM874_o1S84m1aTyjz78FACd2trBDkhIR_NJkMKVThwNdmjox4I9v5kvp2pHfciHxAd3DYfBNlGpnJ02TDqjgXDfLHmdJtnRbUPByMUV0VPn5lvnS39Z0J40CuAAWAKYyGjkFVq-9Y8M_sYlVLqdGsN-8pk0-75P7folzyg0AVRpkK2hQIRV-v7oL5AAsaUAnFdQTbYAROxw9leu1Z8vETnHA8ZSVPJ7G6pR2vqGxWNQHHMau4c7WWk7aaJVSVXqw"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"entityId\": \"AA-SIMULATOR\"\n}                                   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{host}}/simulate/v2/response/list"
+			},
+			"response": []
+		}
+	]
+}

@@ -3,7 +3,7 @@ info:
   title: Mock Entity Registration API
   version: 1.0.0
 servers:
-  - url: https://api.dev.sahamati.org.in/iam/v1
+  - url: https://api.sandbox.sahamati.org.in/iam/v1
 paths:
   /entity/mock/register:
     post:
@@ -42,7 +42,7 @@ paths:
                   example: "1fbb-11ed-861d-0242"
                 type:
                   type: string
-                  example: "FIU"
+                  example: "FIP"
                 entityinfo:
                   type: object
                   required:
@@ -59,10 +59,10 @@ paths:
                   properties:
                     name:
                       type: string
-                      example: "test1"
+                      example: "entityId_mock_FIP"
                     id:
                       type: string
-                      example: "test1"
+                      example: "entityId_mock_FIP"
                     entityhandle:
                       type: string
                       example: ""
@@ -120,17 +120,17 @@ paths:
                       type: array
                       items:
                         type: string
-                        example: "443"
+                        example: ""
                     outboundports:
                       type: array
                       items:
                         type: string
-                        example: "443"
+                        example: ""
                     ips:
                       type: array
                       items:
                         type: string
-                        example: "3.109.145.80"
+                        example: ""
       responses:
         '200':
           description: Successful onboarding of the entity
