@@ -40,7 +40,7 @@ For the above use case implementation, AA need to implement a few internal APIs 
 
 In this scenario, the AA need to have a mock FIP to support the integration testing with mock response for the API requests to FIP. Below are the APIs from Simulator helpful for the implementation and integration.
 
-* [Create a Mock FIP for Integration](../../technical-specifications/routerapi-specs/integration-using-simulator/customisation-of-mock-entity-and-responses.md#entity-mock-register)
-* [Composing Mock Response for](../../technical-specifications/routerapi-specs/integration-using-simulator/customisation-of-mock-entity-and-responses.md#response-add)
+* [Create a Mock FIP for Integration](../../technical-specifications/router-api-specs/integration-using-simulator/customisation-of-mock-entity-and-responses.md#entity-mock-register)
+* [Composing Mock Response for](../../technical-specifications/router-api-specs/integration-using-simulator/customisation-of-mock-entity-and-responses.md#response-add)
   * Accounts Discovery
   * Accounts Linking
