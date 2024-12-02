@@ -83,5 +83,3 @@ Policy Agent is responsible for evaluating the policy rules, as defined in the p
 * **accept**: accept the incoming consent request and process it further (i.e. present to the consumer normally)
 * **reject**: reject the incoming consent request and return an appropriate error to the FIU (e.g.: if the consent parameters are out of range by a large value)
 * **report**: accept the request and report non-compliance
-
-Sahamati will develop and release open-source policy agent SDKs for AAs to incorporate policy enforcement checks into their APIs. Alternatively, AAs have the option to develop their own policy agents following the specifications provided by Sahamati.
