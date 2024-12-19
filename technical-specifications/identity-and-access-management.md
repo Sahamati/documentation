@@ -49,20 +49,20 @@ Below is the Sandbox Environment file for SahamatiNet Services
 
 {% file src="../.gitbook/assets/Sandbox - SahamatiNet.postman_environment.json" %}
 
-{% swagger src="../.gitbook/assets/Token-Service-Latest.yaml" path="/user/token/generate" method="post" %}
-[Token-Service-Latest.yaml](../.gitbook/assets/Token-Service-Latest.yaml)
+{% swagger src="../.gitbook/assets/IAM-Service-Sprint-9.yaml" path="/user/token/generate" method="post" %}
+[IAM-Service-Sprint-9.yaml](../.gitbook/assets/IAM-Service-Sprint-9.yaml)
 {% endswagger %}
 
-{% swagger src="../.gitbook/assets/Token-Service-Latest.yaml" path="/entity/token/generate" method="post" %}
-[Token-Service-Latest.yaml](../.gitbook/assets/Token-Service-Latest.yaml)
+{% swagger src="../.gitbook/assets/IAM-Service-Sprint-9.yaml" path="/entity/token/generate" method="post" %}
+[IAM-Service-Sprint-9.yaml](../.gitbook/assets/IAM-Service-Sprint-9.yaml)
 {% endswagger %}
 
 ## Member Secret Management APIs
 
-{% swagger src="../.gitbook/assets/Token-Service-Latest.yaml" path="/entity/secret/reset" method="post" %}
-[Token-Service-Latest.yaml](../.gitbook/assets/Token-Service-Latest.yaml)
+{% swagger src="../.gitbook/assets/IAM-Service-Sprint-9.yaml" path="/entity/secret/reset" method="post" %}
+[IAM-Service-Sprint-9.yaml](../.gitbook/assets/IAM-Service-Sprint-9.yaml)
 {% endswagger %}
 
-{% swagger src="../.gitbook/assets/Token-Service-Latest.yaml" path="/entity/secret/read" method="post" %}
-[Token-Service-Latest.yaml](../.gitbook/assets/Token-Service-Latest.yaml)
+{% swagger src="../.gitbook/assets/IAM-Service-Sprint-9.yaml" path="/entity/secret/read" method="post" %}
+[IAM-Service-Sprint-9.yaml](../.gitbook/assets/IAM-Service-Sprint-9.yaml)
 {% endswagger %}

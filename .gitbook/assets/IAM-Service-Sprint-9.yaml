@@ -675,6 +675,10 @@ components:
         entityId:
           type: string
           example: "aa-1"
+        secretExpiryDays:
+          type: integer
+          description: Specifies the number of days before the secret expires. This field is optional; if not provided, a default value will be used.
+          example: 100
     EntitySecretResponse:
       type: object
       properties:
