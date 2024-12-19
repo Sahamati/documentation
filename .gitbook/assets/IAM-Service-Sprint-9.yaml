@@ -99,7 +99,12 @@ paths:
         - Entity APIs
       summary: Secret Reset API
       description: |
-        The Secret Reset API is designed to allow an admin to reset a member's secret. To perform this action, an access token with administrative privileges for the specified member is required. Once reset, the newly generated secret will have a validity period of 60 days, after which it will need to be renewed or reset again. Below is the API specification.
+        The Secret Reset API is designed to allow an admin to reset a member's secret. To perform this action, an access token with administrative privileges for the specified member is required. Once reset, the newly generated secret will have a validity period of 180 days by default, after which it will need to be renewed or reset again. 
+
+          With the latest enhancements, members can now select their desired validity period for secrets, up to a defined maximum limit (default: 180 days). The specified validity period is compared with the admin access token expiry, and the minimum value is applied to ensure authentication and security. Additionally, a grace period of 5 days is provided to facilitate a seamless transition between old and new secrets.
+
+          Below is the API specification. 
+
       parameters:
         - name: Authorization
           in: header
@@ -120,6 +125,28 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/EntitySecretResponse'
+              examples:
+                basicResponse:
+                  summary: Basic response
+                  value:
+                    ver: "1.0.0"
+                    timestamp: "2024-07-16T11:33:34.509Z"
+                    txnId: "f35761ac-4a18-11e8-96ff-0277a9fbfedc"
+                    entityId: "aa-1"
+                    secret: "xxxxxxxxxxxxxxxxxxxxx"
+                    expiresOn: 1725010763
+                    expirationDate: "2024-12-17T07:10:52.929"
+                messageResponse:
+                  summary: Response with message
+                  value:
+                    ver: "1.0.0"
+                    timestamp: "2024-07-16T11:33:34.509Z"
+                    txnId: "f35761ac-4a18-11e8-96ff-0277a9fbfedc"
+                    entityId: "aa-1"
+                    secret: "xxxxxxxxxxxxxxxxxxxxx"
+                    expiresOn: 1725010763
+                    expirationDate: "2024-12-17T07:10:52.929"
+                    message: "The expiry is set to 180 days by default, as the user didn't specify or exceeded the default limit."
         '401':
           description: Unauthorized
           content:
@@ -182,7 +209,8 @@ paths:
               -H 'Content-Type: application/x-www-form-urlencoded' \
               -d 'id=<id>&secret=<secret>
       description: |
-        The generation of a Member (Entity) Access Token requires the ID (client ID) and the Secret. This token is used for the interaction with other members. The access token has an expiry of 24 hrs. Below is the API specification.
+        To generate a Member (Entity) Access Token, the client ID and Secret are required. The API generates the token with a warning if the secret is within the grace period, but it will fail once the grace period has ended. This token is used for interactions with other members and has a validity of 24 hours. The API specification is detailed below.
+
       requestBody:
         required: true
         content:
@@ -207,6 +235,26 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/TokenResponse'
+              examples:
+                basicTokenResponse:
+                  summary: Basic token response
+                  value:
+                    ver: "1.0.0"
+                    timestamp: "2024-07-16T11:33:34.509Z"
+                    txnId: "f35761ac-4a18-11e8-96ff-0277a9fbfedc"
+                    accessToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+                    expiresIn: 86400
+                    tokenType: "Bearer"
+                messageTokenResponse:
+                  summary: Token response with message field
+                  value:
+                    ver: "1.0.0"
+                    timestamp: "2024-07-16T11:33:34.509Z"
+                    txnId: "f35761ac-4a18-11e8-96ff-0277a9fbfedc"
+                    accessToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+                    expiresIn: 86400
+                    tokenType: "Bearer"
+                    message: "The secret for entity with ID $entityId is expired and within the grace period"
         '401':
           description: Unauthorized
           content:
@@ -269,7 +317,7 @@ paths:
               -H 'Content-Type: application/x-www-form-urlencoded' \
               -d 'username=<email>&password=<password>
       description: |
-        To generate a User Access Token, the user must provide their username (email) and the password configured during the account activation process. This access token is necessary for interacting with the member's secret management APIs. The access token has an expiry of 24 hrs. Below is the API specification.
+        To generate a User Access Token, the user must provide their username (email) and the password configured during the account activation process. This access token is necessary for interacting with the member's secret management APIs. The access token has an expiry of 180 days. Below is the API specification.
       requestBody:
         required: true
         content:
@@ -701,6 +749,9 @@ components:
         expiresOn:
           type: number
           example: 1725010763
+        expirationDate:
+          type: string
+          example: "2024-12-17T07:10:52.929"
     TokenResponse:
       type: object
       properties:
