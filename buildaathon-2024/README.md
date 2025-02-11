@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # BuildAAthon 2024
 
 Sahamati BuildAAthon 2024 is a hackathon organised as a part of our annual Account Aggregator (AA) community event, SamvAAd 2024.

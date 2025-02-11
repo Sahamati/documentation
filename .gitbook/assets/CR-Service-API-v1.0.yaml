@@ -1,0 +1,394 @@
+openapi: 3.0.3
+info:
+  title: Central Registry APIs
+  version: 1.0.0
+  description: APIs for managing entities in the Central Registry
+
+servers:
+  - url: https://api.sandbox.sahamati.org.in/cr
+    description: Sandbox environment
+
+components:
+  schemas:
+    Error:
+      type: object
+      required:
+        - responseCode
+        - responseText
+      properties:
+        responseCode:
+          type: integer
+          example: 400
+        responseText:
+          type: string
+          example: "400 BAD_REQUEST"
+
+    Error409:
+      type: object
+      required:
+        - responseCode
+        - responseText
+      properties:
+        responseCode:
+          type: integer
+          example: 409
+        responseText:
+          type: string
+          example: "Entity already exist"
+
+    Error200:
+      type: object
+      required:
+        - responseCode
+        - responseText
+      properties:
+        responseCode:
+          type: integer
+          example: 200
+        responseText:
+          type: string
+          example: "200 OK"
+
+    Error404:
+      type: object
+      required:
+        - responseCode
+        - responseText
+      properties:
+        responseCode:
+          type: integer
+          example: 404
+        responseText:
+          type: string
+          example: "Entity not found"
+
+    Error401:
+      type: object
+      required:
+        - responseCode
+        - responseText
+      properties:
+        responseCode:
+          type: integer
+          example: 401
+        responseText:
+          type: string
+          example: "401 UNAUTHORIZED"
+
+    
+    EntityRequest:
+      type: object
+      properties:
+        ver:
+          type: string
+          example: "1.0"
+        timestamp:
+          type: string
+          format: date-time
+          example: "2024-10-16 08:04:50.314"
+        txnid:
+          type: string
+          example: "1fbb-11ed-861d-0242"
+        requester:
+          type: object
+          properties:
+            name:
+              type: string
+            id:
+              type: string
+        entityinfo:
+          type: object
+          properties:
+            name:
+              type: string
+            id:
+              type: string
+            code:
+              type: string
+            entityhandle:
+              type: string
+            Identifiers:
+              type: array
+              items:
+                type: object
+                properties:
+                  category:
+                    type: string
+                  type:
+                    type: string
+            baseurl:
+              type: string
+            webviewurl:
+              type: string
+              nullable: true
+            fitypes:
+              type: array
+              items:
+                type: string
+            certificate:
+              type: object
+              properties:
+                alg:
+                  type: string
+                e:
+                  type: string
+                kid:
+                  type: string
+                kty:
+                  type: string
+                n:
+                  type: string
+                use:
+                  type: string
+            tokeninfo:
+              type: object
+              properties:
+                url:
+                  type: string
+                desc:
+                  type: string
+            inboundports:
+              type: array
+              items:
+                type: string
+            outboundports:
+              type: array
+              items:
+                type: string
+            ips:
+              type: array
+              items:
+                type: string
+
+  responses:
+    UnauthorizedError:
+      description: Access token is missing or invalid
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    
+    NotFoundError:
+      description: Entity not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    
+    ConflictError:
+      description: Entity already exists
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+paths:
+  /entityInfo/{type}:
+    parameters:
+      - name: type
+        in: path
+        required: true
+        schema:
+          type: string
+          enum: [FIU, FIP, AA]
+        description: Type of entity
+    
+    post:
+      tags:
+        - Entity Management
+      summary: Create new entity
+      description: Create a new entity in the Central Registry
+      operationId: createEntity
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EntityRequest'
+      responses:
+        '200':
+          description: Entity created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error200'
+        '401':
+          description: Unauthorized or Invalid token
+        '404':
+          description: Entity not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+        '400':
+          description: Schema validation failure
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '409':
+          description: Entity already exist
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error409'
+      security:
+        - bearerAuth: []
+
+    put:
+      tags:
+        - Entity Management
+      summary: Update entity
+      description: Update an existing entity in the Central Registry
+      operationId: updateEntity
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EntityRequest'
+      responses:
+        '200':
+          description: Entity updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error200'
+        '401':
+          description: Unauthorized or Invalid token
+        '404':
+          description: Entity not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+        '400':
+          description: Schema validation failure
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      security:
+        - bearerAuth: []
+
+  /v2/entityInfo/{type}:
+    parameters:
+      - name: type
+        in: path
+        required: true
+        schema:
+          type: string
+          enum: [FIU, FIP, AA]
+        description: Type of entity
+    
+    get:
+      tags:
+        - Entity Management
+      summary: Get Entities by Type
+      description: To fetch the metadata of all the entities of a specific type (FIU or FIP or AA).
+      operationId: getEntitiesByType
+      responses:
+        '200':
+          description: Successful retrieval
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EntityRequest'
+        '401':
+          description: Unauthorized or Invalid token
+        '404':
+          description: Entity not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+        '400':
+          description: Schema validation failure
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      security:
+        - bearerAuth: []
+
+  /v2/entityInfo/{type}/{id}:
+    parameters:
+      - name: type
+        in: path
+        required: true
+        schema:
+          type: string
+          enum: [FIU, FIP, AA]
+        description: Type of entity
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Entity identifier
+    
+    get:
+      tags:
+        - Entity Management
+      summary: Get Entity by Type and ID
+      description: To fetch the metadata of a specific entity by its type and ID
+      operationId: getEntityByTypeAndId
+      responses:
+        '200':
+          description: Successful retrieval
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EntityRequest'
+        '401':
+          description: Unauthorized or Invalid token
+        '404':
+          description: Entity not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+        '400':
+          description: Schema validation failure
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      security:
+        - bearerAuth: []
+
+    delete:
+      tags:
+        - Entity Management
+      summary: Delete entity
+      description: Delete an entity by its type and ID
+      operationId: deleteEntity
+      responses:
+        '200':
+          description: Entity deleted successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error200'
+        '401':
+          description: Unauthorized or Invalid token
+        '404':
+          description: Entity not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+        '400':
+          description: Schema validation failure
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      security:
+        - bearerAuth: []
