@@ -29,7 +29,7 @@ However, as entities integrate with **SahamatiNet**, this integration model will
 
 * **(FIU + AA + FIP)**: Financial Information Users (FIUs), Account Aggregators (AAs), and Financial Information Providers (FIPs) will now interact with one central service (SahamatiNet). This centralisation simplifies the communication process, reduces the number of direct integrations, and enhances the overall efficiency of the ecosystem.
 
-### Delegation of Trust&#x20;
+## Delegation of Trust&#x20;
 
 The AA ecosystem shifts from a traditional **bilateral-trust** model to a more scalable **network-trust** framework, where trust is centrally managed through SahamatiNet. This framework guarantees interoperability across all participants—FIPs, AAs, and FIUs—by applying consistent security standards and protocols. Instead of each participant individually establishing trust with others, trust is delegated to SahamatiNet, ensuring secure and seamless interactions throughout the ecosystem.
 

@@ -23,7 +23,7 @@ description: For the SahamatiNet Proof Of Concept (POC)
    4. Use the User Access Token to **read the entity’s secret** from the Sahamati IAM API.
       1. If needed, **reset the secret** using the designated API.
    5. Use the entity secret to **generate the Entity Access Token** for ReBIT APIs.
-   6. Refer to the section on these APIs [here](https://app.gitbook.com/o/CcobtOsQAdIoa87kTGdF/s/fY7u471KMiCJqdTaYVzZ/~/changes/100/sahamatinet-poc/sahamatinet/integration-steps/iam-apis)&#x20;
+   6. Refer to the section on these APIs [here](iam-apis.md)&#x20;
 3. **Integrate with SahamatiNet Router in Sandbox**
    1. Understand the **required changes for integration with the Router.**
       1. Sahamati Router simplifies the process by allowing members to send requests to any recipient by adding the recipient identifier (**x-recipient-id**) in the header under **x-request-meta.** Refer [here](integration-with-router.md) for more details.
