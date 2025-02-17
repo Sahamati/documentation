@@ -2,7 +2,10 @@
 
 Sahamati Router serves as an additional layer on top of the AA network, offering extra services and policies. By integrating with Sahamati Router, FIUs, FIPs, and AAs can seamlessly connect with all other entities within the Router. This eliminates the need for multiple integration points, significantly reducing the integration and operational efforts for members.
 
-<figure><img src="../.gitbook/assets/router overview.png" alt=""><figcaption><p>Sahamati Router for AA Ecosystem</p></figcaption></figure>
+\
+
+
+<figure><img src="https://developer.sahamati.org.in/~gitbook/image?url=https%3A%2F%2F2246685224-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FfY7u471KMiCJqdTaYVzZ%252Fuploads%252Fi7fwwbhJFUDykUJLTF0G%252FScreenshot%25202025-02-11%2520at%25205.13.07%25E2%2580%25AFPM.png%3Falt%3Dmedia%26token%3D9e46e3be-1272-4770-aa11-d342b0463bbb&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=7d5984b6&#x26;sv=2" alt=""><figcaption></figcaption></figure>
 
 ## Pre-requisites
 
