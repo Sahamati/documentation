@@ -26,7 +26,7 @@ Sahamati Router simplifies the process for members to send requests to any recip
 
 
 
-<figure><img src="../.gitbook/assets/Sahamati Router APIs for AA.png" alt=""><figcaption><p>Using Sahamati Router APIs for AA Ecosystem for Consent API between FIU and AA</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/router-integration.png" alt=""><figcaption><p>Using Sahamati Router APIs for AA Ecosystem for Consent API between FIU and AA</p></figcaption></figure>
 
 Currently, the Router is fully implemented with all APIs compliant with ReBIT specifications v2.x.
 

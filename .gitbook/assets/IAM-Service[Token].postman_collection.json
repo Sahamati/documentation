@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "b77a4676-13a8-4cce-92ac-44fa7ce6ef75",
+		"name": "Token-Service[IAM]",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "22548295",
+		"_collection_link": "https://sanketikatraining.postman.co/workspace/Personal-Workspace~0e6947ca-ea3a-4f72-9d9f-256da8b1ec59/collection/22548295-b77a4676-13a8-4cce-92ac-44fa7ce6ef75?action=share&source=collection_link&creator=22548295"
+	},
+	"item": [
+		{
+			"name": "Member Token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Generate member token\", function() {",
+							"    pm.response.to.have.status(200);",
+							"})",
+							"",
+							"if(pm.response.code == 200){",
+							"    pm.environment.set(\"member_token\",pm.response.json().accessToken);",
+							"}"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "{{member_id}}",
+							"type": "text"
+						},
+						{
+							"key": "secret",
+							"value": "{{member_secret}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{host}}/iam/v1/entity/token/generate"
+			},
+			"response": []
+		},
+		{
+			"name": "User Token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Token generate - Success\", function() {",
+							"    pm.response.to.have.status(200);",
+							"})",
+							"",
+							"if(pm.response.code == 200){",
+							"    pm.environment.set(\"user_token\",pm.response.json().accessToken);",
+							"}"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{host}}/iam/v1/user/token/generate"
+			},
+			"response": []
+		},
+		{
+			"name": "Member Secret Read",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{user_token}}"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{user_token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"entityId\": \"FIU-SIMULATOR\",\n    \"txnId\": \"f35761ac-4a18-11e8-96ff-0277a9fbfedc\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{host}}/iam/v1/entity/secret/read"
+			},
+			"response": []
+		},
+		{
+			"name": "Member Secret Reset",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{user_token}}"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{user_token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"txnId\": \"f35761ac-4a18-11e8-96ff-0277a9fbfedc\",\n    \"entityId\": \"\",\n    \"secretExpiryDays\": 100\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{host}}/iam/v1/entity/secret/reset"
+			},
+			"response": []
+		}
+	]
+}

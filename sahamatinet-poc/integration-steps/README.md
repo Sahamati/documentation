@@ -36,7 +36,7 @@ description: For the SahamatiNet Proof Of Concept (POC)
    2. Refer to the section on how to use simulators [here](https://app.gitbook.com/o/CcobtOsQAdIoa87kTGdF/s/fY7u471KMiCJqdTaYVzZ/~/changes/100/sahamatinet-poc/sahamatinet/testing-with-simulators) and respective simulators links below&#x20;
       1. [AA Simulator](../testing-with-simulators/aa-simulator.md)
       2. [FIP Simulator](../testing-with-simulators/fip-simulator.md)
-      3. [FIU Simulator](../testing-with-simulators/fiu-simulator.md).
+      3. [FIU Simulator](../testing-with-simulators/fiu-simulator.md)
 5. **Review Integration**&#x20;
    1. Conduct tests with other onboarded entities in the sandbox environment to review all integration points and ensure seamless operation.
    2. More details on this step will be provided as we progress through the POC.

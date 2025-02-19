@@ -13,9 +13,11 @@ Each member of the Sahamati Network will be onboarded with a designated user who
 
 Below are the Base URL of each environment to use IAM APIs.
 
-<table><thead><tr><th width="172">Environment</th><th>Base URL</th></tr></thead><tbody><tr><td>Production</td><td>https://api.sahamati.org.in/iam</td></tr><tr><td>UAT</td><td>https://api.uat.sahamati.org.in/iam</td></tr><tr><td>Sandbox</td><td>https://api.sandbox.sahamati.org.in/iam</td></tr></tbody></table>
+<table><thead><tr><th width="172">Environment</th><th>Base URL</th></tr></thead><tbody><tr><td>Production</td><td>https://api.sahamati.org.in/iam</td></tr><tr><td>UAT</td><td>https://api.uat.sahamati.org.in/iam</td></tr><tr><td><p>Sandbox</p><p>(Used for PoC)</p></td><td>https://api.sandbox.sahamati.org.in/iam</td></tr></tbody></table>
 
 Please note that the following documentation displays the Base URLs from the Sandbox environment. Ensure you use the appropriate Base URLs depending on the environment you are working in.
+
+
 
 {% swagger src="../../.gitbook/assets/IAM-Service-Sprint-9.yaml" path="/user/token/generate" method="post" %}
 [IAM-Service-Sprint-9.yaml](../../.gitbook/assets/IAM-Service-Sprint-9.yaml)
@@ -41,7 +43,7 @@ Please note that the following documentation displays the Base URLs from the San
 We recommend you to use below postman collection to try out our Token-Service\[IAM] APIs
 {% endhint %}
 
-{% file src="../../.gitbook/assets/Token-Service[IAM].postman_collection.json" %}
+{% file src="../../.gitbook/assets/IAM-Service[Token].postman_collection.json" %}
 
 Below is the Sandbox Environment file for SahamatiNet Services
 
@@ -51,6 +53,6 @@ Below is the Sandbox Environment file for SahamatiNet Services
 
 #### API Collection:
 
-{% file src="../../.gitbook/assets/Token-Service[IAM].postman_collection.json" %}
+{% file src="../../.gitbook/assets/IAM-Service[Token].postman_collection (1).json" %}
 Token-Service\[IAM] - API Collection
 {% endfile %}

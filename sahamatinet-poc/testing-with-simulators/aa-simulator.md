@@ -8,7 +8,7 @@ This AA response simulator will support all the APIs listed under this ReBIT Spe
 
 Sample FI/fetch workflow using AA-SIMULATOR:
 
-<figure><img src="../../.gitbook/assets/fi fetch.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/FI-Fetch-Data-Gone.png" alt=""><figcaption></figcaption></figure>
 
 #### Preloaded Scenarios
 

@@ -1,0 +1,1328 @@
+{
+	"info": {
+		"_postman_id": "c8cff8dd-4337-4146-97c0-83c4c4e2fc37",
+		"name": "Proxy API  - Sandbox",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "22548295",
+		"_collection_link": "https://sanketikatraining.postman.co/workspace/Personal-Workspace~0e6947ca-ea3a-4f72-9d9f-256da8b1ec59/collection/22548295-c8cff8dd-4337-4146-97c0-83c4c4e2fc37?action=share&source=collection_link&creator=22548295"
+	},
+	"item": [
+		{
+			"name": "AA -> FIP",
+			"item": [
+				{
+					"name": "Account Discover",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Account Discovery - Success\", function() {",
+									"    pm.response.to.have.status(200);",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-jws-signature",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlRlZ1FhMms3MUlFWlotaEhxcm1ueWFFc3ZvSWloNWdrVUx2SjFfTEhibGsiLCJjcml0IjpbImI2NCJdLCJiNjQiOmZhbHNlfQ..Dux_bx7X-q1YSvyNmZiyPM60ZgaK3MshWBhWeY-bLBeSmxkU5VpH-lQjBjGFW_2opX3ZK5XfF7oPc3wkp-Qj7-qVfgTg53YvGyS3oLbKvkMRHtKa33x5I-0b8BmlMzojtnA_zFfubOJoqZVPpz7BQ4qrazizaF2Z6m3FygNGuAkdbdqtnCgPCjBZ6ibkpyiKR_n_g5FcTOq7fa7JgE6IoMD0R575ssdFbHzcT-IZs0DDqc_DJ0pR7m56z9IlmRZ6kUg99kaYVl6GUHSYPwY9OCbmHa7EbgE5vUdIJjhF3vJDZhYMWCojpbh9KLGSpbHkWG4OY19S-YNJv85FtXZe0Q"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJtckl2NGpsMVprMzZ4cEVITmRJUFBsZHo0WFVLaXBRT3VhcEdOQ1NRd1pNIn0.eyJleHAiOjE3MjEyOTgwNTMsImlhdCI6MTcyMTIxMTY1MywianRpIjoiM2Y3YTgwZDAtMGYxOS00N2RhLTlmZGQtNzEzZmM4OWM4YzBkIiwiaXNzIjoiaHR0cHM6Ly90b2tlbnMuc2FuZGJveC5zYWhhbWF0aS5vcmcuaW4vYXV0aC9yZWFsbXMvc2FoYW1hdGkiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiNWJiMTFhYTItMzI4My00NGJiLTliY2UtMTRhMTQ2ZjczYmQ2IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiU0FOS0VUSUtBREVWRklVIiwic2Vzc2lvbl9zdGF0ZSI6IjM5YzZjMWIyLWM0NWEtNDEyMC1iMTRlLTU3NDBmOTdlODFlMCIsImFjciI6IjEiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1zYWhhbWF0aSIsIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJzaWQiOiIzOWM2YzFiMi1jNDVhLTQxMjAtYjE0ZS01NzQwZjk3ZTgxZTAiLCJjbGllbnRJZCI6IlNBTktFVElLQURFVkZJVSIsImNsaWVudEhvc3QiOiIxNC4xOTUuMTAuMTA2OjUwODc1Iiwicm9sZXMiOiJGSVUiLCJjbGllbnRBZGRyZXNzIjoiMTQuMTk1LjEwLjEwNjo1MDg3NSJ9.nEft_pkclNVF5MjN_qKuTcoM_jvkTWZ54wSuakJf2OnadQpBtRZ1x11F150V72wilSXzoBCQa2xgEcGhXiFfWrfuJ-l7wb5Nl-cmLY1zpm3yRkR04HENjinlMni2zGB2qmprRnynFKavOhHTUKXU5G6uVrsaS0i4aQS8jiyKNRbxqWrxh_bnvRGIUzvBr3wgowLRT1lneo_fxIlZrKKD9JhIiywsenqO7v_mpTTKQ-z-6y0v6vxsk3q1hcmnOCsZm13Gx1bkvWBZurd12idhn9e9X1W86eXGdSJyJSwvFBmg3U-oQ7lKSbJPcBnUWsosnMlw_MO1ooqujPnEg_-eUA"
+							},
+							{
+								"key": "x-simulate-res",
+								"value": "Ok",
+								"type": "text"
+							},
+							{
+								"key": "x-request-meta",
+								"value": "eyJyZWNpcGllbnQtaWQiOiJGSVAtU0lNVUxBVE9SIiB9",
+								"type": "text"
+							},
+							{
+								"key": "aa_api_key",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n        \"ver\": \"2.0.0\",\n        \"timestamp\": \"2023-06-26T06:41:54.904+0000\",\n        \"txnid\": \"f35761ac-4a18-11e8-96ff-0277a9fbfedc2\",\n        \"Customer\": {\n            \"id\": \"customer_identifier@AA_identifier\",\n            \"Identifiers\": [\n                {\n                    \"category\": \"STRONG\",\n                    \"type\": \"AADHAAR\",\n                    \"value\": \"XXXXXXXXXXXXXXXX\"\n                }\n            ]\n        },\n        \"FITypes\": [\n            \"DEPOSIT\"\n        ]\n    }\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/proxy/v2/Accounts/discover"
+					},
+					"response": []
+				},
+				{
+					"name": "Account Link",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Account link - Success\", function() {",
+									"    pm.response.to.have.status(200);",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-jws-signature",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlRlZ1FhMms3MUlFWlotaEhxcm1ueWFFc3ZvSWloNWdrVUx2SjFfTEhibGsiLCJjcml0IjpbImI2NCJdLCJiNjQiOmZhbHNlfQ..Dux_bx7X-q1YSvyNmZiyPM60ZgaK3MshWBhWeY-bLBeSmxkU5VpH-lQjBjGFW_2opX3ZK5XfF7oPc3wkp-Qj7-qVfgTg53YvGyS3oLbKvkMRHtKa33x5I-0b8BmlMzojtnA_zFfubOJoqZVPpz7BQ4qrazizaF2Z6m3FygNGuAkdbdqtnCgPCjBZ6ibkpyiKR_n_g5FcTOq7fa7JgE6IoMD0R575ssdFbHzcT-IZs0DDqc_DJ0pR7m56z9IlmRZ6kUg99kaYVl6GUHSYPwY9OCbmHa7EbgE5vUdIJjhF3vJDZhYMWCojpbh9KLGSpbHkWG4OY19S-YNJv85FtXZe0Q"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJtckl2NGpsMVprMzZ4cEVITmRJUFBsZHo0WFVLaXBRT3VhcEdOQ1NRd1pNIn0.eyJleHAiOjE3MjEyOTgwNTMsImlhdCI6MTcyMTIxMTY1MywianRpIjoiM2Y3YTgwZDAtMGYxOS00N2RhLTlmZGQtNzEzZmM4OWM4YzBkIiwiaXNzIjoiaHR0cHM6Ly90b2tlbnMuc2FuZGJveC5zYWhhbWF0aS5vcmcuaW4vYXV0aC9yZWFsbXMvc2FoYW1hdGkiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiNWJiMTFhYTItMzI4My00NGJiLTliY2UtMTRhMTQ2ZjczYmQ2IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiU0FOS0VUSUtBREVWRklVIiwic2Vzc2lvbl9zdGF0ZSI6IjM5YzZjMWIyLWM0NWEtNDEyMC1iMTRlLTU3NDBmOTdlODFlMCIsImFjciI6IjEiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1zYWhhbWF0aSIsIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJzaWQiOiIzOWM2YzFiMi1jNDVhLTQxMjAtYjE0ZS01NzQwZjk3ZTgxZTAiLCJjbGllbnRJZCI6IlNBTktFVElLQURFVkZJVSIsImNsaWVudEhvc3QiOiIxNC4xOTUuMTAuMTA2OjUwODc1Iiwicm9sZXMiOiJGSVUiLCJjbGllbnRBZGRyZXNzIjoiMTQuMTk1LjEwLjEwNjo1MDg3NSJ9.nEft_pkclNVF5MjN_qKuTcoM_jvkTWZ54wSuakJf2OnadQpBtRZ1x11F150V72wilSXzoBCQa2xgEcGhXiFfWrfuJ-l7wb5Nl-cmLY1zpm3yRkR04HENjinlMni2zGB2qmprRnynFKavOhHTUKXU5G6uVrsaS0i4aQS8jiyKNRbxqWrxh_bnvRGIUzvBr3wgowLRT1lneo_fxIlZrKKD9JhIiywsenqO7v_mpTTKQ-z-6y0v6vxsk3q1hcmnOCsZm13Gx1bkvWBZurd12idhn9e9X1W86eXGdSJyJSwvFBmg3U-oQ7lKSbJPcBnUWsosnMlw_MO1ooqujPnEg_-eUA"
+							},
+							{
+								"key": "x-simulate-res",
+								"value": "Ok",
+								"type": "text"
+							},
+							{
+								"key": "x-callback-res",
+								"value": "LINK",
+								"type": "text"
+							},
+							{
+								"key": "x-request-meta",
+								"value": "eyJyZWNpcGllbnQtaWQiOiJGSVAtU0lNVUxBVE9SIiB9",
+								"type": "text"
+							},
+							{
+								"key": "aa_api_key",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"ver\": \"2.0.0\",\n        \"timestamp\": \"2023-06-26T17:51:18.412Z\",\n        \"txnid\": \"f35761ac-4a18-11e8-96ff-0277a9fbfedcww\",\n        \"Customer\": {\n            \"id\": \"customer_identifier@AA_identifier\",\n            \"Accounts\": [\n                {\n                    \"FIType\": \"DEPOSIT\",\n                    \"accType\": \"SAVINGS\",\n                    \"accRefNumber\": \"BANK11111111\",\n                    \"maskedAccNumber\": \"XXXXXXX3468\"\n                }\n            ]\n        }\n    }\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/proxy/v2/Accounts/link"
+					},
+					"response": []
+				},
+				{
+					"name": "Accounts Link Verify",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Account link verify - Success\", function() {",
+									"    pm.response.to.have.status(200);",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-jws-signature",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlRlZ1FhMms3MUlFWlotaEhxcm1ueWFFc3ZvSWloNWdrVUx2SjFfTEhibGsiLCJjcml0IjpbImI2NCJdLCJiNjQiOmZhbHNlfQ..Dux_bx7X-q1YSvyNmZiyPM60ZgaK3MshWBhWeY-bLBeSmxkU5VpH-lQjBjGFW_2opX3ZK5XfF7oPc3wkp-Qj7-qVfgTg53YvGyS3oLbKvkMRHtKa33x5I-0b8BmlMzojtnA_zFfubOJoqZVPpz7BQ4qrazizaF2Z6m3FygNGuAkdbdqtnCgPCjBZ6ibkpyiKR_n_g5FcTOq7fa7JgE6IoMD0R575ssdFbHzcT-IZs0DDqc_DJ0pR7m56z9IlmRZ6kUg99kaYVl6GUHSYPwY9OCbmHa7EbgE5vUdIJjhF3vJDZhYMWCojpbh9KLGSpbHkWG4OY19S-YNJv85FtXZe0Q"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJtckl2NGpsMVprMzZ4cEVITmRJUFBsZHo0WFVLaXBRT3VhcEdOQ1NRd1pNIn0.eyJleHAiOjE3MjEyOTgwNTMsImlhdCI6MTcyMTIxMTY1MywianRpIjoiM2Y3YTgwZDAtMGYxOS00N2RhLTlmZGQtNzEzZmM4OWM4YzBkIiwiaXNzIjoiaHR0cHM6Ly90b2tlbnMuc2FuZGJveC5zYWhhbWF0aS5vcmcuaW4vYXV0aC9yZWFsbXMvc2FoYW1hdGkiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiNWJiMTFhYTItMzI4My00NGJiLTliY2UtMTRhMTQ2ZjczYmQ2IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiU0FOS0VUSUtBREVWRklVIiwic2Vzc2lvbl9zdGF0ZSI6IjM5YzZjMWIyLWM0NWEtNDEyMC1iMTRlLTU3NDBmOTdlODFlMCIsImFjciI6IjEiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1zYWhhbWF0aSIsIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJzaWQiOiIzOWM2YzFiMi1jNDVhLTQxMjAtYjE0ZS01NzQwZjk3ZTgxZTAiLCJjbGllbnRJZCI6IlNBTktFVElLQURFVkZJVSIsImNsaWVudEhvc3QiOiIxNC4xOTUuMTAuMTA2OjUwODc1Iiwicm9sZXMiOiJGSVUiLCJjbGllbnRBZGRyZXNzIjoiMTQuMTk1LjEwLjEwNjo1MDg3NSJ9.nEft_pkclNVF5MjN_qKuTcoM_jvkTWZ54wSuakJf2OnadQpBtRZ1x11F150V72wilSXzoBCQa2xgEcGhXiFfWrfuJ-l7wb5Nl-cmLY1zpm3yRkR04HENjinlMni2zGB2qmprRnynFKavOhHTUKXU5G6uVrsaS0i4aQS8jiyKNRbxqWrxh_bnvRGIUzvBr3wgowLRT1lneo_fxIlZrKKD9JhIiywsenqO7v_mpTTKQ-z-6y0v6vxsk3q1hcmnOCsZm13Gx1bkvWBZurd12idhn9e9X1W86eXGdSJyJSwvFBmg3U-oQ7lKSbJPcBnUWsosnMlw_MO1ooqujPnEg_-eUA"
+							},
+							{
+								"key": "x-simulate-res",
+								"value": "Ok",
+								"type": "text"
+							},
+							{
+								"key": "x-request-meta",
+								"value": "eyJyZWNpcGllbnQtaWQiOiJGSVAtU0lNVUxBVE9SIiB9",
+								"type": "text"
+							},
+							{
+								"key": "aa_api_key",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"ver\": \"2.0.0\",\n        \"timestamp\": \"2023-06-26T10:27:17.699+0000\",\n        \"txnid\": \"410c2d2e-4a1e-11e8-960e-0277a9fbfedc\",\n        \"refNumber\": \"f6b1482e-8f08-11e8-862a-02552b0d3c36\",\n        \"token\": \"999999\"\n    }\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/proxy/v2/Accounts/link/verify"
+					},
+					"response": []
+				},
+				{
+					"name": "Account Delink",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Account Delink - Success\", function() {",
+									"    pm.response.to.have.status(200);",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-jws-signature",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlRlZ1FhMms3MUlFWlotaEhxcm1ueWFFc3ZvSWloNWdrVUx2SjFfTEhibGsiLCJjcml0IjpbImI2NCJdLCJiNjQiOmZhbHNlfQ..Dux_bx7X-q1YSvyNmZiyPM60ZgaK3MshWBhWeY-bLBeSmxkU5VpH-lQjBjGFW_2opX3ZK5XfF7oPc3wkp-Qj7-qVfgTg53YvGyS3oLbKvkMRHtKa33x5I-0b8BmlMzojtnA_zFfubOJoqZVPpz7BQ4qrazizaF2Z6m3FygNGuAkdbdqtnCgPCjBZ6ibkpyiKR_n_g5FcTOq7fa7JgE6IoMD0R575ssdFbHzcT-IZs0DDqc_DJ0pR7m56z9IlmRZ6kUg99kaYVl6GUHSYPwY9OCbmHa7EbgE5vUdIJjhF3vJDZhYMWCojpbh9KLGSpbHkWG4OY19S-YNJv85FtXZe0Q"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJtckl2NGpsMVprMzZ4cEVITmRJUFBsZHo0WFVLaXBRT3VhcEdOQ1NRd1pNIn0.eyJleHAiOjE3MjEyOTgwNTMsImlhdCI6MTcyMTIxMTY1MywianRpIjoiM2Y3YTgwZDAtMGYxOS00N2RhLTlmZGQtNzEzZmM4OWM4YzBkIiwiaXNzIjoiaHR0cHM6Ly90b2tlbnMuc2FuZGJveC5zYWhhbWF0aS5vcmcuaW4vYXV0aC9yZWFsbXMvc2FoYW1hdGkiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiNWJiMTFhYTItMzI4My00NGJiLTliY2UtMTRhMTQ2ZjczYmQ2IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiU0FOS0VUSUtBREVWRklVIiwic2Vzc2lvbl9zdGF0ZSI6IjM5YzZjMWIyLWM0NWEtNDEyMC1iMTRlLTU3NDBmOTdlODFlMCIsImFjciI6IjEiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1zYWhhbWF0aSIsIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJzaWQiOiIzOWM2YzFiMi1jNDVhLTQxMjAtYjE0ZS01NzQwZjk3ZTgxZTAiLCJjbGllbnRJZCI6IlNBTktFVElLQURFVkZJVSIsImNsaWVudEhvc3QiOiIxNC4xOTUuMTAuMTA2OjUwODc1Iiwicm9sZXMiOiJGSVUiLCJjbGllbnRBZGRyZXNzIjoiMTQuMTk1LjEwLjEwNjo1MDg3NSJ9.nEft_pkclNVF5MjN_qKuTcoM_jvkTWZ54wSuakJf2OnadQpBtRZ1x11F150V72wilSXzoBCQa2xgEcGhXiFfWrfuJ-l7wb5Nl-cmLY1zpm3yRkR04HENjinlMni2zGB2qmprRnynFKavOhHTUKXU5G6uVrsaS0i4aQS8jiyKNRbxqWrxh_bnvRGIUzvBr3wgowLRT1lneo_fxIlZrKKD9JhIiywsenqO7v_mpTTKQ-z-6y0v6vxsk3q1hcmnOCsZm13Gx1bkvWBZurd12idhn9e9X1W86eXGdSJyJSwvFBmg3U-oQ7lKSbJPcBnUWsosnMlw_MO1ooqujPnEg_-eUA"
+							},
+							{
+								"key": "x-simulate-res",
+								"value": "Ok",
+								"type": "text"
+							},
+							{
+								"key": "x-request-meta",
+								"value": "eyJyZWNpcGllbnQtaWQiOiJGSVAtU0lNVUxBVE9SIiB9",
+								"type": "text"
+							},
+							{
+								"key": "aa_api_key",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n        \"ver\": \"2.0.0\",\n        \"timestamp\": \"2023-06-26T17:51:18.412Z\",\n        \"txnid\": \"f35761ac-4a18-11e8-96ff-0277a9fbfedc11\",\n        \"Account\": {\n            \"customerAddress\": \"customer_address@aa_identifiere\",\n            \"linkRefNumber\": \"xxxxxxxxxxxxx\"\n        }\n    }\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/proxy/v2/Accounts/delink"
+					},
+					"response": []
+				},
+				{
+					"name": "FI request",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"FI Request - Success\", function() {",
+									"    pm.response.to.have.status(200);",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{aa_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-jws-signature",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlRlZ1FhMms3MUlFWlotaEhxcm1ueWFFc3ZvSWloNWdrVUx2SjFfTEhibGsiLCJjcml0IjpbImI2NCJdLCJiNjQiOmZhbHNlfQ..Dux_bx7X-q1YSvyNmZiyPM60ZgaK3MshWBhWeY-bLBeSmxkU5VpH-lQjBjGFW_2opX3ZK5XfF7oPc3wkp-Qj7-qVfgTg53YvGyS3oLbKvkMRHtKa33x5I-0b8BmlMzojtnA_zFfubOJoqZVPpz7BQ4qrazizaF2Z6m3FygNGuAkdbdqtnCgPCjBZ6ibkpyiKR_n_g5FcTOq7fa7JgE6IoMD0R575ssdFbHzcT-IZs0DDqc_DJ0pR7m56z9IlmRZ6kUg99kaYVl6GUHSYPwY9OCbmHa7EbgE5vUdIJjhF3vJDZhYMWCojpbh9KLGSpbHkWG4OY19S-YNJv85FtXZe0Q"
+							},
+							{
+								"key": "x-simulate-res",
+								"value": "Ok",
+								"type": "text"
+							},
+							{
+								"key": "x-callback-res",
+								"value": "READY",
+								"type": "text"
+							},
+							{
+								"key": "x-request-meta",
+								"value": "eyJyZWNpcGllbnQtaWQiOiJGSVAtU0lNVUxBVE9SIiB9",
+								"type": "text"
+							},
+							{
+								"key": "aa_api_key",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"ver\": \"2.0.0\",\n        \"timestamp\": \"2024-07-19T09:58:50.505Z\",\n        \"txnid\": \"c4a1450c-d08a-45b4-a475-0468bd10e38sw\",\n        \"Consent\": {\n            \"id\": \"654024c8-29c8-11e8-8868-0289437bf33177\",\n            \"digitalSignature\": \"NdjwMjLortTb10dxcJezkvdOxPVvEdZvIqwqVWOHnE8pS_YDswcRPLTRmds2xO-Tvm_A2cFv1qKYpaZnv8Bl6xmZoOsG_F8_40gRZqIhz5hF9puzp8lEEhMlZ6NaX2Y2OYkwHcOBBpCIXpLXB4CMWiefUEWjO9zKDd5JJwZ4vLWeT4qgwvPfRqE60B33tzVlF5E6OA2mKK17sGRXsfrI9obEjL52RMdGo_9bv1HnHfvPlbj5ihj6d_5iTtoh7HUC_X8CrJGvkgkCjP_7of1jPb5QgJ9nx_Yfsxj3vf8zEseZIVISjF3MwBzW7Di4CpfQl4wlnpkQO9MKu78F69Z9Ig\"\n        },\n        \"FIDataRange\": {\n            \"from\": \"2018-11-27T06:26:29.761Z\",\n            \"to\": \"2018-12-27T06:26:29.761Z\"\n        },\n        \"KeyMaterial\": {\n            \"cryptoAlg\": \"ECDH\",\n            \"curve\": \"Curve25519\",\n            \"params\": \"cipher=AES/GCM/NoPadding;KeyPairGenerator=ECDH\",\n            \"DHPublicKey\": {\n                \"expiry\": \"2019-06-01T09:58:50.505Z\",\n                \"Parameters\": \"string\",\n                \"KeyValue\": \"string\"\n            },\n            \"Nonce\": \"29512b70-ca84-46b5-9471-63765599cf15\"\n        }\n    }\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/proxy/v2/FI/request"
+					},
+					"response": []
+				},
+				{
+					"name": "FI fetch",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"FI Fetch - Success\", function() {",
+									"    pm.response.to.have.status(200);",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-jws-signature",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlRlZ1FhMms3MUlFWlotaEhxcm1ueWFFc3ZvSWloNWdrVUx2SjFfTEhibGsiLCJjcml0IjpbImI2NCJdLCJiNjQiOmZhbHNlfQ..Dux_bx7X-q1YSvyNmZiyPM60ZgaK3MshWBhWeY-bLBeSmxkU5VpH-lQjBjGFW_2opX3ZK5XfF7oPc3wkp-Qj7-qVfgTg53YvGyS3oLbKvkMRHtKa33x5I-0b8BmlMzojtnA_zFfubOJoqZVPpz7BQ4qrazizaF2Z6m3FygNGuAkdbdqtnCgPCjBZ6ibkpyiKR_n_g5FcTOq7fa7JgE6IoMD0R575ssdFbHzcT-IZs0DDqc_DJ0pR7m56z9IlmRZ6kUg99kaYVl6GUHSYPwY9OCbmHa7EbgE5vUdIJjhF3vJDZhYMWCojpbh9KLGSpbHkWG4OY19S-YNJv85FtXZe0Q"
+							},
+							{
+								"key": "x-simulate-res",
+								"value": "Ok",
+								"type": "text"
+							},
+							{
+								"key": "x-request-meta",
+								"value": "eyJyZWNpcGllbnQtaWQiOiJGSVAtU0lNVUxBVE9SIiB9",
+								"type": "text"
+							},
+							{
+								"key": "aa_api_key",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"ver\": \"2.0.0\",\n        \"timestamp\": \"2024-07-19T06:41:34.904+0000\",\n        \"txnid\": \"af5b8023-aabc-4a46-8f37-d3c167129b1e\",\n        \"sessionId\": \"caa2f259-2dc2-4075-87aa-6d81018b6183\",\n        \"fipId\": \"MOCKSANDBOXFIP\",\n        \"linkRefNumber\": [\n            {\n                \"id\": \"XXXX-XXXX-XXXX\"\n            }\n        ]\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/proxy/v2/FI/fetch"
+					},
+					"response": []
+				},
+				{
+					"name": "Consent",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Consent - Success\", function() {",
+									"    pm.response.to.have.status(200);",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-jws-signature",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlRlZ1FhMms3MUlFWlotaEhxcm1ueWFFc3ZvSWloNWdrVUx2SjFfTEhibGsiLCJjcml0IjpbImI2NCJdLCJiNjQiOmZhbHNlfQ..Dux_bx7X-q1YSvyNmZiyPM60ZgaK3MshWBhWeY-bLBeSmxkU5VpH-lQjBjGFW_2opX3ZK5XfF7oPc3wkp-Qj7-qVfgTg53YvGyS3oLbKvkMRHtKa33x5I-0b8BmlMzojtnA_zFfubOJoqZVPpz7BQ4qrazizaF2Z6m3FygNGuAkdbdqtnCgPCjBZ6ibkpyiKR_n_g5FcTOq7fa7JgE6IoMD0R575ssdFbHzcT-IZs0DDqc_DJ0pR7m56z9IlmRZ6kUg99kaYVl6GUHSYPwY9OCbmHa7EbgE5vUdIJjhF3vJDZhYMWCojpbh9KLGSpbHkWG4OY19S-YNJv85FtXZe0Q"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "x-simulate-res",
+								"value": "Ok",
+								"type": "text"
+							},
+							{
+								"key": "x-callback-res",
+								"value": "ACTIVE",
+								"type": "text"
+							},
+							{
+								"key": "x-request-meta",
+								"value": "eyJyZWNpcGllbnQtaWQiOiJGSVAtU0lNVUxBVE9SIiB9",
+								"type": "text"
+							},
+							{
+								"key": "aa_api_key",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ver\": \"2.0.0\",\n    \"txnid\": \"0b811819-9044-4856-b0ee-8c88035f8858\",\n    \"consentId\": \"XXXX-XXXX-XXXX-XXXX\",\n    \"status\": \"ACTIVE\",\n    \"createTimestamp\": \"2023-06-26T11:39:57.153Z\",\n    \"signedConsent\": \"eyJhbGciOiJSUzI1NiIsImtpZCI6IjQyNzE5MTNlLTdiOTMtNDlkZC05OTQ5LTFjNzZmZjVmYzVjZiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19.ew0KICAgICAgICAiY29uc2VudFN0YXJ0IjogIjIwMTktMDUtMjhUMTE6Mzg6MjAuMzgwKzAwMDAiLA0KICAgICAgICAiY29uc2VudEV4cGlyeSI6ICIyMDIwLTA1LTI4VDExOjM4OjIwLjM4MSswMDAwIiwNCiAgICAgICAgImNvbnNlbnRNb2RlIjogIlZJRVciLA0KICAgICAgICAiZmV0Y2hUeXBlIjogIk9ORVRJTUUiLA0KICAgICAgICAiY29uc2VudFR5cGVzIjogWw0KICAgICAgICAgICAgIlBST0ZJTEUiLA0KICAgICAgICAgICAgIlNVTU1BUlkiLA0KICAgICAgICAgICAgIlRSQU5TQUNUSU9OUyINCiAgICAgICAgXSwNCiAgICAgICAgImZpVHlwZXMiOiBbDQogICAgICAgICAgICAiREVQT1NJVCIsDQogICAgICAgICAgICAiVEVSTS1ERVBPU0lUIg0KICAgICAgICBdLA0KICAgICAgICAiRGF0YUNvbnN1bWVyIjogew0KICAgICAgICAgICAgImlkIjogImNvb2tpZWphci1hYUBmaW52dS5pbiIsDQogICAgICAgICAgICAidHlwZSI6ICJBQSINCiAgICAgICAgfSwNCiAgICAgICAgIkRhdGFQcm92aWRlciI6IHsNCiAgICAgICAgICAgICJpZCI6ICJCQVJCMEtJTVhYWCIsDQogICAgICAgICAgICAidHlwZSI6ICJGSVAiDQogICAgICAgIH0sDQogICAgICAgICJDdXN0b21lciI6IHsNCiAgICAgICAgICAgICJpZCI6ICJkZW1vQGZpbnZ1Ig0KICAgICAgICB9LA0KICAgICAgICAiQWNjb3VudHMiOiBbDQogICAgICAgICAgICB7DQogICAgICAgICAgICAgICAgImZpVHlwZSI6ICJERVBPU0lUIiwNCiAgICAgICAgICAgICAgICAiZmlwSWQiOiAiQkFSQjBLSU1YWFgiLA0KICAgICAgICAgICAgICAgICJhY2NUeXBlIjogIlNBVklOR1MiLA0KICAgICAgICAgICAgICAgICJsaW5rUmVmTnVtYmVyIjogIlVCSTQ4NTk2NDU3OSIsDQogICAgICAgICAgICAgICAgIm1hc2tlZEFjY051bWJlciI6ICJVQkk4NTIxNzg4MTI3OSINCiAgICAgICAgICAgIH0sDQogICAgICAgICAgICB7DQogICAgICAgICAgICAgICAgImZpVHlwZSI6ICJERVBPU0lUIiwNCiAgICAgICAgICAgICAgICAiZmlwSWQiOiAiQkFSQjBLSU1YWFgiLA0KICAgICAgICAgICAgICAgICJhY2NUeXBlIjogIlNBVklOR1MiLA0KICAgICAgICAgICAgICAgICJsaW5rUmVmTnVtYmVyIjogIlVCSTQ4NTk2NDUiLA0KICAgICAgICAgICAgICAgICJtYXNrZWRBY2NOdW1iZXIiOiAiVUJJODUyMTc4ODEyIg0KICAgICAgICAgICAgfQ0KICAgICAgICBdLA0KICAgICAgICAiUHVycG9zZSI6IHsNCiAgICAgICAgICAgICJjb2RlIjogIjEwMSIsDQogICAgICAgICAgICAicmVmVXJpIjogImh0dHBzOi8vYXBpLnJlYml0Lm9yZy5pbi9hYS9wdXJwb3NlLzEwMS54bWwiLA0KICAgICAgICAgICAgInRleHQiOiAiV2VhbHRoIG1hbmFnZW1lbnQgc2VydmljZSIsDQogICAgICAgICAgICAiQ2F0ZWdvcnkiOiB7DQogICAgICAgICAgICAgICAgInR5cGUiOiAicHVycG9zZUNhdGVnb3J5VHlwZSINCiAgICAgICAgICAgIH0NCiAgICAgICAgfSwNCiAgICAgICAgIkZJRGF0YVJhbmdlIjogew0KICAgICAgICAgICAgImZyb20iOiAiMjAxOS0wNS0yOFQxMTozODoyMC4zODMrMDAwMCIsDQogICAgICAgICAgICAidG8iOiAiMjAyMC0wNS0yOFQxMTozODoyMC4zODErMDAwMCINCiAgICAgICAgfSwNCiAgICAgICAgIkRhdGFMaWZlIjogew0KICAgICAgICAgICAgInVuaXQiOiAiTU9OVEgiLA0KICAgICAgICAgICAgInZhbHVlIjogNA0KICAgICAgICB9LA0KICAgICAgICAiRnJlcXVlbmN5Ijogew0KICAgICAgICAgICAgInVuaXQiOiAiSE9VUiIsDQogICAgICAgICAgICAidmFsdWUiOiA0DQogICAgICAgIH0sDQogICAgICAgICJEYXRhRmlsdGVyIjogWw0KICAgICAgICAgICAgew0KICAgICAgICAgICAgICAgICJ0eXBlIjogIlRSQU5TQUNUSU9OQU1PVU5UIiwNCiAgICAgICAgICAgICAgICAib3BlcmF0b3IiOiAiPiIsDQogICAgICAgICAgICAgICAgInZhbHVlIjogIjIwMDAwIg0KICAgICAgICAgICAgfQ0KICAgICAgICBdDQogICAgfQ.O3KPh-eTpW2w47QXYidOBe1Hk2y7djVAEcOnZyRRvxQ3cY18-9ZWiodF16jff-e7yNQgsYZpAy95Fx2Fft8LoYugkYh9_6qHiG_7LCtW8Ng4nCMgZM3Wwsj11ks1msrK5C1ksPrGlTkFhm9-FufNkPTAlW76_5Sb8G_lOsIj1lB8TrvKpOvPlhEIgsS4WBNdPfv3SBqTV2suw2LvkX3QTilqwuMgXMkrm9-RYL90fweX_yyoyaBWHOJNQaKNuQWPpoRRNHGOx3v4_QiwgrELdfeTVtKn6R_AsfaBoEthQ3wrc8tY1q0Wx5j0x18NdU2R2C26dHyZ9M11dEH99psA1A\",\n    \"ConsentUse\": {\n        \"logUri\": \"string\",\n        \"count\": 1,\n        \"lastUseDateTime\": \"2018-12-06T11:39:57.153Z\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/proxy/v2/Consent"
+					},
+					"response": []
+				},
+				{
+					"name": "Consent notification",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Consent Notification - Success\", function() {",
+									"    pm.response.to.have.status(200);",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-jws-signature",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlRlZ1FhMms3MUlFWlotaEhxcm1ueWFFc3ZvSWloNWdrVUx2SjFfTEhibGsiLCJjcml0IjpbImI2NCJdLCJiNjQiOmZhbHNlfQ..Dux_bx7X-q1YSvyNmZiyPM60ZgaK3MshWBhWeY-bLBeSmxkU5VpH-lQjBjGFW_2opX3ZK5XfF7oPc3wkp-Qj7-qVfgTg53YvGyS3oLbKvkMRHtKa33x5I-0b8BmlMzojtnA_zFfubOJoqZVPpz7BQ4qrazizaF2Z6m3FygNGuAkdbdqtnCgPCjBZ6ibkpyiKR_n_g5FcTOq7fa7JgE6IoMD0R575ssdFbHzcT-IZs0DDqc_DJ0pR7m56z9IlmRZ6kUg99kaYVl6GUHSYPwY9OCbmHa7EbgE5vUdIJjhF3vJDZhYMWCojpbh9KLGSpbHkWG4OY19S-YNJv85FtXZe0Q"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJtckl2NGpsMVprMzZ4cEVITmRJUFBsZHo0WFVLaXBRT3VhcEdOQ1NRd1pNIn0.eyJleHAiOjE3MjEyOTgwNDksImlhdCI6MTcyMTIxMTY0OSwianRpIjoiYWRkZmVkN2YtZDU4Zi00ZmRiLTlkNDktMDY2MmYzZGI3NzZmIiwiaXNzIjoiaHR0cHM6Ly90b2tlbnMuc2FuZGJveC5zYWhhbWF0aS5vcmcuaW4vYXV0aC9yZWFsbXMvc2FoYW1hdGkiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiZTkzMmEyZmEtZTFjMC00ZTA0LTk2YTItYWNiNGMwNmViNDJlIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiU0FOS0VUSUtBREVWQUEiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtc2FoYW1hdGkiLCJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiY2xpZW50SG9zdCI6IjE0LjE5NS4xMC4xMDY6NTA4NzUiLCJjbGllbnRJZCI6IlNBTktFVElLQURFVkFBIiwicm9sZXMiOiJBQSIsImNsaWVudEFkZHJlc3MiOiIxNC4xOTUuMTAuMTA2OjUwODc1In0.vjG5oYANsvPZLKgbMFmOKy_8JQx0ImVWplSP6c3DR9CpqGlFDKCfruET5tDTACyD9p7ozVDxXGpzGoTbhZfQA61EAwmx_GICzcHOQplaVTdQJ3WxozqB0vWnOZvwaCngaCGCsLw6UAgAcUM360wj_Lco9jfvcjGGj_KFBxh2EPcyk4Q7kO_H6YhNpBSpWOx-1xSodHXusTS8zdwYBgdbs3wK_zHaUJoBMegDGb7UIlPrZxNOEEaQsB9mmYmfL_1B-TESy7I-LjgCqOrzQip0BQI8lnXj5THUwIkjsw-FckMRT-0DtvZenHq5QLEuQJhE97EXjfWduWR2dh8DBxK_UA"
+							},
+							{
+								"key": "x-simulate-res",
+								"value": "Ok",
+								"type": "text"
+							},
+							{
+								"key": "x-request-meta",
+								"value": "eyJyZWNpcGllbnQtaWQiOiJGSVAtU0lNVUxBVE9SIiB9",
+								"type": "text"
+							},
+							{
+								"key": "aa_api_key",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"ver\": \"2.0.0\",\n        \"timestamp\": \"2023-06-26T11:39:57.153Z\",\n        \"txnid\": \"0b811819-9044-4856-b0ee-8c88035f8858\",\n        \"Notifier\": {\n            \"type\": \"AA\",\n            \"id\": \"AA_1\"\n        },\n        \"ConsentStatusNotification\": {\n            \"consentId\": \"XXXX0-XXXX-XXXX\",\n            \"consentStatus\": \"REVOKED\"\n        }\n    }\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/proxy/v2/Consent/Notification"
+					},
+					"response": []
+				},
+				{
+					"name": "Heart Beat",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-jws-signature",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlRlZ1FhMms3MUlFWlotaEhxcm1ueWFFc3ZvSWloNWdrVUx2SjFfTEhibGsiLCJjcml0IjpbImI2NCJdLCJiNjQiOmZhbHNlfQ..Dux_bx7X-q1YSvyNmZiyPM60ZgaK3MshWBhWeY-bLBeSmxkU5VpH-lQjBjGFW_2opX3ZK5XfF7oPc3wkp-Qj7-qVfgTg53YvGyS3oLbKvkMRHtKa33x5I-0b8BmlMzojtnA_zFfubOJoqZVPpz7BQ4qrazizaF2Z6m3FygNGuAkdbdqtnCgPCjBZ6ibkpyiKR_n_g5FcTOq7fa7JgE6IoMD0R575ssdFbHzcT-IZs0DDqc_DJ0pR7m56z9IlmRZ6kUg99kaYVl6GUHSYPwY9OCbmHa7EbgE5vUdIJjhF3vJDZhYMWCojpbh9KLGSpbHkWG4OY19S-YNJv85FtXZe0Q"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "x-simulate-res",
+								"value": "Ok"
+							},
+							{
+								"key": "x-callback-res",
+								"value": "AC"
+							},
+							{
+								"key": "x-request-meta",
+								"value": "eyJyZWNpcGllbnQtaWQiOiJGSVAtU0lNVUxBVE9SIiB9"
+							},
+							{
+								"key": "aa_api_key",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": "{{host}}/proxy/v2/Heartbeat"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AA -> FIU",
+			"item": [
+				{
+					"name": "Consent Notification",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Consent Notification - Success\", function() {",
+									"    pm.response.to.have.status(200);",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-jws-signature",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlRlZ1FhMms3MUlFWlotaEhxcm1ueWFFc3ZvSWloNWdrVUx2SjFfTEhibGsiLCJjcml0IjpbImI2NCJdLCJiNjQiOmZhbHNlfQ..Dux_bx7X-q1YSvyNmZiyPM60ZgaK3MshWBhWeY-bLBeSmxkU5VpH-lQjBjGFW_2opX3ZK5XfF7oPc3wkp-Qj7-qVfgTg53YvGyS3oLbKvkMRHtKa33x5I-0b8BmlMzojtnA_zFfubOJoqZVPpz7BQ4qrazizaF2Z6m3FygNGuAkdbdqtnCgPCjBZ6ibkpyiKR_n_g5FcTOq7fa7JgE6IoMD0R575ssdFbHzcT-IZs0DDqc_DJ0pR7m56z9IlmRZ6kUg99kaYVl6GUHSYPwY9OCbmHa7EbgE5vUdIJjhF3vJDZhYMWCojpbh9KLGSpbHkWG4OY19S-YNJv85FtXZe0Q"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJtckl2NGpsMVprMzZ4cEVITmRJUFBsZHo0WFVLaXBRT3VhcEdOQ1NRd1pNIn0.eyJleHAiOjE3MjEyOTgwNDksImlhdCI6MTcyMTIxMTY0OSwianRpIjoiYWRkZmVkN2YtZDU4Zi00ZmRiLTlkNDktMDY2MmYzZGI3NzZmIiwiaXNzIjoiaHR0cHM6Ly90b2tlbnMuc2FuZGJveC5zYWhhbWF0aS5vcmcuaW4vYXV0aC9yZWFsbXMvc2FoYW1hdGkiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiZTkzMmEyZmEtZTFjMC00ZTA0LTk2YTItYWNiNGMwNmViNDJlIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiU0FOS0VUSUtBREVWQUEiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtc2FoYW1hdGkiLCJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiY2xpZW50SG9zdCI6IjE0LjE5NS4xMC4xMDY6NTA4NzUiLCJjbGllbnRJZCI6IlNBTktFVElLQURFVkFBIiwicm9sZXMiOiJBQSIsImNsaWVudEFkZHJlc3MiOiIxNC4xOTUuMTAuMTA2OjUwODc1In0.vjG5oYANsvPZLKgbMFmOKy_8JQx0ImVWplSP6c3DR9CpqGlFDKCfruET5tDTACyD9p7ozVDxXGpzGoTbhZfQA61EAwmx_GICzcHOQplaVTdQJ3WxozqB0vWnOZvwaCngaCGCsLw6UAgAcUM360wj_Lco9jfvcjGGj_KFBxh2EPcyk4Q7kO_H6YhNpBSpWOx-1xSodHXusTS8zdwYBgdbs3wK_zHaUJoBMegDGb7UIlPrZxNOEEaQsB9mmYmfL_1B-TESy7I-LjgCqOrzQip0BQI8lnXj5THUwIkjsw-FckMRT-0DtvZenHq5QLEuQJhE97EXjfWduWR2dh8DBxK_UA"
+							},
+							{
+								"key": "x-simulate-res",
+								"value": "Ok",
+								"type": "text"
+							},
+							{
+								"key": "x-request-meta",
+								"value": "eyJyZWNpcGllbnQtaWQiOiJGSVUtU0lNVUxBVE9SIiB9",
+								"type": "text"
+							},
+							{
+								"key": "aa_api_key",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"ver\": \"2.0.0\",\n        \"timestamp\": \"2023-06-26T11:39:57.153Z\",\n        \"txnid\": \"0b811819-9044-4856-b0ee-8c88035f8858A\",\n        \"Notifier\": {\n            \"type\": \"AA\",\n            \"id\": \"AA-1\"\n        },\n        \"ConsentStatusNotification\": {\n            \"consentId\": \"XXXX0-XXXX-XXXX\",\n            \"consentHandle\": \"XXXX0-XXXX-XXXX\",\n            \"consentStatus\": \"PAUSED\"\n        }\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/proxy/v2/Consent/Notification"
+					},
+					"response": []
+				},
+				{
+					"name": "FI Notification",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"FI Notification - Success\", function() {",
+									"    pm.response.to.have.status(200);",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-jws-signature",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlRlZ1FhMms3MUlFWlotaEhxcm1ueWFFc3ZvSWloNWdrVUx2SjFfTEhibGsiLCJjcml0IjpbImI2NCJdLCJiNjQiOmZhbHNlfQ..Dux_bx7X-q1YSvyNmZiyPM60ZgaK3MshWBhWeY-bLBeSmxkU5VpH-lQjBjGFW_2opX3ZK5XfF7oPc3wkp-Qj7-qVfgTg53YvGyS3oLbKvkMRHtKa33x5I-0b8BmlMzojtnA_zFfubOJoqZVPpz7BQ4qrazizaF2Z6m3FygNGuAkdbdqtnCgPCjBZ6ibkpyiKR_n_g5FcTOq7fa7JgE6IoMD0R575ssdFbHzcT-IZs0DDqc_DJ0pR7m56z9IlmRZ6kUg99kaYVl6GUHSYPwY9OCbmHa7EbgE5vUdIJjhF3vJDZhYMWCojpbh9KLGSpbHkWG4OY19S-YNJv85FtXZe0Q"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJtckl2NGpsMVprMzZ4cEVITmRJUFBsZHo0WFVLaXBRT3VhcEdOQ1NRd1pNIn0.eyJleHAiOjE3MjEyOTgwNDksImlhdCI6MTcyMTIxMTY0OSwianRpIjoiYWRkZmVkN2YtZDU4Zi00ZmRiLTlkNDktMDY2MmYzZGI3NzZmIiwiaXNzIjoiaHR0cHM6Ly90b2tlbnMuc2FuZGJveC5zYWhhbWF0aS5vcmcuaW4vYXV0aC9yZWFsbXMvc2FoYW1hdGkiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiZTkzMmEyZmEtZTFjMC00ZTA0LTk2YTItYWNiNGMwNmViNDJlIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiU0FOS0VUSUtBREVWQUEiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtc2FoYW1hdGkiLCJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiY2xpZW50SG9zdCI6IjE0LjE5NS4xMC4xMDY6NTA4NzUiLCJjbGllbnRJZCI6IlNBTktFVElLQURFVkFBIiwicm9sZXMiOiJBQSIsImNsaWVudEFkZHJlc3MiOiIxNC4xOTUuMTAuMTA2OjUwODc1In0.vjG5oYANsvPZLKgbMFmOKy_8JQx0ImVWplSP6c3DR9CpqGlFDKCfruET5tDTACyD9p7ozVDxXGpzGoTbhZfQA61EAwmx_GICzcHOQplaVTdQJ3WxozqB0vWnOZvwaCngaCGCsLw6UAgAcUM360wj_Lco9jfvcjGGj_KFBxh2EPcyk4Q7kO_H6YhNpBSpWOx-1xSodHXusTS8zdwYBgdbs3wK_zHaUJoBMegDGb7UIlPrZxNOEEaQsB9mmYmfL_1B-TESy7I-LjgCqOrzQip0BQI8lnXj5THUwIkjsw-FckMRT-0DtvZenHq5QLEuQJhE97EXjfWduWR2dh8DBxK_UA"
+							},
+							{
+								"key": "x-simulate-res",
+								"value": "Ok",
+								"type": "text"
+							},
+							{
+								"key": "x-request-meta",
+								"value": "eyJyZWNpcGllbnQtaWQiOiJGSVUtU0lNVUxBVE9SIiB9",
+								"type": "text"
+							},
+							{
+								"key": "aa_api_key",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"ver\": \"2.0.0\",\n        \"timestamp\": \"2023-06-26T11:39:57.153Z\",\n        \"txnid\": \"0b811819-9044-4856-b0ee-8c88035f8858\",\n        \"Notifier\": {\n            \"type\": \"AA\",\n            \"id\": \"AA-1\"\n        },\n        \"FIStatusNotification\": {\n            \"sessionId\": \"XXXX0-XXXX-XXXX\",\n            \"sessionStatus\": \"ACTIVE\",\n            \"FIStatusResponse\": [\n                {\n                    \"fipID\": \"FIP-1\",\n                    \"Accounts\": [\n                        {\n                            \"linkRefNumber\": \"XXXX-XXXX-XXXX\",\n                            \"FIStatus\": \"READY\",\n                            \"description\": \"\"\n                        }\n                    ]\n                }\n            ]\n        }\n    }\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/proxy/v2/FI/Notification"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "FIP -> AA",
+			"item": [
+				{
+					"name": "Consent notification",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Consent Notification - Success\", function() {",
+									"    pm.response.to.have.status(200);",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-jws-signature",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlRlZ1FhMms3MUlFWlotaEhxcm1ueWFFc3ZvSWloNWdrVUx2SjFfTEhibGsiLCJjcml0IjpbImI2NCJdLCJiNjQiOmZhbHNlfQ..Dux_bx7X-q1YSvyNmZiyPM60ZgaK3MshWBhWeY-bLBeSmxkU5VpH-lQjBjGFW_2opX3ZK5XfF7oPc3wkp-Qj7-qVfgTg53YvGyS3oLbKvkMRHtKa33x5I-0b8BmlMzojtnA_zFfubOJoqZVPpz7BQ4qrazizaF2Z6m3FygNGuAkdbdqtnCgPCjBZ6ibkpyiKR_n_g5FcTOq7fa7JgE6IoMD0R575ssdFbHzcT-IZs0DDqc_DJ0pR7m56z9IlmRZ6kUg99kaYVl6GUHSYPwY9OCbmHa7EbgE5vUdIJjhF3vJDZhYMWCojpbh9KLGSpbHkWG4OY19S-YNJv85FtXZe0Q"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "x-simulate-res",
+								"value": "Ok",
+								"type": "text"
+							},
+							{
+								"key": "x-request-meta",
+								"value": "eyJyZWNpcGllbnQtaWQiOiJBQS1TSU1VTEFUT1IiIH0=",
+								"type": "text"
+							},
+							{
+								"key": "fip_api_key",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"ver\": \"2.0.0\",\n        \"timestamp\": \"2023-06-26T11:39:57.153Z\",\n        \"txnid\": \"0b811819-9044-4856-b0ee-8c88035f8858\",\n        \"Notifier\": {\n            \"type\": \"AA\",\n            \"id\": \"AA-1\"\n        },\n        \"ConsentStatusNotification\": {\n            \"consentId\": \"XXXX0-XXXX-XXXX\",\n            \"consentHandle\": \"XXXX0-XXXX-XXXX\",\n            \"consentStatus\": \"PAUSED\"\n        }\n    }\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/proxy/v2/Consent/Notification"
+					},
+					"response": []
+				},
+				{
+					"name": "FI Notification",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"FI Notification - Success\", function() {",
+									"    pm.response.to.have.status(200);",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-jws-signature",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlRlZ1FhMms3MUlFWlotaEhxcm1ueWFFc3ZvSWloNWdrVUx2SjFfTEhibGsiLCJjcml0IjpbImI2NCJdLCJiNjQiOmZhbHNlfQ..Dux_bx7X-q1YSvyNmZiyPM60ZgaK3MshWBhWeY-bLBeSmxkU5VpH-lQjBjGFW_2opX3ZK5XfF7oPc3wkp-Qj7-qVfgTg53YvGyS3oLbKvkMRHtKa33x5I-0b8BmlMzojtnA_zFfubOJoqZVPpz7BQ4qrazizaF2Z6m3FygNGuAkdbdqtnCgPCjBZ6ibkpyiKR_n_g5FcTOq7fa7JgE6IoMD0R575ssdFbHzcT-IZs0DDqc_DJ0pR7m56z9IlmRZ6kUg99kaYVl6GUHSYPwY9OCbmHa7EbgE5vUdIJjhF3vJDZhYMWCojpbh9KLGSpbHkWG4OY19S-YNJv85FtXZe0Q"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "x-simulate-res",
+								"value": "Ok",
+								"type": "text"
+							},
+							{
+								"key": "x-request-meta",
+								"value": "eyJyZWNpcGllbnQtaWQiOiJBQS1TSU1VTEFUT1IiIH0=",
+								"type": "text"
+							},
+							{
+								"key": "fip_api_key",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"ver\": \"2.0.0\",\n        \"timestamp\": \"2023-06-26T11:39:57.153Z\",\n        \"txnid\": \"0b811819-9044-4856-b0ee-8c88035f8858\",\n        \"Notifier\": {\n            \"type\": \"AA\",\n            \"id\": \"MOCKSANDBOXAA\"\n        },\n        \"FIStatusNotification\": {\n            \"sessionId\": \"XXXX0-XXXX-XXXX\",\n            \"sessionStatus\": \"ACTIVE\",\n            \"FIStatusResponse\": [\n                {\n                    \"fipID\": \"MOCKSANDBOXFIP\",\n                    \"Accounts\": [\n                        {\n                            \"linkRefNumber\": \"XXXX-XXXX-XXXX\",\n                            \"FIStatus\": \"READY\",\n                            \"description\": \"\"\n                        }\n                    ]\n                }\n            ]\n        }\n    }\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/proxy/v2/FI/Notification"
+					},
+					"response": []
+				},
+				{
+					"name": "Account Link Notification",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Account link Notification - Success\", function() {",
+									"    pm.response.to.have.status(200);",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-jws-signature",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlRlZ1FhMms3MUlFWlotaEhxcm1ueWFFc3ZvSWloNWdrVUx2SjFfTEhibGsiLCJjcml0IjpbImI2NCJdLCJiNjQiOmZhbHNlfQ..Dux_bx7X-q1YSvyNmZiyPM60ZgaK3MshWBhWeY-bLBeSmxkU5VpH-lQjBjGFW_2opX3ZK5XfF7oPc3wkp-Qj7-qVfgTg53YvGyS3oLbKvkMRHtKa33x5I-0b8BmlMzojtnA_zFfubOJoqZVPpz7BQ4qrazizaF2Z6m3FygNGuAkdbdqtnCgPCjBZ6ibkpyiKR_n_g5FcTOq7fa7JgE6IoMD0R575ssdFbHzcT-IZs0DDqc_DJ0pR7m56z9IlmRZ6kUg99kaYVl6GUHSYPwY9OCbmHa7EbgE5vUdIJjhF3vJDZhYMWCojpbh9KLGSpbHkWG4OY19S-YNJv85FtXZe0Q"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "x-simulate-res",
+								"value": "Ok",
+								"type": "text"
+							},
+							{
+								"key": "x-request-meta",
+								"value": "eyJyZWNpcGllbnQtaWQiOiJBQS1TSU1VTEFUT1IiIH0=",
+								"type": "text"
+							},
+							{
+								"key": "fip_api_key",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"ver\": \"2.0.0\",\n        \"timestamp\": \"2024-07-19T11:39:57.153Z\",\n        \"txnid\": \"0b811819-9044-4856-b0ee-8c88035f8858\",\n        \"Notifier\": {\n            \"type\": \"FIP\",\n            \"id\": \"FIP-1\"\n        },\n        \"AccountLinkStatusNotification\": {\n            \"accRefNumber\": \"XXXX0-XXXX-XXXX\",\n            \"customerAddress\": \"customer_identifier@aa_identifier\",\n            \"linkRefNumber\": \"XXXX-XXXX-XXXX\",\n            \"linkStatus\": \"LINKED\"\n        }\n    }\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/proxy/v2/Account/link/Notification"
+					},
+					"response": []
+				},
+				{
+					"name": "Heart Beat",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-jws-signature",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlRlZ1FhMms3MUlFWlotaEhxcm1ueWFFc3ZvSWloNWdrVUx2SjFfTEhibGsiLCJjcml0IjpbImI2NCJdLCJiNjQiOmZhbHNlfQ..Dux_bx7X-q1YSvyNmZiyPM60ZgaK3MshWBhWeY-bLBeSmxkU5VpH-lQjBjGFW_2opX3ZK5XfF7oPc3wkp-Qj7-qVfgTg53YvGyS3oLbKvkMRHtKa33x5I-0b8BmlMzojtnA_zFfubOJoqZVPpz7BQ4qrazizaF2Z6m3FygNGuAkdbdqtnCgPCjBZ6ibkpyiKR_n_g5FcTOq7fa7JgE6IoMD0R575ssdFbHzcT-IZs0DDqc_DJ0pR7m56z9IlmRZ6kUg99kaYVl6GUHSYPwY9OCbmHa7EbgE5vUdIJjhF3vJDZhYMWCojpbh9KLGSpbHkWG4OY19S-YNJv85FtXZe0Q"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "x-simulate-res",
+								"value": "Ok"
+							},
+							{
+								"key": "x-callback-res",
+								"value": "AC"
+							},
+							{
+								"key": "x-request-meta",
+								"value": "eyJyZWNpcGllbnQtaWQiOiJGSVAtU0lNVUxBVE9SIiB9"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJtckl2NGpsMVprMzZ4cEVITmRJUFBsZHo0WFVLaXBRT3VhcEdOQ1NRd1pNIn0.eyJleHAiOjE3Mjc0MTcxMDYsImlhdCI6MTcyNzMzMDcwNiwianRpIjoiOTRkNTk0OGItOTc3My00ZDlkLWIyNjctNjA3MWFmMzhhMTlkIiwiaXNzIjoiaHR0cHM6Ly9hcGkuZGV2LnNhaGFtYXRpLm9yZy5pbi9hdXRoL3JlYWxtcy9zYWhhbWF0aSIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiJlNTdjMzA4MC04YWIzLTRlMTAtODgxOC1lNzM1MGUyZGEzMDMiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJBQS1TSU1VTEFUT1IiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtc2FoYW1hdGkiLCJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBtaWNyb3Byb2ZpbGUtand0IHByb2ZpbGUgYWRkcmVzcyBwaG9uZSBvZmZsaW5lX2FjY2VzcyIsInVwbiI6InNlcnZpY2UtYWNjb3VudC1hYS1zaW11bGF0b3IiLCJjbGllbnRJZCI6IkFBLVNJTVVMQVRPUiIsImFkZHJlc3MiOnt9LCJjbGllbnRIb3N0IjoiMTAzLjYuMTU4LjMzOjQ5OTA2Iiwicm9sZXMiOiJBQSIsImdyb3VwcyI6WyJkZWZhdWx0LXJvbGVzLXNhaGFtYXRpIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdLCJzZWNyZXQtZXhwaXJ5LXRzIjoiMjAyNC0xMC0wMVQwOTo1MDoyOS4xMDI3ODI0NzkiLCJjbGllbnRBZGRyZXNzIjoiMTAzLjYuMTU4LjMzOjQ5OTA2In0.HFzmBpYm-FQdeFY11kSIAywyeKAGkidgzKbjmjh4CdDWb7LwdoNY4x4o3iDYIQlTlUIsdYt-zrlkcm9ZYw4gN7LNznaj4k9IcSICoSZ1boeMz_02s1oMGG6cRAWPn6F4iHVg7wyyIGoYtGELU7KJf47rL3W-l-QAuE9lqCmXbZIR18qPVB7_glhSWcY-yRXPovEVrJ-gfzPIoTBuYf75j5JD00TyALjlTwtLWz9PRUnxMLzZWUYJxBPTYIp1jFvq-dO_zxRQhARgLRw3YU5ZVDMOlK8TTfQ_YpzTgQiZkxts1Vq7ORJaA36OLQveX8DLTicwFNJGbsDoDdrvLZ86LA"
+							}
+						],
+						"url": "{{host}}/proxy/v2/Heartbeat"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "FIU -> AA",
+			"item": [
+				{
+					"name": "Consent",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Consent - Success\", function() {",
+									"    pm.response.to.have.status(200);",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-jws-signature",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlRlZ1FhMms3MUlFWlotaEhxcm1ueWFFc3ZvSWloNWdrVUx2SjFfTEhibGsiLCJjcml0IjpbImI2NCJdLCJiNjQiOmZhbHNlfQ..Dux_bx7X-q1YSvyNmZiyPM60ZgaK3MshWBhWeY-bLBeSmxkU5VpH-lQjBjGFW_2opX3ZK5XfF7oPc3wkp-Qj7-qVfgTg53YvGyS3oLbKvkMRHtKa33x5I-0b8BmlMzojtnA_zFfubOJoqZVPpz7BQ4qrazizaF2Z6m3FygNGuAkdbdqtnCgPCjBZ6ibkpyiKR_n_g5FcTOq7fa7JgE6IoMD0R575ssdFbHzcT-IZs0DDqc_DJ0pR7m56z9IlmRZ6kUg99kaYVl6GUHSYPwY9OCbmHa7EbgE5vUdIJjhF3vJDZhYMWCojpbh9KLGSpbHkWG4OY19S-YNJv85FtXZe0Q"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "x-simulate-res",
+								"value": "Ok",
+								"type": "text"
+							},
+							{
+								"key": "x-callback-res",
+								"value": "AC",
+								"type": "text"
+							},
+							{
+								"key": "x-request-meta",
+								"value": "eyJyZWNpcGllbnQtaWQiOiJBQS1TSU1VTEFUT1IiIH0=",
+								"type": "text"
+							},
+							{
+								"key": "client_api_key",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"ver\": \"2.0.0\",\n        \"timestamp\": \"2023-06-26T11:39:57.153Z\",\n        \"txnid\": \"4a4adbbe-29ae-11e8-a8d7-0289437bf331\",\n        \"ConsentDetail\": {\n            \"consentStart\": \"2019-12-06T11:39:57.153Z\",\n            \"consentExpiry\": \"2019-12-06T11:39:57.153Z\",\n            \"consentMode\": \"VIEW\",\n            \"fetchType\": \"ONETIME\",\n            \"consentTypes\": [\n                \"PROFILE\"\n            ],\n            \"fiTypes\": [\n                \"DEPOSIT\"\n            ],\n            \"DataConsumer\": {\n                \"id\": \"DC1\",\n                \"type\": \"FIU\"\n            },\n            \"Customer\": {\n                \"id\": \"customer_identifier@AA_identifier99\",\n                \"Identifiers\": [\n                    {\n                        \"type\": \"MOBILE\",\n                        \"value\": \"919867123456\"\n                    }\n                ]\n            },\n            \"Purpose\": {\n                \"code\": \"101\",\n                \"refUri\": \"https://api.rebit.org.in/aa/purpose/101.xml\",\n                \"text\": \"Wealth management service\",\n                \"Category\": {\n                    \"type\": \"string\"\n                }\n            },\n            \"FIDataRange\": {\n                \"from\": \"2023-07-06T11:39:57.153Z\",\n                \"to\": \"2019-12-06T11:39:57.153Z\"\n            },\n            \"DataLife\": {\n                \"unit\": \"MONTH\",\n                \"value\": 0\n            },\n            \"Frequency\": {\n                \"unit\": \"HOUR\",\n                \"value\": 1\n            },\n            \"DataFilter\": [\n                {\n                    \"type\": \"TRANSACTIONAMOUNT\",\n                    \"operator\": \">=\",\n                    \"value\": \"20000\"\n                }\n            ]\n        }\n    }\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/proxy/v2/Consent"
+					},
+					"response": []
+				},
+				{
+					"name": "Consent handle",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Consent handle - Success\", function() {",
+									"    pm.response.to.have.status(200);",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-jws-signature",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlRlZ1FhMms3MUlFWlotaEhxcm1ueWFFc3ZvSWloNWdrVUx2SjFfTEhibGsiLCJjcml0IjpbImI2NCJdLCJiNjQiOmZhbHNlfQ..Dux_bx7X-q1YSvyNmZiyPM60ZgaK3MshWBhWeY-bLBeSmxkU5VpH-lQjBjGFW_2opX3ZK5XfF7oPc3wkp-Qj7-qVfgTg53YvGyS3oLbKvkMRHtKa33x5I-0b8BmlMzojtnA_zFfubOJoqZVPpz7BQ4qrazizaF2Z6m3FygNGuAkdbdqtnCgPCjBZ6ibkpyiKR_n_g5FcTOq7fa7JgE6IoMD0R575ssdFbHzcT-IZs0DDqc_DJ0pR7m56z9IlmRZ6kUg99kaYVl6GUHSYPwY9OCbmHa7EbgE5vUdIJjhF3vJDZhYMWCojpbh9KLGSpbHkWG4OY19S-YNJv85FtXZe0Q"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "x-simulate-res",
+								"value": "Ok",
+								"type": "text"
+							},
+							{
+								"key": "x-request-meta",
+								"value": "eyJyZWNpcGllbnQtaWQiOiJBQS1TSU1VTEFUT1IiIH0=",
+								"type": "text"
+							},
+							{
+								"key": "client_api_key",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"ver\": \"2.0.0\",\n        \"timestamp\": \"2023-06-26T11:39:57.153Z\",\n        \"txnid\": \"795038d3-86fb-4d3a-a681-2d39e8f4fc3c8787878\",\n        \"ConsentHandle\": \"39e108fe-9243-11e8-b9f2-0256d88\"\n    }\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/proxy/v2/Consent/handle"
+					},
+					"response": []
+				},
+				{
+					"name": "Consent fetch",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Consent fetch - Success\", function() {",
+									"    pm.response.to.have.status(200);",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-jws-signature",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlRlZ1FhMms3MUlFWlotaEhxcm1ueWFFc3ZvSWloNWdrVUx2SjFfTEhibGsiLCJjcml0IjpbImI2NCJdLCJiNjQiOmZhbHNlfQ..Dux_bx7X-q1YSvyNmZiyPM60ZgaK3MshWBhWeY-bLBeSmxkU5VpH-lQjBjGFW_2opX3ZK5XfF7oPc3wkp-Qj7-qVfgTg53YvGyS3oLbKvkMRHtKa33x5I-0b8BmlMzojtnA_zFfubOJoqZVPpz7BQ4qrazizaF2Z6m3FygNGuAkdbdqtnCgPCjBZ6ibkpyiKR_n_g5FcTOq7fa7JgE6IoMD0R575ssdFbHzcT-IZs0DDqc_DJ0pR7m56z9IlmRZ6kUg99kaYVl6GUHSYPwY9OCbmHa7EbgE5vUdIJjhF3vJDZhYMWCojpbh9KLGSpbHkWG4OY19S-YNJv85FtXZe0Q"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "x-simulate-res",
+								"value": "Ok",
+								"type": "text"
+							},
+							{
+								"key": "x-request-meta",
+								"value": "eyJyZWNpcGllbnQtaWQiOiJBQS1TSU1VTEFUT1IiIH0=",
+								"type": "text"
+							},
+							{
+								"key": "client_api_key",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"ver\": \"2.0.0\",\n        \"timestamp\": \"2023-06-26T11:39:57.153Z\",\n        \"txnid\": \"0b811819-9044-4856-b0ee-8c88035f8858\",\n        \"consentId\": \"654024c8-29c8-11e8-8868-0289437bf331\"\n    }\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/proxy/v2/Consent/fetch"
+					},
+					"response": []
+				},
+				{
+					"name": "FI fetch",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"FI fetch - Success\", function() {",
+									"    pm.response.to.have.status(200);",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-jws-signature",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlRlZ1FhMms3MUlFWlotaEhxcm1ueWFFc3ZvSWloNWdrVUx2SjFfTEhibGsiLCJjcml0IjpbImI2NCJdLCJiNjQiOmZhbHNlfQ..Dux_bx7X-q1YSvyNmZiyPM60ZgaK3MshWBhWeY-bLBeSmxkU5VpH-lQjBjGFW_2opX3ZK5XfF7oPc3wkp-Qj7-qVfgTg53YvGyS3oLbKvkMRHtKa33x5I-0b8BmlMzojtnA_zFfubOJoqZVPpz7BQ4qrazizaF2Z6m3FygNGuAkdbdqtnCgPCjBZ6ibkpyiKR_n_g5FcTOq7fa7JgE6IoMD0R575ssdFbHzcT-IZs0DDqc_DJ0pR7m56z9IlmRZ6kUg99kaYVl6GUHSYPwY9OCbmHa7EbgE5vUdIJjhF3vJDZhYMWCojpbh9KLGSpbHkWG4OY19S-YNJv85FtXZe0Q"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "x-simulate-res",
+								"value": "Ok",
+								"type": "text"
+							},
+							{
+								"key": "x-request-meta",
+								"value": "eyJyZWNpcGllbnQtaWQiOiJBQS1TSU1VTEFUT1IiIH0=",
+								"type": "text"
+							},
+							{
+								"key": "client_api_key",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"ver\": \"2.0.0\",\n        \"timestamp\": \"2024-07-19T06:41:34.904+0000\",\n        \"txnid\": \"af5b8023-aabc-4a46-8f37-d3c167129b1e\",\n        \"sessionId\": \"caa2f259-2dc2-4075-87aa-6d81018b6183\",\n        \"fipId\": \"FIP-12\",\n        \"linkRefNumber\": [\n            {\n                \"id\": \"XXXX-XXXX-XXXX\"\n            }\n        ]\n    }\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/proxy/v2/FI/fetch"
+					},
+					"response": []
+				},
+				{
+					"name": "FI request",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"FI Request - Success\", function() {",
+									"    pm.response.to.have.status(200);",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-jws-signature",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlRlZ1FhMms3MUlFWlotaEhxcm1ueWFFc3ZvSWloNWdrVUx2SjFfTEhibGsiLCJjcml0IjpbImI2NCJdLCJiNjQiOmZhbHNlfQ..Dux_bx7X-q1YSvyNmZiyPM60ZgaK3MshWBhWeY-bLBeSmxkU5VpH-lQjBjGFW_2opX3ZK5XfF7oPc3wkp-Qj7-qVfgTg53YvGyS3oLbKvkMRHtKa33x5I-0b8BmlMzojtnA_zFfubOJoqZVPpz7BQ4qrazizaF2Z6m3FygNGuAkdbdqtnCgPCjBZ6ibkpyiKR_n_g5FcTOq7fa7JgE6IoMD0R575ssdFbHzcT-IZs0DDqc_DJ0pR7m56z9IlmRZ6kUg99kaYVl6GUHSYPwY9OCbmHa7EbgE5vUdIJjhF3vJDZhYMWCojpbh9KLGSpbHkWG4OY19S-YNJv85FtXZe0Q"
+							},
+							{
+								"key": "x-simulate-res",
+								"value": "Ok",
+								"type": "text"
+							},
+							{
+								"key": "x-callback-res",
+								"value": "delivered",
+								"type": "text"
+							},
+							{
+								"key": "x-request-meta",
+								"value": "eyJyZWNpcGllbnQtaWQiOiJBQS1TSU1VTEFUT1IiIH0=",
+								"type": "text"
+							},
+							{
+								"key": "client_api_key",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"ver\": \"2.0.0\",\n        \"timestamp\": \"2024-07-19T09:58:50.505Z\",\n        \"txnid\": \"c4a1450c-d08a-45b4-a475-0468bd10e380\",\n        \"Consent\": {\n            \"id\": \"654024c8-29c8-11e8-8868-0289437bf33133\",\n            \"digitalSignature\": \"NdjwMjLortTb10dxcJezkvdOxPVvEdZvIqwqVWOHnE8pS_YDswcRPLTRmds2xO-Tvm_A2cFv1qKYpaZnv8Bl6xmZoOsG_F8_40gRZqIhz5hF9puzp8lEEhMlZ6NaX2Y2OYkwHcOBBpCIXpLXB4CMWiefUEWjO9zKDd5JJwZ4vLWeT4qgwvPfRqE60B33tzVlF5E6OA2mKK17sGRXsfrI9obEjL52RMdGo_9bv1HnHfvPlbj5ihj6d_5iTtoh7HUC_X8CrJGvkgkCjP_7of1jPb5QgJ9nx_Yfsxj3vf8zEseZIVISjF3MwBzW7Di4CpfQl4wlnpkQO9MKu78F69Z9Ig\"\n        },\n        \"FIDataRange\": {\n            \"from\": \"2018-11-27T06:26:29.761Z\",\n            \"to\": \"2018-12-27T06:26:29.761Z\"\n        },\n        \"KeyMaterial\": {\n            \"cryptoAlg\": \"ECDH\",\n            \"curve\": \"Curve25519\",\n            \"params\": \"cipher=AES/GCM/NoPadding;KeyPairGenerator=ECDH\",\n            \"DHPublicKey\": {\n                \"expiry\": \"2019-06-01T09:58:50.505Z\",\n                \"Parameters\": \"string\",\n                \"KeyValue\": \"string\"\n            },\n            \"Nonce\": \"29512b70-ca84-46b5-9471-63765599cf15\"\n        }\n    }\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/proxy/v2/FI/request"
+					},
+					"response": []
+				},
+				{
+					"name": "FI Notification",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"FI Notification - Success\", function() {",
+									"    pm.response.to.have.status(200);",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-jws-signature",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlRlZ1FhMms3MUlFWlotaEhxcm1ueWFFc3ZvSWloNWdrVUx2SjFfTEhibGsiLCJjcml0IjpbImI2NCJdLCJiNjQiOmZhbHNlfQ..Dux_bx7X-q1YSvyNmZiyPM60ZgaK3MshWBhWeY-bLBeSmxkU5VpH-lQjBjGFW_2opX3ZK5XfF7oPc3wkp-Qj7-qVfgTg53YvGyS3oLbKvkMRHtKa33x5I-0b8BmlMzojtnA_zFfubOJoqZVPpz7BQ4qrazizaF2Z6m3FygNGuAkdbdqtnCgPCjBZ6ibkpyiKR_n_g5FcTOq7fa7JgE6IoMD0R575ssdFbHzcT-IZs0DDqc_DJ0pR7m56z9IlmRZ6kUg99kaYVl6GUHSYPwY9OCbmHa7EbgE5vUdIJjhF3vJDZhYMWCojpbh9KLGSpbHkWG4OY19S-YNJv85FtXZe0Q"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJtckl2NGpsMVprMzZ4cEVITmRJUFBsZHo0WFVLaXBRT3VhcEdOQ1NRd1pNIn0.eyJleHAiOjE3MjEyOTgwNDksImlhdCI6MTcyMTIxMTY0OSwianRpIjoiYWRkZmVkN2YtZDU4Zi00ZmRiLTlkNDktMDY2MmYzZGI3NzZmIiwiaXNzIjoiaHR0cHM6Ly90b2tlbnMuc2FuZGJveC5zYWhhbWF0aS5vcmcuaW4vYXV0aC9yZWFsbXMvc2FoYW1hdGkiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiZTkzMmEyZmEtZTFjMC00ZTA0LTk2YTItYWNiNGMwNmViNDJlIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiU0FOS0VUSUtBREVWQUEiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtc2FoYW1hdGkiLCJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiY2xpZW50SG9zdCI6IjE0LjE5NS4xMC4xMDY6NTA4NzUiLCJjbGllbnRJZCI6IlNBTktFVElLQURFVkFBIiwicm9sZXMiOiJBQSIsImNsaWVudEFkZHJlc3MiOiIxNC4xOTUuMTAuMTA2OjUwODc1In0.vjG5oYANsvPZLKgbMFmOKy_8JQx0ImVWplSP6c3DR9CpqGlFDKCfruET5tDTACyD9p7ozVDxXGpzGoTbhZfQA61EAwmx_GICzcHOQplaVTdQJ3WxozqB0vWnOZvwaCngaCGCsLw6UAgAcUM360wj_Lco9jfvcjGGj_KFBxh2EPcyk4Q7kO_H6YhNpBSpWOx-1xSodHXusTS8zdwYBgdbs3wK_zHaUJoBMegDGb7UIlPrZxNOEEaQsB9mmYmfL_1B-TESy7I-LjgCqOrzQip0BQI8lnXj5THUwIkjsw-FckMRT-0DtvZenHq5QLEuQJhE97EXjfWduWR2dh8DBxK_UA"
+							},
+							{
+								"key": "x-simulate-res",
+								"value": "Ok",
+								"type": "text"
+							},
+							{
+								"key": "x-request-meta",
+								"value": "eyJyZWNpcGllbnQtaWQiOiJBQS1TSU1VTEFUT1IiIH0=",
+								"type": "text"
+							},
+							{
+								"key": "client_api_key",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"ver\": \"2.0.0\",\n        \"timestamp\": \"2023-06-26T11:39:57.153Z\",\n        \"txnid\": \"0b811819-9044-4856-b0ee-8c88035f8858\",\n        \"Notifier\": {\n            \"type\": \"AA\",\n            \"id\": \"MOCKSANDBOXAA\"\n        },\n        \"FIStatusNotification\": {\n            \"sessionId\": \"XXXX0-XXXX-XXXX\",\n            \"sessionStatus\": \"ACTIVE\",\n            \"FIStatusResponse\": [\n                {\n                    \"fipID\": \"MOCKSANDBOXFIP\",\n                    \"Accounts\": [\n                        {\n                            \"linkRefNumber\": \"XXXX-XXXX-XXXX\",\n                            \"FIStatus\": \"READY\",\n                            \"description\": \"\"\n                        }\n                    ]\n                }\n            ]\n        }\n    }\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/proxy/v2/FI/Notification"
+					},
+					"response": []
+				},
+				{
+					"name": "Consent notification",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Consent Notification - Success\", function() {",
+									"    pm.response.to.have.status(200);",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-jws-signature",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlRlZ1FhMms3MUlFWlotaEhxcm1ueWFFc3ZvSWloNWdrVUx2SjFfTEhibGsiLCJjcml0IjpbImI2NCJdLCJiNjQiOmZhbHNlfQ..Dux_bx7X-q1YSvyNmZiyPM60ZgaK3MshWBhWeY-bLBeSmxkU5VpH-lQjBjGFW_2opX3ZK5XfF7oPc3wkp-Qj7-qVfgTg53YvGyS3oLbKvkMRHtKa33x5I-0b8BmlMzojtnA_zFfubOJoqZVPpz7BQ4qrazizaF2Z6m3FygNGuAkdbdqtnCgPCjBZ6ibkpyiKR_n_g5FcTOq7fa7JgE6IoMD0R575ssdFbHzcT-IZs0DDqc_DJ0pR7m56z9IlmRZ6kUg99kaYVl6GUHSYPwY9OCbmHa7EbgE5vUdIJjhF3vJDZhYMWCojpbh9KLGSpbHkWG4OY19S-YNJv85FtXZe0Q"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "x-simulate-res",
+								"value": "Ok",
+								"type": "text"
+							},
+							{
+								"key": "x-request-meta",
+								"value": "eyJyZWNpcGllbnQtaWQiOiJBQS1TSU1VTEFUT1IiIH0=",
+								"type": "text"
+							},
+							{
+								"key": "client_api_key",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"ver\": \"2.0.0\",\n        \"timestamp\": \"2023-06-26T11:39:57.153Z\",\n        \"txnid\": \"0b811819-9044-4856-b0ee-8c88035f8858\",\n        \"Notifier\": {\n            \"type\": \"AA\",\n            \"id\": \"AA_1\"\n        },\n        \"ConsentStatusNotification\": {\n            \"consentId\": \"XXXX0-XXXX-XXXX\",\n            \"consentStatus\": \"REVOKED\"\n        }\n    }\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/proxy/v2/Consent/Notification"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -24,9 +24,9 @@ paths:
     post:
       tags:
         - Entity APIs
-      summary: Secret Read API
+      summary: Read Secret API
       description: |
-        The Secret Read API enables admin to retrieve the current secret for a specific member. To access this information, an user access token with administrative rights must be provided. Below is the API specification.
+        The Read Secret API enables admin to retrieve the current secret for a specific member. To access this information, an user access token with administrative rights must be provided. Below is the API specification.
       parameters:
         - name: Authorization
           in: header
@@ -97,9 +97,9 @@ paths:
     post:
       tags:
         - Entity APIs
-      summary: Secret Reset API
+      summary: Reset Secret API
       description: |
-        The Secret Reset API is designed to allow an admin to reset a member's secret. To perform this action, an access token with administrative privileges for the specified member is required. Once reset, the newly generated secret will have a validity period of 180 days by default, after which it will need to be renewed or reset again. 
+        The Reset Secret API is designed to allow an admin to reset a member's secret. To perform this action, an access token with administrative privileges for the specified member is required. Once reset, the newly generated secret will have a validity period of 180 days by default, after which it will need to be renewed or reset again. 
 
           With the latest enhancements, members can now select their desired validity period for secrets, up to a defined maximum limit (default: 180 days). The specified validity period is compared with the admin access token expiry, and the minimum value is applied to ensure authentication and security. Additionally, a grace period of 5 days is provided to facilitate a seamless transition between old and new secrets.
 
@@ -197,7 +197,7 @@ paths:
     post:
       tags:
         - Entity APIs
-      summary: Entity Token Generate API
+      summary: Generate Entity Access Token API
       x-codeSamples:
         - lang: curl
           label: Curl
@@ -305,7 +305,7 @@ paths:
     post:
       tags:
         - User APIs
-      summary: User Token Generate API
+      summary: Generate User Access Token API
       x-codeSamples:
         - lang: curl
           label: Curl

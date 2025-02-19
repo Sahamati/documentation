@@ -10,14 +10,14 @@ The sample workflow diagram below illustrates the usage of the Response Simulato
 
 
 
-<figure><img src="../../.gitbook/assets/Entity Integration with Router using Response Simulator.png" alt=""><figcaption><p>Entity Integration with Router using "Response Simulator"</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/consent-example.png" alt=""><figcaption><p>Entity Integration with Router using "Response Simulator"</p></figcaption></figure>
 
 The following two details are required in the request to use the APIs with Response Simulator:
 
 * **recipient-id:** This is specified in the **x-request-meta** header through which the router that will route the request to the respective response simulator. The available options are,
   * **AA-SIMULATOR**
   * **FIU-SIMULATOR** and
-  * **FIP-SIMULATOR**.
+  * **FIP-SIMULATOR**
 * **x-simulate-res:** This header should contain a hint for the expected response from the response simulator. It can be any of the options listed in the specific entity tables. If this is not included, the response simulator will default to returning a 200 OK response.
 
 #### Sample Request Headers:
@@ -36,8 +36,8 @@ The **FIP's Accounts/link/verify** API is the only one that utilizes the OTP rec
 
 The sample workflow diagram below illustrates the usage of the valid OTP &#x20;
 
-<figure><img src="../../.gitbook/assets/link verify success.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Valid-OTP-flow.png" alt=""><figcaption></figcaption></figure>
 
 The sample workflow diagram below illustrates the usage of the invalid OTP&#x20;
 
-<figure><img src="../../.gitbook/assets/invalid otp.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Invalid-OTP-flow.png" alt=""><figcaption></figcaption></figure>
