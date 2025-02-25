@@ -8,7 +8,7 @@ The consent workflow is a fundamental part of the Account Aggregator (AA) ecosys
 
 The [Account Discovery & Linking](account-discovery-and-linking.md) is handled by the user to execute the Consent workflow.
 
-<figure><img src="../../.gitbook/assets/consent-workflow.png" alt=""><figcaption><p>Consent Workflow</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/consent-workflow.png" alt=""><figcaption><p>Consent Workflow</p></figcaption></figure>
 
 #### **1. FIU Initiates Consent Request:**
 

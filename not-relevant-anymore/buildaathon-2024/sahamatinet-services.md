@@ -6,7 +6,7 @@ Below are the key SahamatiNet services, each of which addresses a unique need wi
 
 
 
-<figure><img src="../.gitbook/assets/SahamatiNet - Services.png" alt=""><figcaption><p>SahamatiNet - Services</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/SahamatiNet - Services.png" alt=""><figcaption><p>SahamatiNet - Services</p></figcaption></figure>
 
 ### **1. Central Registry**
 
@@ -20,7 +20,7 @@ The Central Registry is a foundational service that serves as a directory for al
 
 #### API Collection:
 
-{% file src="../.gitbook/assets/Central Registry.postman_collection.json" %}
+{% file src="../../.gitbook/assets/Central Registry.postman_collection.json" %}
 Central Registry - API Collection
 {% endfile %}
 
@@ -36,7 +36,7 @@ In the AA ecosystem, secure and authorized communication between members is crit
 
 #### API Collection:
 
-{% file src="../.gitbook/assets/Token-Service[IAM].postman_collection.json" %}
+{% file src="../../.gitbook/assets/Token-Service[IAM].postman_collection.json" %}
 Token-Service\[IAM] - API Collection
 {% endfile %}
 
@@ -55,7 +55,7 @@ For more detailed insights into how the Router functions, you can refer to the b
 
 #### API Collection:
 
-{% file src="../.gitbook/assets/Proxy Service.postman_collection.json" %}
+{% file src="../../.gitbook/assets/Proxy Service.postman_collection.json" %}
 
 ### **4. Simulator**
 
@@ -72,7 +72,7 @@ To learn more about how to use the Simulator for API integration, visit the foll
 
 #### API Collection:
 
-{% file src="../.gitbook/assets/Simulator.postman_collection.json" %}
+{% file src="../../.gitbook/assets/Simulator.postman_collection.json" %}
 Simulator - API Collection
 {% endfile %}
 
@@ -94,7 +94,7 @@ Observability Dashboard: [http://data.sandbox.sahamati.org.in/](http://data.sand
 
 #### Sandbox Environment file for Postman collection
 
-{% file src="../.gitbook/assets/Sandbox - SahamatiNet.postman_environment.json" %}
+{% file src="../../.gitbook/assets/Sandbox - SahamatiNet.postman_environment.json" %}
 SahamatiNet - Sandbox Environment
 {% endfile %}
 

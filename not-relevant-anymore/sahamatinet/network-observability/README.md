@@ -13,7 +13,7 @@ Network Observability is a structured approach to observe business, operational,
 
 **Network Observability plays a pivotal role in monitoring and achieving the key objectives of the network, thereby ensuring optimal Network Performance, Health & Growth**
 
-<figure><img src="../../.gitbook/assets/Observability in AA context.png" alt=""><figcaption><p>Observability in AA context</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Observability in AA context.png" alt=""><figcaption><p>Observability in AA context</p></figcaption></figure>
 
 ## Network Observability in the AA context:
 

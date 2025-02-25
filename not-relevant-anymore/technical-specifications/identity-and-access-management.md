@@ -43,26 +43,26 @@ Below are the Base URL of each environment to use IAM APIs.
 We recommend you to use below postman collection to try out our Token-Service\[IAM] APIs
 {% endhint %}
 
-{% file src="../.gitbook/assets/Token-Service[IAM].postman_collection.json" %}
+{% file src="../../.gitbook/assets/Token-Service[IAM].postman_collection.json" %}
 
 Below is the Sandbox Environment file for SahamatiNet Services
 
-{% file src="../.gitbook/assets/Sandbox - SahamatiNet.postman_environment.json" %}
+{% file src="../../.gitbook/assets/Sandbox - SahamatiNet.postman_environment.json" %}
 
-{% swagger src="../.gitbook/assets/IAM-Service-Sprint-9.yaml" path="/user/token/generate" method="post" %}
-[IAM-Service-Sprint-9.yaml](../.gitbook/assets/IAM-Service-Sprint-9.yaml)
-{% endswagger %}
+{% openapi src="../../.gitbook/assets/IAM-Service-Sprint-9.yaml" path="/user/token/generate" method="post" %}
+[IAM-Service-Sprint-9.yaml](../../.gitbook/assets/IAM-Service-Sprint-9.yaml)
+{% endopenapi %}
 
-{% swagger src="../.gitbook/assets/IAM-Service-Sprint-9.yaml" path="/entity/token/generate" method="post" %}
-[IAM-Service-Sprint-9.yaml](../.gitbook/assets/IAM-Service-Sprint-9.yaml)
-{% endswagger %}
+{% openapi src="../../.gitbook/assets/IAM-Service-Sprint-9.yaml" path="/entity/token/generate" method="post" %}
+[IAM-Service-Sprint-9.yaml](../../.gitbook/assets/IAM-Service-Sprint-9.yaml)
+{% endopenapi %}
 
 ## Member Secret Management APIs
 
-{% swagger src="../.gitbook/assets/IAM-Service-Sprint-9.yaml" path="/entity/secret/reset" method="post" %}
-[IAM-Service-Sprint-9.yaml](../.gitbook/assets/IAM-Service-Sprint-9.yaml)
-{% endswagger %}
+{% openapi src="../../.gitbook/assets/IAM-Service-Sprint-9.yaml" path="/entity/secret/reset" method="post" %}
+[IAM-Service-Sprint-9.yaml](../../.gitbook/assets/IAM-Service-Sprint-9.yaml)
+{% endopenapi %}
 
-{% swagger src="../.gitbook/assets/IAM-Service-Sprint-9.yaml" path="/entity/secret/read" method="post" %}
-[IAM-Service-Sprint-9.yaml](../.gitbook/assets/IAM-Service-Sprint-9.yaml)
-{% endswagger %}
+{% openapi src="../../.gitbook/assets/IAM-Service-Sprint-9.yaml" path="/entity/secret/read" method="post" %}
+[IAM-Service-Sprint-9.yaml](../../.gitbook/assets/IAM-Service-Sprint-9.yaml)
+{% endopenapi %}

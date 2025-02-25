@@ -154,9 +154,9 @@ If the output of the outcome rule evaluation is an error, the details of the err
 
 ## API Specification
 
-{% swagger src="../.gitbook/assets/consent-template-list-api-v1.yaml" path="/consent-template/list" method="post" %}
-[consent-template-list-api-v1.yaml](../.gitbook/assets/consent-template-list-api-v1.yaml)
-{% endswagger %}
+{% openapi src="../../.gitbook/assets/consent-template-list-api-v1.yaml" path="/consent-template/list" method="post" %}
+[consent-template-list-api-v1.yaml](../../.gitbook/assets/consent-template-list-api-v1.yaml)
+{% endopenapi %}
 
 ## Telemetry Specification
 

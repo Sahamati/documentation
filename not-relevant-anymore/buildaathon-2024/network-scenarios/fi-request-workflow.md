@@ -8,7 +8,7 @@ The Financial Information (FI) Request Workflow allows a Financial Information U
 
 The [Account Discovery & Linking](account-discovery-and-linking.md), [Consent Workflow](consent-workflow.md) are handled by the user to execute the FI request.
 
-<figure><img src="../../.gitbook/assets/fi-request-workflow.png" alt=""><figcaption><p>FI Request Workflow</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/fi-request-workflow.png" alt=""><figcaption><p>FI Request Workflow</p></figcaption></figure>
 
 #### **1. FIU Sends FI Request to AA:**
 

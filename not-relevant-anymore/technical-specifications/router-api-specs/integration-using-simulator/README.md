@@ -10,7 +10,7 @@ The sample workflow diagram below illustrates the usage of the Response Simulato
 
 
 
-<figure><img src="../../../.gitbook/assets/Entity Integration with Router using Response Simulator.png" alt=""><figcaption><p>Entity Integration with Router using "Response Simulator"</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Entity Integration with Router using Response Simulator.png" alt=""><figcaption><p>Entity Integration with Router using "Response Simulator"</p></figcaption></figure>
 
 The following two details are required in the request to use the APIs with Response Simulator:
 
@@ -36,17 +36,17 @@ The **FIP's Accounts/link/verify** API is the only one that utilizes the OTP rec
 
 The sample workflow diagram below illustrates the usage of the valid OTP &#x20;
 
-<figure><img src="../../../.gitbook/assets/link verify success.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/link verify success.png" alt=""><figcaption></figcaption></figure>
 
 The sample workflow diagram below illustrates the usage of the invalid OTP&#x20;
 
-<figure><img src="../../../.gitbook/assets/invalid otp.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/invalid otp.png" alt=""><figcaption></figcaption></figure>
 
 ## API Specifications:
 
 ### AA - Response Simulator:
 
-This AA response simulator will support all the APIs listed under this ReBIT Spec - [https://api.rebit.org.in/viewSpec/AA\_2\_1\_0.yaml](https://api.rebit.org.in/viewSpec/AA\_2\_1\_0.yaml)
+This AA response simulator will support all the APIs listed under this ReBIT Spec - [https://api.rebit.org.in/viewSpec/AA\_2\_1\_0.yaml](https://api.rebit.org.in/viewSpec/AA_2_1_0.yaml)
 
 <table><thead><tr><th width="110">API</th><th width="262">Expected Response</th><th>x-simulate-res Header Options</th></tr></thead><tbody><tr><td>All</td><td>200 OK</td><td>Ok</td></tr><tr><td>All</td><td>400 Bad Request</td><td>BadRequest</td></tr><tr><td>All</td><td>401 Unauthorized Access</td><td>Unauthorized</td></tr><tr><td>All</td><td>404 Not Found</td><td>NotFound</td></tr><tr><td>All</td><td>409 Conflict</td><td>Conflict</td></tr><tr><td>All</td><td>412 Precondition failed</td><td>PreconditionFail</td></tr><tr><td>All</td><td>501 Not Implemented</td><td>NotImplemented</td></tr><tr><td>All</td><td>503 Service Unavailable</td><td>ServiceUnavailable</td></tr><tr><td>FI/fetch</td><td><p>403 Forbidden</p><p>(DataFetchRequestInProgress)</p></td><td>Forbidden</td></tr><tr><td>FI/fetch</td><td>410 Data Gone</td><td>DataGone</td></tr><tr><td>All</td><td><p>Timeout Scenario</p><p>(delay in sending response)</p></td><td>TimeOut</td></tr></tbody></table>
 
@@ -54,7 +54,7 @@ Sample FI/fetch workflow using AA-SIMULATOR:
 
 
 
-<figure><img src="../../../.gitbook/assets/fi fetch.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/fi fetch.png" alt=""><figcaption></figcaption></figure>
 
 #### Preloaded Scenarios
 
@@ -83,7 +83,7 @@ The AA Response Simulator (AA-SIMULATOR) includes preloaded scenarios that can b
 
 ### FIU Response Simulator
 
-This FIU response simulator will support all the APIs listed under this ReBIT Spec - [https://api.rebit.org.in/viewSpec/FIU\_2\_0\_0.yaml](https://api.rebit.org.in/viewSpec/FIU\_2\_0\_0.yaml)
+This FIU response simulator will support all the APIs listed under this ReBIT Spec - [https://api.rebit.org.in/viewSpec/FIU\_2\_0\_0.yaml](https://api.rebit.org.in/viewSpec/FIU_2_0_0.yaml)
 
 <table><thead><tr><th width="145">API</th><th width="176">Expected Response</th><th width="354">x-simulate-res Header Options</th></tr></thead><tbody><tr><td>All</td><td>200 OK</td><td>Ok</td></tr><tr><td>All</td><td>400 Bad Request</td><td>BadRequest</td></tr><tr><td>All</td><td>401 Unauthorized Access</td><td>Unauthorized</td></tr><tr><td>All</td><td>404 Not Found</td><td>NotFound</td></tr><tr><td>All</td><td>409 Conflict</td><td>Conflict</td></tr><tr><td>All</td><td>412 Precondition failed</td><td>PreconditionFail</td></tr><tr><td>All</td><td>501 Not Implemented</td><td>NotImplemented</td></tr><tr><td>All</td><td>503 Service Unavailable</td><td>ServiceUnavailable</td></tr><tr><td>All</td><td><p>Timeout Scenario</p><p>(delay in sending response)</p></td><td>TimeOut</td></tr></tbody></table>
 
@@ -98,7 +98,7 @@ The FIU Response Simulator (FIU-SIMULATOR) includes preloaded scenarios that can
 
 ### FIP Response Simulator:
 
-This FIP response simulator will support all the APIs listed under this ReBIT Spec - [https://api.rebit.org.in/viewSpec/FIP\_2\_1\_0.yaml](https://api.rebit.org.in/viewSpec/FIP\_2\_1\_0.yaml)
+This FIP response simulator will support all the APIs listed under this ReBIT Spec - [https://api.rebit.org.in/viewSpec/FIP\_2\_1\_0.yaml](https://api.rebit.org.in/viewSpec/FIP_2_1_0.yaml)
 
 <table><thead><tr><th>API</th><th>Expected Response</th><th width="340">x-simulate-res Header Options</th></tr></thead><tbody><tr><td>All</td><td>200 OK</td><td>Ok</td></tr><tr><td>All</td><td>400 Bad Request</td><td>BadRequest</td></tr><tr><td>All</td><td>401 Unauthorized Access</td><td>Unauthorized</td></tr><tr><td>All</td><td>404 Not Found</td><td>NotFound</td></tr><tr><td>All</td><td>409 Conflict</td><td>Conflict</td></tr><tr><td>All</td><td>412 Precondition failed</td><td>PreconditionFail</td></tr><tr><td>All</td><td>501 Not Implemented</td><td>NotImplemented</td></tr><tr><td>All</td><td>503 Service Unavailable</td><td>ServiceUnavailable</td></tr><tr><td>FI/fetch</td><td><p>403 Forbidden</p><p>(DataFetchRequestInProgress)</p></td><td>Forbidden</td></tr><tr><td>All</td><td><p>Timeout Scenario</p><p>(delay in sending response)</p></td><td>TimeOut</td></tr></tbody></table>
 

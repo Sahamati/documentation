@@ -4,7 +4,7 @@ The Account Discovery & Linking process involves identifying the financial accou
 
 ### **Steps Involved in Account Discovery & Linking:**
 
-<figure><img src="../../.gitbook/assets/account-linking-scenario.png" alt=""><figcaption><p>Account Discovery &#x26; Linking</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/account-linking-scenario.png" alt=""><figcaption><p>Account Discovery &#x26; Linking</p></figcaption></figure>
 
 #### **1. User Login and Identity Verification:**
 

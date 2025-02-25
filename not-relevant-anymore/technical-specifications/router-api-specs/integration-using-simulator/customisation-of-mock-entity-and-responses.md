@@ -16,11 +16,11 @@ All the APIs listed below require a user token for authorization. Onboarded user
 
 We recommend to use below postman collection for quicker access
 
-{% file src="../../../.gitbook/assets/Simulator-service.postman_collection.json" %}
+{% file src="../../../../.gitbook/assets/Simulator-service.postman_collection.json" %}
 
-{% swagger src="../../../.gitbook/assets/MockEntityCreate api.yml" path="/entity/mock/register" method="post" %}
-[MockEntityCreate api.yml](<../../../.gitbook/assets/MockEntityCreate api.yml>)
-{% endswagger %}
+{% openapi src="../../../../.gitbook/assets/MockEntityCreate api.yml" path="/entity/mock/register" method="post" %}
+[MockEntityCreate api.yml](<../../../../.gitbook/assets/MockEntityCreate api.yml>)
+{% endopenapi %}
 
 
 
@@ -28,10 +28,10 @@ We recommend to use below postman collection for quicker access
 #### Regenerate the User Token after creating the mock entity to enable access to the newly created entity.
 {% endhint %}
 
-{% swagger src="../../../.gitbook/assets/Simulator api.yml" path="/response/add" method="post" %}
-[Simulator api.yml](<../../../.gitbook/assets/Simulator api.yml>)
-{% endswagger %}
+{% openapi src="../../../../.gitbook/assets/Simulator api.yml" path="/response/add" method="post" %}
+[Simulator api.yml](<../../../../.gitbook/assets/Simulator api.yml>)
+{% endopenapi %}
 
-{% swagger src="../../../.gitbook/assets/Simulator api.yml" path="/response/list" method="post" %}
-[Simulator api.yml](<../../../.gitbook/assets/Simulator api.yml>)
-{% endswagger %}
+{% openapi src="../../../../.gitbook/assets/Simulator api.yml" path="/response/list" method="post" %}
+[Simulator api.yml](<../../../../.gitbook/assets/Simulator api.yml>)
+{% endopenapi %}

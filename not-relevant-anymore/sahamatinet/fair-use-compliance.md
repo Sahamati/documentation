@@ -66,7 +66,7 @@ Each use case is mapped to one Purpose Code and the AA ecosystem is collaboratin
 
 A policy-based automated framework that ensures compliance to fair use of consumer's consent and data in the AA ecosystem. AAs must enforce the Fair Use Policy for consent on all "Consent Request" and “FI Request” APIs.&#x20;
 
-<figure><img src="../.gitbook/assets/fairuse-policy-framework.png" alt=""><figcaption><p>AA Fair Use Policy Architecture</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/fairuse-policy-framework.png" alt=""><figcaption><p>AA Fair Use Policy Architecture</p></figcaption></figure>
 
 The fair use policy framework consists of three main Policy components and a Policy Agent:
 
