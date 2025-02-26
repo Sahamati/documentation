@@ -29,7 +29,7 @@ After selecting the member type, the participating teams must share details abou
 To officially onboard as an ecosystem member in the hackathon, participants must complete the provided Google form. This form will capture all the necessary details required to set up the team in the Sahamati Sandbox environment. Ensure that all fields are filled accurately to avoid delays in the onboarding process.
 
 You can access the form using the following link:\
-[Google Form - Onboarding for Hackathon](https://docs.google.com/forms/d/e/1FAIpQLScMsjVgSGNwKY84a3ymm2llu-yb5wQe\_x3VVeaCDMoB\_qb-nw/viewform)
+[Google Form - Onboarding for Hackathon](https://docs.google.com/forms/d/e/1FAIpQLScMsjVgSGNwKY84a3ymm2llu-yb5wQe_x3VVeaCDMoB_qb-nw/viewform)
 
 For more detailed information on the onboarding process and requirements, please refer to the following link:\
 [Onboarding Process Details](https://developer.sahamati.org.in/sahamatinet/proxy#onboarding-process)

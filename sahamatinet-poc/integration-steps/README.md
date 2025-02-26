@@ -26,7 +26,7 @@ description: For the SahamatiNet Proof Of Concept (POC)
    6. Refer to the section on these APIs [here](iam-apis.md)&#x20;
 3. **Integrate with SahamatiNet Router in Sandbox**
    1. Understand the **required changes for integration with the Router.**
-      1. Sahamati Router simplifies the process by allowing members to send requests to any recipient by adding the recipient identifier (**x-recipient-id**) in the header under **x-request-meta.** Refer [here](integration-with-router.md) for more details.
+      1. Sahamati Router simplifies the process by allowing members to send requests to any recipient by adding the recipient identifier (**x-recipient-id**) in the header under **x-request-meta.** Refer [here](integration-with-router/) for more details.
    2. **Review ReBIT workflows relevant to your entity** **using the Router**.&#x20;
       1. [Account Discovery and Linking workflows](rebit-workflows-using-router/account-discovery-and-linking.md)
       2. [Consent workflows ](rebit-workflows-using-router/consent-workflow.md)

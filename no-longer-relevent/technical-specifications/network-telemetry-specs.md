@@ -4,7 +4,7 @@ This page details the telemetry specification to be implemented by the members a
 
 ## Open Network Telemetry Specification
 
-We will be adopting the [Open Network Telemetry Specification](https://github.com/Sunbird-Obsrv/network-telemetry-spec) defined by [Sunbird](https://sunbird.org/) based on top of OpenTelemetry protocol for all decentralized networks like ONDC, Beckn etc. While the majority of the telemetry structure is going to be same, there are some minor additions (additional attributes) to the structure that are documented as part of the [telemetry structure](https://github.com/Sahamati/Observability\_Instrumentation/blob/main/specs/telemetry.md#telemetry-structure)
+We will be adopting the [Open Network Telemetry Specification](https://github.com/Sunbird-Obsrv/network-telemetry-spec) defined by [Sunbird](https://sunbird.org/) based on top of OpenTelemetry protocol for all decentralized networks like ONDC, Beckn etc. While the majority of the telemetry structure is going to be same, there are some minor additions (additional attributes) to the structure that are documented as part of the [telemetry structure](https://github.com/Sahamati/Observability_Instrumentation/blob/main/specs/telemetry.md#telemetry-structure)
 
 ## Why OpenTelemetry Protocol?
 
@@ -91,7 +91,7 @@ Following is the required entity level contextual attributes to be sent for all 
 }
 ```
 
-Detailed example would be described as part of [event types](https://github.com/Sahamati/Observability\_Instrumentation/blob/main/specs/telemetry.md#event-types)
+Detailed example would be described as part of [event types](https://github.com/Sahamati/Observability_Instrumentation/blob/main/specs/telemetry.md#event-types)
 
 ### Transport Context
 
@@ -127,7 +127,7 @@ Following are the optional transport contextual attributes that can be sent for 
 
 ### Event Data
 
-Contains the actual data about the event for the defined [event types](https://github.com/Sahamati/Observability\_Instrumentation/blob/main/specs/telemetry.md#event-types). The structure will be specific for every event type.
+Contains the actual data about the event for the defined [event types](https://github.com/Sahamati/Observability_Instrumentation/blob/main/specs/telemetry.md#event-types). The structure will be specific for every event type.
 
 ### Event Types
 

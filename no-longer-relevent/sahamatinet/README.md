@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # SahamatiNet
 
 **SahamatiNet** is the technological infrastructure developed and maintained by Sahamati to support the Account Aggregator (AA) ecosystem. It comprises a set of specifications, Application Programming Interfaces (APIs), and services aimed at improving the ecosystem's performance, trust, and reliability. By establishing a robust infrastructure, SahamatiNet addresses key challenges such as interoperability, data compliance, data quality, and operational efficiency, thereby ensuring a seamless and trustworthy experience for AA ecosystem entities involved.
