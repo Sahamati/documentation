@@ -44,4 +44,4 @@ _**ReBIT API:**_**&#x20;/Account/link/Notification (POST) with 'x-request-meta' 
 
 For the above use case implementation, AA need to implement a few internal APIs for hanlding the user registration, login and accounts data along with the ReBIT API Specification.
 
-In this scenario, the AA need to have a mock FIP to support the integration testing with mock response for the API requests to FIP. Please use the "FIP-SIMULATOR" for the integration testing with mock data. Please refer to [Testing with Simulator](../../testing-with-simulators/) for more details.
+In this scenario, the AA need to have a mock FIP to support the integration testing with mock response for the API requests to FIP. Please use the "FIP-SIMULATOR" for the integration testing with mock data. Please refer to [Testing with Simulator](../../integration-with-simulators/) for more details.

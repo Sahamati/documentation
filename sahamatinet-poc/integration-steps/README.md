@@ -27,17 +27,21 @@ description: For the SahamatiNet Proof Of Concept (POC)
 3. **Integrate with SahamatiNet Router in Sandbox**
    1. Understand the **required changes for integration with the Router.**
       1. Sahamati Router simplifies the process by allowing members to send requests to any recipient by adding the recipient identifier (**x-recipient-id**) in the header under **x-request-meta.** Refer [here](integration-with-router/) for more details.
-   2. **Review ReBIT workflows relevant to your entity** **using the Router**.&#x20;
+   2. **Changes of additional step of onboarding in your application**
+      1. With the transition to integrating with the SahamatiNet Router, the onboarding process for FIUs (Financial Information Users), AAs (Account Aggregators), and FIPs (Financial Information Providers) is no longer necessary. Previously, this step was essential for establishing peer-to-peer trust and enabling communication within the AA ecosystem. However, with Router integration, trust is managed through technical means, eliminating the need for additional onboarding on your side. &#x20;
+      2. As an AA Ecosystem participant, **you can bypass the manual onboarding for FIUs, AAs, and FIPs in your application**. These participants would undergo the required compliance through SahamatiNet before interacting with other entities via the Router. **This change streamlines the integration process, removing the need for extra code or configuration**, and improving the efficiency and ease of connections across the AA ecosystem.&#x20;
+      3. Note that while the technical integrations are now handled through the Router, the necessary commercial agreements between AA ecosystem participants remain unchanged and will continue as they are.
+   3. **Review ReBIT workflows relevant to your entity** **using the Router**.&#x20;
       1. [Account Discovery and Linking workflows](rebit-workflows-using-router/account-discovery-and-linking.md)
       2. [Consent workflows ](rebit-workflows-using-router/consent-workflow.md)
       3. [FI Request workflows](rebit-workflows-using-router/fi-request-workflow.md)
-4. **Validate Integration**
+4. **Integration with Simulators** &#x20;
    1. Test and validate the Router's functionality with ReBIT workflows tailored to your entity type by using the integration simulators in the sandbox environment (FIU, AA, FIP).
    2. Refer to the section on how to use simulators [here](https://app.gitbook.com/o/CcobtOsQAdIoa87kTGdF/s/fY7u471KMiCJqdTaYVzZ/~/changes/100/sahamatinet-poc/sahamatinet/testing-with-simulators) and respective simulators links below&#x20;
-      1. [AA Simulator](../testing-with-simulators/aa-simulator.md)
-      2. [FIP Simulator](../testing-with-simulators/fip-simulator.md)
-      3. [FIU Simulator](../testing-with-simulators/fiu-simulator.md)
-5. **Review Integration**&#x20;
+      1. [AA Simulator](../integration-with-simulators/aa-simulator.md)
+      2. [FIP Simulator](../integration-with-simulators/fip-simulator.md)
+      3. [FIU Simulator](../integration-with-simulators/fiu-simulator.md)
+5. **Validate Integration with Simulators and Regulated Entities**&#x20;
    1. Conduct tests with other onboarded entities in the sandbox environment to review all integration points and ensure seamless operation.
    2. More details on this step will be provided as we progress through the POC.
 
