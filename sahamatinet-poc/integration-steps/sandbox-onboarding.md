@@ -32,3 +32,44 @@ Once the member entry is added to CR, they can whitelist Sahamati Router IP.
 
 Ecosystem Member should provide the above details in the [Google Form](https://forms.gle/puL3DnurVQg28iSw5). Sahamati team will validate the details and onboard the entity as the member to the Sahamati's Central Registry (CR) and IAM (Token Service).&#x20;
 
+If you're experiencing difficulties accessing the Google form from your organization's network, you can alternatively generate the following JSON request and email it as an attachment to **sandbox@sahamati.org.in**. Please use the subject line: **Onboarding to SahamatiNet Router POC**: and make sure to include the designated user's email ID and full name for each entry.
+
+```json
+{
+    "type": "<Entity Type - one of FIU, FIP, AA>",
+    "requester": {
+        "name": "<Your Organisations Full Legal Name>",
+        "id": "<Entity ID.. YourOrgsUniqueShortName_Environment_EntityType>"
+    },
+    "entityinfo": {
+        "name": "<Your Organisations Full Legal Name>",
+        "id": "<Entity ID.. YourOrgsUniqueShortName_Environment_EntityType>",
+        "code": "<Same as above>",
+        "entityhandle": "<Your Organisations AA Handle, Only relevant for AA entity type>",
+        "Identifiers": [
+            {
+                "category": "STRONG",
+                "type": "MOBILE"
+            }
+        ],
+        "baseurl": "<Base URL of the entity to access ReBIT APIs. Only v2 is supported.>",
+        "fitypes": [
+            "<Supported FI Types>"
+        ],
+        "certificate": {
+            "<Certificate data>"
+        },
+        "inboundports": [
+            "<in bound ports>"
+        ],
+        "outboundports": [
+            "<out bound ports>"
+        ],
+        "ips": [
+            "<Whitelist IP addresses>"
+        ]
+    }
+}
+
+```
+

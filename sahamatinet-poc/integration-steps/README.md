@@ -15,7 +15,7 @@ description: For the SahamatiNet Proof Of Concept (POC)
          * RSA Public Key for secure communication
          * IP Address, Inbound and Outbound Ports (for production; optional for UAT and Sandbox)
       3. **Designate a user** (preferably with a service email account) to manage the entity as an admin in CR and IAM.
-   2. Complete the [Google Form for Registration](https://forms.gle/puL3DnurVQg28iSw5) to onboard with the Central Registry (CR).&#x20;
+   2. Complete the [Google Form for Registration](https://forms.gle/JKPSivKt36P4iH3a7) to onboard with the Central Registry (CR).&#x20;
 2. **Verify and Set Up User and Entity Access Tokens**&#x20;
    1. The designated user will **receive an email with a password reset link**.
    2. **Reset the password** and complete the account setup.
@@ -26,7 +26,7 @@ description: For the SahamatiNet Proof Of Concept (POC)
    6. Refer to the section on these APIs [here](iam-apis.md)&#x20;
 3. **Integrate with SahamatiNet Router in Sandbox**
    1. Understand the **required changes for integration with the Router.**
-      1. Sahamati Router simplifies the process by allowing members to send requests to any recipient by adding the recipient identifier (**x-recipient-id**) in the header under **x-request-meta.** Refer [here](integration-with-router/) for more details.
+      1. Sahamati Router simplifies the process by allowing members to send requests to any recipient by adding the recipient identifier (**recipient-id**) in the header under **x-request-meta.** Refer [here](integration-with-router/) for more details.
    2. **Changes of additional step of onboarding in your application**
       1. With the transition to integrating with the SahamatiNet Router, the onboarding process for FIUs (Financial Information Users), AAs (Account Aggregators), and FIPs (Financial Information Providers) is no longer necessary. Previously, this step was essential for establishing peer-to-peer trust and enabling communication within the AA ecosystem. However, with Router integration, trust is managed through technical means, eliminating the need for additional onboarding on your side. &#x20;
       2. As an AA Ecosystem participant, **you can bypass the manual onboarding for FIUs, AAs, and FIPs in your application**. These participants would undergo the required compliance through SahamatiNet before interacting with other entities via the Router. **This change streamlines the integration process, removing the need for extra code or configuration**, and improving the efficiency and ease of connections across the AA ecosystem.&#x20;
@@ -36,8 +36,8 @@ description: For the SahamatiNet Proof Of Concept (POC)
       2. [Consent workflows ](rebit-workflows-using-router/consent-workflow.md)
       3. [FI Request workflows](rebit-workflows-using-router/fi-request-workflow.md)
 4. **Integration with Simulators** &#x20;
-   1. Test and validate the Router's functionality with ReBIT workflows tailored to your entity type by using the integration simulators in the sandbox environment (FIU, AA, FIP).
-   2. Refer to the section on how to use simulators [here](https://app.gitbook.com/o/CcobtOsQAdIoa87kTGdF/s/fY7u471KMiCJqdTaYVzZ/~/changes/100/sahamatinet-poc/sahamatinet/testing-with-simulators) and respective simulators links below&#x20;
+   1. Test and validate the Router's functionality with ReBIT workflows tailored to your entity type by using the integration simulators in the sandbox environment (FIU, AA, FIP). You can also test this with your own simulators, if you have them. Please be sure to include the simulator details in the Google form provided above. We will onboard it for validation in the Sandbox environment as part of the POC.
+   2. Refer to the section on how to use SahamatiNet simulators [here](https://app.gitbook.com/o/CcobtOsQAdIoa87kTGdF/s/fY7u471KMiCJqdTaYVzZ/~/changes/100/sahamatinet-poc/sahamatinet/testing-with-simulators) and respective simulators links below&#x20;
       1. [AA Simulator](../integration-with-simulators/aa-simulator.md)
       2. [FIP Simulator](../integration-with-simulators/fip-simulator.md)
       3. [FIU Simulator](../integration-with-simulators/fiu-simulator.md)
