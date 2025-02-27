@@ -42,7 +42,7 @@ consumes:
 produces:
   - application/json
 host: api.sandbox.sahamati.org.in
-basePath: /proxy/v2
+basePath: /router/v2
 paths:
   /Consent:
     post:
