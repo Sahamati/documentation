@@ -1,27 +1,64 @@
+---
+description: >-
+  This FAQ section summarises the key aspects of the SahamatiNet Router and its
+  integration process in a clear, concise manner.
+---
+
 # Frequently Asked Questions
 
-**Q: What is the SahamatiNet Router, and what role does it play in the Account Aggregator (AA) ecosystem?**
+## SahamatiNet Router Overview
 
-* The SahamatiNet Router is a network service that streamlines and secures interactions between Financial Information Providers (FIPs), Account Aggregators (AAs), and Financial Information Users (FIUs). By routing communication, it reduces the complexity of multiple integrations, ensuring interoperability as well as efficient and secure data exchange.
+**Q. What is the SahamatiNet Router, and what role does it play in the AA ecosystem?**
 
-**Q: How does the SahamatiNet Router enhance integration, collaboration, and the AA Ecosystem ?**
+* The SahamatiNet Router is a network service that streamlines and secures interactions between Financial Information Providers (FIPs), Account Aggregators (AAs), and Financial Information Users (FIUs). It simplifies communication by reducing integration complexity, ensuring interoperability, and enabling secure data exchange.
 
-* The SahamatiNet Router streamlines interactions between FIPs, AAs, and FIUs by providing a standardised interface, eliminating the need for custom integrations. It simplifies data exchange, improves collaboration between participants, and handles backend operations like traffic routing and load balancing. This allows AAs to focus on enhancing their services and delivering a better customer experience.
+**Q. How does the SahamatiNet Router enhance integration and collaboration within the AA Ecosystem?**
 
-**Q: How does observability in the SahamatiNet Router benefit participants?**
+* The Router provides a standardised network interface, eliminating the need for multiple custom integrations. It handles backend tasks like traffic routing and load balancing, simplifying data exchange and promoting better collaboration among participants in the AA ecosystem.
 
-* The Network SahamatiNet Router offers real-time observability, providing insights into API call frequency, response times, and error rates. This helps participants monitor system performance, diagnose issues, and optimise their infrastructure for better operational efficiency.
+**Q. How does the Router handle scalability as the AA ecosystem grows?**
 
-**Q: How does the SahamatiNet Router handle scalability as the AA ecosystem grows?**
+* The Router is designed for scalability and can manage increased traffic and participants as the ecosystem expands. It supports horizontal scaling, multiple availability zones, and multi-region cloud deployments, ensuring high performance and availability.
 
-* The SahamatiNet Router is designed with scalability in mind, capable of handling increased traffic and participants as the ecosystem expands. Its architecture supports horizontal scaling to ensure continued high performance and availability.
+**Q. How does observability in the SahamatiNet Router benefit participants?**
 
-**Q: What is the purpose of the sandbox environment provided by the SahamatiNet Router?**
+* The Router offers real-time observability, allowing participants to monitor API call frequency, response times, and error rates. This enables optimised system performance, easier issue diagnosis, and improved operational efficiency.
 
-* The sandbox environment allows participants to test their integrations in a risk-free setting that mimics real-world conditions. It enables FIPs, AAs, and FIUs to validate system functionality and troubleshoot issues before transitioning to the production environment.
-* Do note, the Sandbox is independent of UAT and Production environments of SahamatiNet.
+## Integration Process and Onboarding
 
-**Q: What are the Base URLs for each environment ?**
+**Q. Is the additional onboarding process for FIUs, AAs, and FIPs still required by the AA Ecosystem application when integrating with the SahamatiNet Router?**
 
-<table><thead><tr><th width="173">Environment</th><th>Base URL</th></tr></thead><tbody><tr><td><strong>Sandbox</strong></td><td><code>https://api.sandbox.sahamati.org.in</code></td></tr><tr><td><strong>UAT</strong></td><td><code>https://api.uat.sahamati.org.in</code></td></tr><tr><td><strong>Production</strong></td><td><code>https://api.sahamati.org.in</code></td></tr></tbody></table>
+* Once onboarded to the SahamatiNet Router, there is no additional onboarding required for FIUs, AAs, or FIPs in their respective applications. All participants will have already undergone the necessary compliance and validation through SahamatiNet, ensuring this step is covered for all entities. This process aligns with current participant interactions.
 
+**Q. Will this change impact the integration process?**
+
+* Yes, this change simplifies the integration process by eliminating the need for extra code or configuration for additional onboarding in your application. It enhances the ease of connection and overall efficiency across the AA ecosystem.
+
+## Technical Aspects
+
+**Q. Are there any data size limits or timeout considerations?**
+
+* Yes, there are defined data size limits and timeout rules outlined in the integration guidelines. These values will be finalised and standardised during the Proof Of Concept (POC), with a consensus process involving all participants.
+
+**Q. What about the delay in using the integration?**
+
+* The integration is designed to be sub-second, ensuring minimal delay. The Router ensures fast, efficient communication between entities, facilitating seamless interactions.
+
+## Testing and Compliance
+
+**Q. Is integration with SahamatiNet mandatory?**
+
+* No, integrating with SahamatiNet via the Router is not mandatory for participating in the AA ecosystem. However, integration simplifies interactions and ensures secure, standardised, and efficient communication between REs (Registered Entities).
+
+**Q. What is the purpose of the SahamatiNet Router sandbox environment?**
+
+* The sandbox environment allows participants to test integrations in a risk-free setting that mimics real-world conditions. For the Proof of Concept (POC), the SahamatiNet Sandbox is used for validation and troubleshooting before transitioning to UAT and production environments.
+* **Note:** The Sandbox environment is independent of the UAT and Production environments of SahamatiNet.
+
+## Base URLs for Each Environment
+
+| **Environment** | **Base URL**                                                               |
+| --------------- | -------------------------------------------------------------------------- |
+| **Sandbox**     | [https://api.sandbox.sahamati.org.in](https://api.sandbox.sahamati.org.in) |
+| **UAT**         | [https://api.uat.sahamati.org.in](https://api.uat.sahamati.org.in)         |
+| **Production**  | [https://api.sahamati.org.in](https://api.sahamati.org.in)                 |
