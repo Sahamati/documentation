@@ -33,4 +33,4 @@ curl -X 'POST' \
 Ensure you replace `<your-email>`, `<your-password>`, `<entityId>`, and `<entitySecret>` mentioned in above curl with actual values when running these commands.
 
 **Postman Collection**:\
-You can also download the [**Postman collection**](https://developer.sahamati.org.in/technical-specifications/identity-and-access-management#token-generation-apis) from the Sahamati developer portal. The Postman collection includes pre-configured API requests and is ideal for rapid testing and validation of token generation.
+You can also download the [**Postman collection**](../sahamatinet-poc/integration-steps/iam-apis.md#api-postman-collection) from the Sahamati developer portal. The Postman collection includes pre-configured API requests and is ideal for rapid testing and validation of token generation.

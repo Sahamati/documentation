@@ -49,6 +49,7 @@ description: >-
 **Q. Is integration with SahamatiNet mandatory?**
 
 * No, integrating with SahamatiNet via the Router is not mandatory for participating in the AA ecosystem. However, integration simplifies interactions and ensures secure, standardised, and efficient communication between REs (Registered Entities).
+* For example, if an AA gets onboarded to SahamatiNet, it gets access to all the onboarded FIPs without having to integrate individually with each FIP. Similarly, when an FIU gets onboarded to SahamatiNet, technically, it has access to all AAs who are onboarded. AA will still need the bilateral commercial agreement with the FIUs.
 
 **Q. What is the purpose of the SahamatiNet Router sandbox environment?**
 
