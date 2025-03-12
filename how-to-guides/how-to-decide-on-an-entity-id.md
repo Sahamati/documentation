@@ -13,3 +13,4 @@
   * **For AA : ABC\_UAT\_AA or ABC\_SANDBOX\_AA**
   * **For FIP : AXBYCZ\_UAT\_FIP or AXBYCZ\_SANDBOX\_FIP**
 * Ensure that the Entity ID is a unique and easily recognisable name of the organisation that is getting onboarded. It can include letters, numbers, or symbols, but a simple and meaningful string is recommended.
+* **Do note,** the above examples and recommendations **use an underscore** ( \_ ) as the **delimiter**. You **can also use hyphens** ( - ) if preferred.
