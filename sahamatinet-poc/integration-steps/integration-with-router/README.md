@@ -4,8 +4,13 @@
 
 Outlined below are the changes that members need to make to their implementation to use the SahamatiNet Router.
 
-* Using **Sahamati Router API endpoint** [https://api.sandbox.sahamati.org.in/router/v2](https://api.sandbox.sahamati.org.in/proxy/v2) as base path for all the requests.
-  * Do note the Router API endpoint URL mentioned above is used for Sandbox, the respective URL for each environment (UAT and Production) will be updated when we progress to next environments.&#x20;
+* Use the following **Sahamati Router API endpoint** as base path for all the requests.
+
+```url
+https://api.sandbox.sahamati.org.in/router/v2
+```
+
+* Do note the Router API endpoint URL mentioned above is used for Sandbox, the respective URL for each environment (UAT and Production) will be updated when we progress to next environments.&#x20;
 * Add the recipient ID under the new header **x-request-meta** with **recipient-id** in a JSON object which is the identifier of the receiver to whom the API call needs to be forwarded.
   * The value of the **x-request-meta** is Base64 string of the JSON object with recipient-id.
   * This structure helps us to easily extend the JSON object by adding the required attributes for future use cases.
@@ -25,4 +30,4 @@ These header changes need to be implemented for communication between FIU and AA
 
 **API Collection:**
 
-{% file src="../../.gitbook/assets/Proxy Service.postman_collection.json" %}
+{% file src="../../../.gitbook/assets/Router API  - Sandbox.postman_collection.json" %}
