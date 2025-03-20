@@ -24,9 +24,15 @@ x-request-meta: <Base64 of JSON object
 
 The receiver could be any of the participant, FIU, AA or FIP.&#x20;
 
-<table><thead><tr><th width="157">Particulars</th><th width="176">Comments</th><th></th></tr></thead><tbody><tr><td>Host</td><td>The base path to use by the members of SahamatiNet Router.</td><td><a href="https://api.sandbox.sahamati.org.in/router">​</a><a href="https://api.sandbox.sahamati.org.in/router">https://api.sandbox.sahamati.org.in/router</a></td></tr><tr><td>Headers</td><td>This will remain same as previous.</td><td><p>​</p><ul><li>x-jws-signature - Authorization</li><li>Token (from sender)</li></ul></td></tr><tr><td>Additional Headers</td><td>The recipient id is a required property. It is the identifier of the receiver to whom the API call needs to be forwarded.</td><td>x-request-meta</td></tr></tbody></table>
+<table><thead><tr><th width="100.8345947265625">Particulars</th><th width="304.542724609375">Comments</th><th>Values</th></tr></thead><tbody><tr><td>Host</td><td>The base path to use by the members of SahamatiNet Router.</td><td><a href="https://api.sandbox.sahamati.org.in/router">​</a><a href="https://api.sandbox.sahamati.org.in/router">https://api.sandbox.sahamati.org.in/router</a></td></tr><tr><td>Headers</td><td>This will remain same as previous.</td><td><p>​</p><ul><li>x-jws-signature - Authorization</li><li>Token (from sender)</li></ul></td></tr><tr><td>Additional Headers</td><td>The recipient id is a required property. It is the identifier of the receiver to whom the API call needs to be forwarded.</td><td>x-request-meta</td></tr></tbody></table>
 
 These header changes need to be implemented for communication between FIU and AA, AA and FIP, FIP and AA, as well as FIU and AA.
+
+## Service URLs for the Sandbox
+
+<table><thead><tr><th width="208.99652099609375">Service</th><th>Base URL</th></tr></thead><tbody><tr><td>Public Key</td><td>https://api.<strong>sandbox</strong>.sahamati.org.in/<strong>auth/realms/sahamati/protocol/openid-connect/certs</strong></td></tr><tr><td>IAM (Token Service)</td><td>https://api.<strong>sandbox</strong>.sahamati.org.in/<strong>iam</strong></td></tr><tr><td>Central Registry (CR)</td><td>https://api.<strong>sandbox</strong>.sahamati.org.in/<strong>cr</strong></td></tr><tr><td>Router </td><td>https://api.<strong>sandbox</strong>.sahamati.org.in/<strong>router</strong></td></tr></tbody></table>
+
+Please ensure that, in addition to the changes in the ReBIT API calls, the **entity key validation** for the **public key** is also **pointing to the Sandbox** for your code changes for POC. These URLs will vary across different environments. You can find the Base URLs for these in the [FAQ section](../../../frequently-asked-questions.md#base-urls-for-each-environment).
 
 **API Collection:**
 
