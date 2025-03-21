@@ -24,7 +24,7 @@ x-request-meta: <Base64 of JSON object
 
 The receiver could be any of the participant, FIU, AA or FIP.&#x20;
 
-<table><thead><tr><th width="100.8345947265625">Particulars</th><th width="304.542724609375">Comments</th><th>Values</th></tr></thead><tbody><tr><td>Host</td><td>The base path to use by the members of SahamatiNet Router.</td><td><a href="https://api.sandbox.sahamati.org.in/router">​</a><a href="https://api.sandbox.sahamati.org.in/router">https://api.sandbox.sahamati.org.in/router</a></td></tr><tr><td>Headers</td><td>This will remain same as previous.</td><td><p>​</p><ul><li>x-jws-signature - Authorization</li><li>Token (from sender)</li></ul></td></tr><tr><td>Additional Headers</td><td>The recipient id is a required property. It is the identifier of the receiver to whom the API call needs to be forwarded.</td><td>x-request-meta</td></tr></tbody></table>
+<table><thead><tr><th width="109.80975341796875">Particulars</th><th width="284.70166015625">Comments</th><th>Values</th></tr></thead><tbody><tr><td>Host</td><td>The base path to use by the members of SahamatiNet Router.</td><td><a href="https://api.sandbox.sahamati.org.in/router">​</a><a href="https://api.sandbox.sahamati.org.in/router">https://api.sandbox.sahamati.org.in/router</a></td></tr><tr><td>Headers</td><td>This will remain same as previous.</td><td><p>​</p><ul><li>x-jws-signature - Authorization</li><li>Token (from sender)</li></ul></td></tr><tr><td>Additional Headers</td><td>The recipient id is a required property. It is the identifier of the receiver to whom the API call needs to be forwarded.</td><td>x-request-meta</td></tr></tbody></table>
 
 These header changes need to be implemented for communication between FIU and AA, AA and FIP, FIP and AA, as well as FIU and AA.
 

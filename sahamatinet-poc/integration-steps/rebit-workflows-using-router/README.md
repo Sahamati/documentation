@@ -13,3 +13,7 @@ The **Consent Workflow** is at the core of the Account Aggregator (AA) ecosystem
 ## [**Financial Information (FI) Request Workflow**](../../../no-longer-relevent/buildaathon-2024/network-scenarios/fi-request-workflow.md)
 
 The **FI Request Workflow** outlines how a Financial Information User (FIU) requests data from Financial Information Providers (FIPs) via the Account Aggregator. Once consent is granted, the FIU can initiate a financial information request, and the AA retrieves the required data from the FIP. ReBIT APIs are integral in transmitting these requests securely and ensuring that only authorized data is shared with the FIU.
+
+## Router Integration Changes
+
+The following sections provide a detailed explanation of these above mentioned workflows, including a diagram illustrating API interactions (Reference) within the AA ecosystem. The diagram also highlights changes related to the Router. Review these sections carefully to understand the modifications and the necessary updates to your code.

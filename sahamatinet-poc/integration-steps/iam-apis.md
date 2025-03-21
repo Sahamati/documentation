@@ -1,5 +1,5 @@
 ---
-description: Identity and Access Management ( Token Service)
+description: Identity and Access Management ( Token Service) APIs
 ---
 
 # IAM APIs
@@ -11,29 +11,35 @@ Each member of the Sahamati Network will be onboarded with a designated user who
 * The designated user can then use the User Access Token to **access the entity’s secret** and, if necessary, **reset the secret**.
 * Finally, the entity secret is used to **generate the Entity Access Token**, which is needed for interactions with the ReBIT APIs within the AA network.
 
+### Entity Token Generation use case&#x20;
+
+The Regulated Entities (REs) should generate the Access Token using the Token API from Sahamati for accessing and authentication of any APIs in the AA ecosystem including Sahamati APIs.
+
+Here is the sequence diagram for the Token Generation Process.
+
+<figure><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdc4HeMCiC89Fdmj_Xf0Nv3AZZKB6BuqMxBUGRt41o73HkYfBchfZOQ9S_a5dg6nK32KXqo44LBDV1AhjU_IyorOrAk0PFyphQuHLr0k3ilJwrjo2xbHH6XFFhwJB0hZWZuW62-0Q?key=3aTz-3SKYP0rOCX7DFnLglx6" alt=""><figcaption><p>Token Generation use case diagram</p></figcaption></figure>
+
 Below are the Base URL of each environment to use IAM APIs.
 
-<table><thead><tr><th width="172">Environment</th><th>Base URL</th></tr></thead><tbody><tr><td>Production</td><td>https://api.sahamati.org.in/iam</td></tr><tr><td>UAT</td><td>https://api.uat.sahamati.org.in/iam</td></tr><tr><td><p>Sandbox</p><p>(Used for PoC)</p></td><td>https://api.sandbox.sahamati.org.in/iam</td></tr></tbody></table>
+<table><thead><tr><th width="213.489501953125">Environment</th><th>Base URL</th></tr></thead><tbody><tr><td>Production</td><td>https://api.sahamati.org.in/iam</td></tr><tr><td>UAT</td><td>https://api.uat.sahamati.org.in/iam</td></tr><tr><td>Sandbox (Used for PoC)</td><td>https://api.sandbox.sahamati.org.in/iam</td></tr></tbody></table>
 
 Please note that the following documentation displays the Base URLs from the Sandbox environment. Ensure you use the appropriate Base URLs depending on the environment you are working in.
 
-
-
-{% swagger src="../../.gitbook/assets/IAM-Service-Sprint-9.yaml" path="/user/token/generate" method="post" %}
+{% openapi src="../../.gitbook/assets/IAM-Service-Sprint-9.yaml" path="/user/token/generate" method="post" %}
 [IAM-Service-Sprint-9.yaml](../../.gitbook/assets/IAM-Service-Sprint-9.yaml)
-{% endswagger %}
+{% endopenapi %}
 
-{% swagger src="../../.gitbook/assets/IAM-Service-Sprint-9.yaml" path="/entity/secret/read" method="post" %}
+{% openapi src="../../.gitbook/assets/IAM-Service-Sprint-9.yaml" path="/entity/secret/read" method="post" %}
 [IAM-Service-Sprint-9.yaml](../../.gitbook/assets/IAM-Service-Sprint-9.yaml)
-{% endswagger %}
+{% endopenapi %}
 
-{% swagger src="../../.gitbook/assets/IAM-Service-Sprint-9.yaml" path="/entity/secret/reset" method="post" %}
+{% openapi src="../../.gitbook/assets/IAM-Service-Sprint-9.yaml" path="/entity/secret/reset" method="post" %}
 [IAM-Service-Sprint-9.yaml](../../.gitbook/assets/IAM-Service-Sprint-9.yaml)
-{% endswagger %}
+{% endopenapi %}
 
-{% swagger src="../../.gitbook/assets/IAM-Service-Sprint-9.yaml" path="/entity/token/generate" method="post" %}
+{% openapi src="../../.gitbook/assets/IAM-Service-Sprint-9.yaml" path="/entity/token/generate" method="post" %}
 [IAM-Service-Sprint-9.yaml](../../.gitbook/assets/IAM-Service-Sprint-9.yaml)
-{% endswagger %}
+{% endopenapi %}
 
 ## Token Generation APIs:
 
