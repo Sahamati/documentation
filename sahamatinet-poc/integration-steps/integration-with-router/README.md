@@ -30,7 +30,39 @@ These header changes need to be implemented for communication between FIU and AA
 
 ## Service URLs for the Sandbox
 
-<table><thead><tr><th width="208.99652099609375">Service</th><th>Base URL</th></tr></thead><tbody><tr><td>Public Key</td><td>https://api.<strong>sandbox</strong>.sahamati.org.in/<strong>auth/realms/sahamati/protocol/openid-connect/certs</strong></td></tr><tr><td>IAM (Token Service)</td><td>https://api.<strong>sandbox</strong>.sahamati.org.in/<strong>iam</strong></td></tr><tr><td>Central Registry (CR)</td><td>https://api.<strong>sandbox</strong>.sahamati.org.in/<strong>cr</strong></td></tr><tr><td>Router </td><td>https://api.<strong>sandbox</strong>.sahamati.org.in/<strong>router</strong></td></tr></tbody></table>
+Service Name and their URLS&#x20;
+
+**Public Key**
+
+{% code overflow="wrap" fullWidth="true" %}
+```url
+https://api.sandbox.sahamati.org.in/auth/realms/sahamati/protocol/openid-connect/certs
+```
+{% endcode %}
+
+**IAM (Token Service)** &#x20;
+
+{% code overflow="wrap" fullWidth="true" %}
+```url
+https://api.sandbox.sahamati.org.in/iam
+```
+{% endcode %}
+
+**Central Registry (CR)**&#x20;
+
+{% code overflow="wrap" fullWidth="true" %}
+```url
+https://api.sandbox.sahamati.org.in/cr
+```
+{% endcode %}
+
+**Router** &#x20;
+
+{% code overflow="wrap" fullWidth="true" %}
+```url
+https://api.sandbox.sahamati.org.in/router
+```
+{% endcode %}
 
 Please ensure that, in addition to the changes in the ReBIT API calls, the **entity key validation** for the **public key** is also **pointing to the Sandbox** for your code changes for POC. These URLs will vary across different environments. You can find the Base URLs for these in the [FAQ section](../../../frequently-asked-questions.md#base-urls-for-each-environment).
 
