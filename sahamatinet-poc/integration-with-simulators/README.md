@@ -1,23 +1,22 @@
-# Testing with Simulators
+# Integration with Simulators
 
-This page outlines the usage of **Response Simulator** by AA, FIU or FIP with entity APIs for the integration of Router. This **Response Simulator** will simulate the behaviour of the actual entity APIs to facilitate Sahamati router usage and testing.
+## Overview
 
-## Overview:
+SahamatiNet has developed Response **Simulators** for each type of entity in the AA ecosystem. These simulators replicate the behaviour of AA, FIU, or FIP while interacting with ReBIT APIs for Router integration, enabling seamless testing and validation.
 
-The Response Simulator is designed to simulate the behaviour of real Entity’s Protocol APIs. It provides a controlled environment for developers to test and verify router service without relying on an actual entity.
+By mimicking real Entity Protocol APIs, the **Response Simulator provides a controlled environment where developers can test the router service** independently without relying on a live entity.
 
 The sample workflow diagram below illustrates the usage of the Response Simulator by including a simulated response with the expected response.
 
-
-
 <figure><img src="../../.gitbook/assets/consent-example.png" alt=""><figcaption><p>Entity Integration with Router using "Response Simulator"</p></figcaption></figure>
 
-The following two details are required in the request to use the APIs with Response Simulator:
+The following two details are required in the request to use the APIs with Response **Simulator**:
 
-* **recipient-id:** This is specified in the **x-request-meta** header through which the router that will route the request to the respective response simulator. The available options are,
-  * **AA-SIMULATOR**
-  * **FIU-SIMULATOR** and
-  * **FIP-SIMULATOR**
+* **recipient-id:** This is specified in the **x-request-meta** header through which the router that will route the request to the respective response simulator.&#x20;
+  * Based on the respective use case you can use the following Entity ID as `recipient-id`, which are mapped to the respective Response Simulators in Sandbox environment,
+    * **AA-SIMULATOR**
+    * **FIU-SIMULATOR** and
+    * **FIP-SIMULATOR**
 * **x-simulate-res:** This header should contain a hint for the expected response from the response simulator. It can be any of the options listed in the specific entity tables. If this is not included, the response simulator will default to returning a 200 OK response.
 
 #### Sample Request Headers:
